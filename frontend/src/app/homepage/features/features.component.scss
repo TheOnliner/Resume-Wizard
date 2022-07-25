@@ -1,0 +1,97 @@
+@import "../../../assets/variables.scss";
+
+.container {
+  // background-color: #511bda;
+  background: linear-gradient(to right, #350f96, #511bda, #350f96);
+  display: flex;
+  padding: 1em 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+
+  &__heading {
+    font-family: "Quicksand", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-weight: 800;
+    color: $color-white;
+  }
+
+  &__steps {
+    display: flex;
+    height: 75%;
+    align-items: center;
+    justify-content: space-around;
+
+    &__step-1,
+    &__step-2,
+    &__step-3 {
+      padding: 3em 2.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 30%;
+      border-radius: 15px;
+      transition: all 0.1s;
+      border: solid 1px $color-white;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        background: linear-gradient(to bottom right, #350aa1, #6224ff);
+        background-position: top bottom;
+        border-top: solid 3px $color-white;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+          rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .imgcontainer__img-1,
+      .imgcontainer__img-2,
+      .imgcontainer__img-3 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 2.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 2px $color-white;
+        transition: all 1.5s;
+
+        &:hover {
+          transform: rotateY(360deg);
+        }
+
+        .icon {
+          font-size: 5rem;
+          color: $color-white;
+        }
+      }
+
+      .sub-heading {
+        font-family: "Quicksand", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1em;
+        text-align: center;
+        color: $color-white;
+      }
+      p {
+        padding: 0 2em;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__features {
+  }
+}
