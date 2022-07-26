@@ -91,7 +91,126 @@
       }
     }
   }
+}
 
-  &__features {
+.features {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 5em 8em;
+  height: 105vh;
+
+  &__images {
+    background: linear-gradient(to bottom left, #350aa1, #6224ff);
+    width: 20%;
+    border-radius: 10px;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__image {
+      height: 40vh;
+      margin-bottom: 13em;
+      box-shadow: rgba(3, 3, 3, 0.397) 0px 8px 24px;
+      animation: scrolling 15s linear infinite;
+    }
+  }
+
+  .card-container {
+    background-color: $color-white;
+    height: 100%;
+    width: 80%;
+    padding: 2rem;
+
+    .card {
+      height: 15rem;
+      margin-bottom: 4em;
+      padding: 2rem;
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      position: relative;
+      .side {
+        height: 50%;
+        width: 100%;
+        padding: 1em 2.5em;
+        transition: all 0.8s;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        &__front {
+          background: linear-gradient(to bottom right, #ffffff, #e0e0e0);
+          height: 100%;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+            rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+            rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+          color: $color-primary;
+
+          .heading {
+            font-family: "PT Sans Narrow", sans-serif;
+            font-size: 4rem;
+          }
+        }
+        &__back {
+          background: linear-gradient(to right, #350f96, #511bda, #350f96);
+          color: $color-white;
+          transform: rotateX(-180deg);
+          height: 100%;
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p {
+              font-family: "PT Sans Narrow", sans-serif;
+              font-size: 2rem;
+              text-align: center;
+              padding-bottom: 1.5em;
+            }
+            .btn {
+              text-decoration: none;
+              font-family: "PT Sans Narrow", sans-serif;
+              font-size: 1.5rem;
+              background-color: $color-white;
+              border-radius: 4px;
+              padding: 0.3em 1em;
+              color: $color-primary;
+              transition: all 0.3s;
+              cursor: pointer;
+
+              &:hover {
+                font-size: 1.7rem;
+              }
+            }
+          }
+        }
+      }
+      &:hover .side__front {
+        transform: rotateX(180deg);
+      }
+      &:hover .side__back {
+        transform: rotateX(0);
+      }
+    }
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateY(260vh);
+  }
+  100% {
+    transform: translateY(-260vh);
   }
 }
