@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,10 @@ import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   faHatWizard = faHatWizard;
-  constructor() {}
+  constructor(private homeService: HomeService) {}
 
   ngOnInit(): void {}
+  signupClicked() {
+    this.homeService.toggle.next(true);
+  }
 }

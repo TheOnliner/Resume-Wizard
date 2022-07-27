@@ -1,20 +1,178 @@
 @import "../../../assets/variables.scss";
+// @import "../../../../node_modules/primeicons/primeicons.css";
+// @import "../../../../node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+// @import "../../../../node_modules/primeng/resources/primeng.min.css";
+
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881a1;
+$input-text-active: #bfd2ff;
+
+a {
+  text-decoration: none;
+}
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+:host ::ng-deep .pi-times:before {
+  font-size: 1.5em;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  background-image: radial-gradient(
+    circle at 0% 0%,
+    #373b52,
+    #252736 51%,
+    #1d1e26
+  );
+  padding: 1rem;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background-image: radial-gradient(
+    circle at 0% 0%,
+    #373b52,
+    #252736 51%,
+    #1d1e26
+  );
+}
 
 .signupC {
-  background-color: $color-white;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: fit-content;
-  margin: auto;
-  margin-top: 30vh;
+  gap: 1em;
 
   &__title {
-    color: $color-primary;
+    .heading {
+      color: $color-white;
+      font-family: "Pacifico", cursive;
+      font-weight: 100;
+      font-size: 3rem;
+      text-align: center;
+      cursor: pointer;
+    }
+    .desc--1 {
+      color: $color-white;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.2em;
+    }
   }
   &__form {
+    .webflow-style-input {
+      position: relative;
+      display: flex;
+      width: 40rem;
+      margin: 2rem auto;
+      border-radius: 2px;
+      padding: 1rem 1.6rem;
+      background: $input-background;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 999;
+        height: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(
+          to right,
+          #b294ff,
+          #57e6e6,
+          #feffb8,
+          #57e6e6,
+          #b294ff,
+          #57e6e6
+        );
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite;
+      }
+    }
+
+    .webflow-style-input input {
+      flex-grow: 1;
+      color: $input-text-active;
+      font-size: 1.5rem;
+      &::-webkit-input-placeholder {
+        color: $input-text-inactive;
+      }
+    }
+
+    .webflow-style-input button {
+      color: $input-text-inactive;
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      vertical-align: middle;
+      transition: color 0.25s;
+      &:hover {
+        color: $input-text-active;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 2em;
+
+      .desc--middle {
+        color: $color-white;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+
+        a {
+          text-decoration: underline;
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .signupbtn {
+      background-color: $color-white;
+      color: $color-primary;
+      border-radius: 3px;
+      padding: 0.8em 8em;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      margin: auto auto;
+      margin-bottom: 2em;
+    }
   }
+
   &__link {
+    color: $color-white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+
+    a {
+      text-decoration: underline;
+      color: $color-secondary;
+    }
   }
 }

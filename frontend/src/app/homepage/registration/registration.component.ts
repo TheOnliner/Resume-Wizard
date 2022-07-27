@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { HomeService } from '../home.service';
 
 @Component({
   selector: 'app-registration',
@@ -6,12 +7,15 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
-  constructor() {}
-  display: boolean = false;
+  // displayModal: boolean;
+  displayModal = true;
+  constructor(private homeService: HomeService) {}
 
-  showDialog() {
-    this.display = true;
+  ngOnInit(): void {
+    this.homeService.toggle.subscribe((toggle) => {
+      if (toggle) {
+        // this.displayModal = true;
+      }
+    });
   }
-
-  ngOnInit(): void {}
 }
