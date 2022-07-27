@@ -1,0 +1,20 @@
+@import "../../../assets/variables.scss";
+
+.signupC {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 30vh;
+
+  &__title {
+    color: $color-primary;
+  }
+  &__form {
+  }
+  &__link {
+  }
+}
