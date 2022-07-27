@@ -1,0 +1,17 @@
+@import "../../../assets/variables.scss";
+
+.loginC {
+  height: 15rem;
+  width: 30rem;
+  background-color: $color-white;
+  .loginC--title {
+    color: $color-primary;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  // .loginC--form {
+  // }
+  // .loginC--link {
+  // }
+}

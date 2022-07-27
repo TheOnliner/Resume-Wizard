@@ -1,0 +1,59 @@
+<div class="loginC">
+  <div class="loginC--title">
+    <div class="heading">Login here</div>
+    <div class="desc--top">Nice to see you again!</div>
+  </div>
+  <form class="loginC--form">
+    <!-- <p
+    class="help-block"
+    *ngIf="!loginForm.email.valid && loginForm.email.touched"
+  >
+    <span *ngIf="!loginForm.email.errors.required">Email is required</span>
+    <span *ngIf="!loginForm.email.errors.email">Email is invalid</span>
+  </p> -->
+    <div class="email">
+      <input
+        class="email__input userinput"
+        formControlName="email"
+        type="email"
+        name="email"
+        placeholder="Email Address"
+      />
+      <!-- <span class="material-symbols-outlined"> done_all </span> -->
+    </div>
+    <!-- <p
+    class="help-block"
+    *ngIf="!loginForm.password.valid && loginForm.password.touched"
+  >
+    Min. 8 characters required.
+  </p> -->
+    <div class="password">
+      <input
+        class="password__input userinput"
+        name="password"
+        formControlName="password"
+        type="password"
+        placeholder="Password"
+        pattern=".{8,}"
+      />
+      <!-- <span class="material-symbols-outlined"> done_all </span> -->
+    </div>
+    <div class="checkbox">
+      <input class="checkbox" type="checkbox" name="TC" id="TC" />
+      <p class="desc--middle" for="">
+        <span><a href="">Remember me</a></span>
+      </p>
+    </div>
+    <!-- <p class="help-block" *ngIf="isSubmitted && authError">
+    {{ authMessage }}
+  </p> -->
+    <button class="loginbtn" type="submit">
+      <!-- [disabled]="!loginFormGroup.valid" -->
+      Login
+    </button>
+  </form>
+  <div class="loginC--link">
+    <span><a href="">Forgot Password?</a></span>
+  </div>
+</div>
+
