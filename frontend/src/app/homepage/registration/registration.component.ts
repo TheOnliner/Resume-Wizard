@@ -7,6 +7,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
   constructor() {}
+  display: boolean = false;
+
+  showDialog() {
+    this.display = true;
+  }
 
   ngOnInit(): void {}
 }
