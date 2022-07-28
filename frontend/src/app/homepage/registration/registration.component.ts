@@ -10,8 +10,7 @@ import { HomeService } from '../home.service';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
-  // displayModal: boolean;
-  displayModal = true;
+  displayModal: boolean;
   signupFormGroup: FormGroup;
   isSubmitted = false;
   authsignMessage = '';
@@ -26,10 +25,10 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.toggle.subscribe((toggle) => {
       if (toggle) {
-        // this.displayModal = true;
+        this.displayModal = true;
       }
-      this._initSignupForm();
     });
+    this._initSignupForm();
   }
   private _initSignupForm() {
     this.signupFormGroup = this.formBuilder.group({

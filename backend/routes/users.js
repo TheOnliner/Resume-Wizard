@@ -13,9 +13,9 @@ router.post("/", async (req, res) => {
 
   if (usernew?.email) return res.status(500).send("Found same mail id");
 
-  user = await user.save();
-
   if (!user) return res.status(400).send("the user cannot be created!");
+
+  user = await user.save();
 
   res.send(user);
 });
