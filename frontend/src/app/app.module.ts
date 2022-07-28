@@ -7,6 +7,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { HeaderComponent } from './homepage/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './homepage/features/features.component';
+import { HomeComponent } from './homepage/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FeaturesComponent } from './homepage/features/features.component';
     HomepageComponent,
     HeaderComponent,
     FeaturesComponent,
+    HomeComponent,
+  
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
