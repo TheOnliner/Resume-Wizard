@@ -3,10 +3,6 @@
 // @import "../../../../node_modules/primeng/resources/themes/lara-light-blue/theme.css";
 // @import "../../../../node_modules/primeng/resources/primeng.min.css";
 
-$input-background: rgba(57, 63, 84, 0.8);
-$input-text-inactive: #7881a1;
-$input-text-active: #bfd2ff;
-
 a {
   text-decoration: none;
 }
@@ -21,16 +17,9 @@ button {
   border: none;
   outline: none;
 }
+
 :host ::ng-deep .pi-times:before {
   font-size: 1.5em;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
 }
 
 :host ::ng-deep .p-dialog .p-dialog-header {
@@ -49,6 +38,16 @@ button {
     #252736 51%,
     #1d1e26
   );
+  overflow: hidden;
+}
+
+input.ng-invalid.ng-touched {
+  // border: solid 5px $color-white;
+}
+
+input.ng-valid.ng-touched ~ .material-symbols-outlined {
+  color: $input-text-active;
+  // font-variation-settings: "FILL" 100, "wght" 500, "GRAD" 50, "opsz" 90;
 }
 
 .signupC {
@@ -73,6 +72,7 @@ button {
       font-size: 1.5rem;
       text-align: center;
       line-height: 1.2em;
+      margin-bottom: 5rem;
     }
   }
   &__form {
@@ -80,7 +80,8 @@ button {
       position: relative;
       display: flex;
       width: 40rem;
-      margin: 2rem auto;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
       border-radius: 2px;
       padding: 1rem 1.6rem;
       background: $input-background;
@@ -117,14 +118,16 @@ button {
       &::-webkit-input-placeholder {
         color: $input-text-inactive;
       }
+
+      &.ng-valid.ng-touched ~ .material-symbols-outlined {
+        color: $input-text-active;
+        font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+      }
     }
 
-    .webflow-style-input button {
-      color: $input-text-inactive;
-      font-size: 2.4rem;
-      line-height: 2.4rem;
-      vertical-align: middle;
+    .material-symbols-outlined {
       transition: color 0.25s;
+      font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
       &:hover {
         color: $input-text-active;
       }
@@ -150,6 +153,12 @@ button {
       }
     }
 
+    .help-block {
+      color: rgb(238, 255, 0);
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.1rem;
+    }
+
     .signupbtn {
       background-color: $color-white;
       color: $color-primary;
@@ -162,6 +171,13 @@ button {
       display: block;
       margin: auto auto;
       margin-bottom: 2em;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-white;
+      }
     }
   }
 
@@ -174,5 +190,14 @@ button {
       text-decoration: underline;
       color: $color-secondary;
     }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
   }
 }

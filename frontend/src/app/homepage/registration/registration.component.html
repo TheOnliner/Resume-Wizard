@@ -1,7 +1,7 @@
 <p-dialog
   [(visible)]="displayModal"
   [modal]="true"
-  [style]="{ width: '50vw' }"
+  [style]="{ width: '40vw' }"
   [draggable]="false"
   [resizable]="false"
 >
@@ -14,61 +14,58 @@
       </div>
     </div>
 
-    <form class="signupC__form">
-      <!-- <p
-              class="help-block"
-              *ngIf="!signupForm.name.valid && signupForm.name.touched"
-            >
-              This field cannot be empty & numbers are not allowed
-            </p> -->
+    <form class="signupC__form" [formGroup]="signupFormGroup">
+      <p
+        class="help-block"
+        *ngIf="!signupForm['name'].valid && signupForm['name'].touched"
+      >
+        *This field cannot be empty & numbers are not allowed
+      </p>
       <div class="webflow-style-input">
         <input
           class="username__input userinput"
           type="text"
           name="name"
+          formControlName="name"
           placeholder="What's your Name?"
           pattern="[a-zA-Z ]*"
         />
-        <button>
-          <i class="material-symbols-outlined">done_all</i>
-        </button>
+        <i class="material-symbols-outlined">done_all</i>
       </div>
-      <!-- <p
-              class="help-block"
-              *ngIf="!signupForm.email.valid && signupForm.email.touched"
-            >
-              Please enter a valid Email-Address
-            </p> -->
+      <p
+        class="help-block"
+        *ngIf="!signupForm['email'].valid && signupForm['email'].touched"
+      >
+        *Please enter a valid Email-Address
+      </p>
       <div class="webflow-style-input">
         <input
           class="email__input userinput"
           type="email"
           name="email"
+          formControlName="email"
           placeholder=" Please enter your Email"
           email
         />
-        <button type="submit">
-          <i class="material-symbols-outlined">done_all</i>
-        </button>
+        <i class="material-symbols-outlined">done_all</i>
       </div>
-      <!-- <p
-              class="help-block"
-              *ngIf="!signupForm.password.valid && signupForm.password.touched"
-            >
-              Min. 8 characters required.
-            </p> -->
+      <p
+        class="help-block"
+        *ngIf="!signupForm['password'].valid && signupForm['password'].touched"
+      >
+        *Min. 8 characters required.
+      </p>
 
       <div class="webflow-style-input">
         <input
           class="password__input userinput"
           name="password"
           type="password"
+          formControlName="password"
           placeholder="Please enter your Password"
           pattern=".{8,}"
         />
-        <button>
-          <i class="material-symbols-outlined">done_all</i>
-        </button>
+        <i class="material-symbols-outlined">done_all</i>
       </div>
 
       <div class="checkbox">
@@ -77,6 +74,7 @@
           type="checkbox"
           name="TC"
           id="TC"
+          formControlName="checkbox"
         />
         <p class="desc--middle" for="">
           I agree to the
@@ -86,7 +84,7 @@
       <!-- <p class="help-block-auth" *ngIf="isSubmitted && authsignError">
               {{ authsignMessage }}
             </p> -->
-      <button class="signupbtn" type="submit">
+      <button class="signupbtn" type="submit" (click)="onSignup()">
         <!-- [disabled]="!signupFormGroup.valid" -->
         Register
       </button>
