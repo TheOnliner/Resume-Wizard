@@ -41,13 +41,8 @@ button {
   overflow: hidden;
 }
 
-input.ng-invalid.ng-touched {
-  // border: solid 5px $color-white;
-}
-
 input.ng-valid.ng-touched ~ .material-symbols-outlined {
   color: $input-text-active;
-  // font-variation-settings: "FILL" 100, "wght" 500, "GRAD" 50, "opsz" 90;
 }
 
 .signupC {
@@ -196,11 +191,6 @@ input.ng-valid.ng-touched ~ .material-symbols-outlined {
       &:active:not([disabled]) {
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.05);
       }
-
-      // &:hover {
-      //   background-color: $color-secondary;
-      //   color: $color-white;
-      // }
     }
   }
 
