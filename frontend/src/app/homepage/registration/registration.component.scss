@@ -159,6 +159,15 @@ input.ng-valid.ng-touched ~ .material-symbols-outlined {
       font-size: 1.1rem;
     }
 
+    .help-block-auth {
+      color: rgb(238, 255, 0);
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.1rem;
+      padding-bottom: 1em;
+      display: block;
+      text-align: center;
+    }
+
     .signupbtn {
       background-color: $color-white;
       color: $color-primary;
@@ -171,13 +180,27 @@ input.ng-valid.ng-touched ~ .material-symbols-outlined {
       display: block;
       margin: auto auto;
       margin-bottom: 2em;
-      cursor: pointer;
       transition: all 0.2s;
 
-      &:hover {
+      &:disabled {
+        background-color: $color-grey-dark;
+        color: $color-grey-light-2;
+        box-shadow: 0 0.8rem 2rem rgba($color-black, 0);
+      }
+      &:hover:not([disabled]) {
         background-color: $color-secondary;
         color: $color-white;
+        cursor: pointer;
       }
+
+      &:active:not([disabled]) {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.05);
+      }
+
+      // &:hover {
+      //   background-color: $color-secondary;
+      //   color: $color-white;
+      // }
     }
   }
 

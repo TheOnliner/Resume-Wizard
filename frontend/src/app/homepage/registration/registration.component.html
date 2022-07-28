@@ -81,11 +81,15 @@
           <span><a href=""> Terms & Conditions</a></span>
         </p>
       </div>
-      <!-- <p class="help-block-auth" *ngIf="isSubmitted && authsignError">
-              {{ authsignMessage }}
-            </p> -->
-      <button class="signupbtn" type="submit" (click)="onSignup()">
-        <!-- [disabled]="!signupFormGroup.valid" -->
+      <p class="help-block-auth" *ngIf="isSubmitted && authsignError">
+        {{ authsignMessage }}
+      </p>
+      <button
+        class="signupbtn"
+        type="submit"
+        (click)="onSignup()"
+        [disabled]="!signupFormGroup.valid"
+      >
         Register
       </button>
     </form>
