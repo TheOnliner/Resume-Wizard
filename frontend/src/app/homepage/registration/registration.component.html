@@ -1,0 +1,102 @@
+<p-dialog
+  [(visible)]="displayModal"
+  [modal]="true"
+  [style]="{ width: '40vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <div class="signupC">
+    <div class="signupC__title">
+      <div class="heading">ResumeWizard</div>
+      <div class="desc--1">
+        Getting started is quick and simple, <br />
+        just fill out the info below!
+      </div>
+    </div>
+
+    <form class="signupC__form" [formGroup]="signupFormGroup">
+      <p
+        class="help-block"
+        *ngIf="!signupForm['name'].valid && signupForm['name'].touched"
+      >
+        *This field cannot be empty & numbers are not allowed
+      </p>
+      <div class="webflow-style-input">
+        <input
+          class="username__input userinput"
+          type="text"
+          name="name"
+          formControlName="name"
+          placeholder="What's your Name?"
+          pattern="[a-zA-Z ]*"
+        />
+        <i class="material-symbols-outlined">done_all</i>
+      </div>
+      <p
+        class="help-block"
+        *ngIf="!signupForm['email'].valid && signupForm['email'].touched"
+      >
+        *Please enter a valid Email-Address
+      </p>
+      <div class="webflow-style-input">
+        <input
+          class="email__input userinput"
+          type="email"
+          name="email"
+          formControlName="email"
+          placeholder=" Please enter your Email"
+          email
+        />
+        <i class="material-symbols-outlined">done_all</i>
+      </div>
+      <p
+        class="help-block"
+        *ngIf="!signupForm['password'].valid && signupForm['password'].touched"
+      >
+        *Min. 8 characters required.
+      </p>
+
+      <div class="webflow-style-input">
+        <input
+          class="password__input userinput"
+          name="password"
+          type="password"
+          formControlName="password"
+          placeholder="Please enter your Password"
+          pattern=".{8,}"
+        />
+        <i class="material-symbols-outlined">done_all</i>
+      </div>
+
+      <div class="checkbox">
+        <input
+          class="checkbox__input userinput"
+          type="checkbox"
+          name="TC"
+          id="TC"
+          formControlName="checkbox"
+        />
+        <p class="desc--middle" for="">
+          I agree to the
+          <span><a href=""> Terms & Conditions</a></span>
+        </p>
+      </div>
+      <p class="help-block-auth" *ngIf="isSubmitted && authsignError">
+        {{ authsignMessage }}
+      </p>
+      <button
+        class="signupbtn"
+        type="submit"
+        (click)="onSignup()"
+        [disabled]="!signupFormGroup.valid"
+      >
+        Register
+      </button>
+    </form>
+    <div class="signupC__link">
+      Already have an account? Click
+      <span><a href="">here</a></span>
+      to login
+    </div>
+  </div>
+</p-dialog>
