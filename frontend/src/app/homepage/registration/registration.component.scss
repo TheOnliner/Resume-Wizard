@@ -1,0 +1,216 @@
+@import "../../../assets/variables.scss";
+// @import "../../../../node_modules/primeicons/primeicons.css";
+// @import "../../../../node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+// @import "../../../../node_modules/primeng/resources/primeng.min.css";
+
+a {
+  text-decoration: none;
+}
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+:host ::ng-deep .pi-times:before {
+  font-size: 1.5em;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  background-image: radial-gradient(
+    circle at 0% 0%,
+    #373b52,
+    #252736 51%,
+    #1d1e26
+  );
+  padding: 1rem;
+}
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background-image: radial-gradient(
+    circle at 0% 0%,
+    #373b52,
+    #252736 51%,
+    #1d1e26
+  );
+  overflow: hidden;
+}
+
+input.ng-valid.ng-touched ~ .material-symbols-outlined {
+  color: $input-text-active;
+}
+
+.signupC {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+
+  &__title {
+    .heading {
+      color: $color-white;
+      font-family: "Pacifico", cursive;
+      font-weight: 100;
+      font-size: 3rem;
+      text-align: center;
+      cursor: pointer;
+    }
+    .desc--1 {
+      color: $color-white;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.2em;
+      margin-bottom: 5rem;
+    }
+  }
+  &__form {
+    .webflow-style-input {
+      position: relative;
+      display: flex;
+      width: 40rem;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      border-radius: 2px;
+      padding: 1rem 1.6rem;
+      background: $input-background;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 999;
+        height: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(
+          to right,
+          #b294ff,
+          #57e6e6,
+          #feffb8,
+          #57e6e6,
+          #b294ff,
+          #57e6e6
+        );
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite;
+      }
+    }
+
+    .webflow-style-input input {
+      flex-grow: 1;
+      color: $input-text-active;
+      font-size: 1.5rem;
+      &::-webkit-input-placeholder {
+        color: $input-text-inactive;
+      }
+
+      &.ng-valid.ng-touched ~ .material-symbols-outlined {
+        color: $input-text-active;
+        font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+      }
+    }
+
+    .material-symbols-outlined {
+      transition: color 0.25s;
+      font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+      &:hover {
+        color: $input-text-active;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 2em;
+
+      .desc--middle {
+        color: $color-white;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+
+        a {
+          text-decoration: underline;
+          color: $color-secondary;
+        }
+      }
+    }
+
+    .help-block {
+      color: rgb(238, 255, 0);
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .help-block-auth {
+      color: rgb(238, 255, 0);
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.1rem;
+      padding-bottom: 1em;
+      display: block;
+      text-align: center;
+    }
+
+    .signupbtn {
+      background-color: $color-white;
+      color: $color-primary;
+      border-radius: 3px;
+      padding: 0.8em 8em;
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      margin: auto auto;
+      margin-bottom: 2em;
+      transition: all 0.2s;
+
+      &:disabled {
+        background-color: $color-grey-dark;
+        color: $color-grey-light-2;
+        box-shadow: 0 0.8rem 2rem rgba($color-black, 0);
+      }
+      &:hover:not([disabled]) {
+        background-color: $color-secondary;
+        color: $color-white;
+        cursor: pointer;
+      }
+
+      &:active:not([disabled]) {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.05);
+      }
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+
+    a {
+      text-decoration: underline;
+      color: $color-secondary;
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

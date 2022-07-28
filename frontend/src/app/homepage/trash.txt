@@ -1,0 +1,88 @@
+<div class="signupC">
+  <div class="signupC__title">
+    <div class="heading">Let's Sign Up</div>
+    <div class="desc--top">
+      Getting started is quick and simple, just fill out the info below!
+    </div>
+  </div>
+
+  <form class="signupC__form">
+    <!-- <p
+      class="help-block"
+      *ngIf="!signupForm.name.valid && signupForm.name.touched"
+    >
+      This field cannot be empty & numbers are not allowed
+    </p> -->
+    <div class="username">
+      <input
+        class="username__input userinput"
+        type="text"
+        formControlName="name"
+        name="name"
+        placeholder="Full Name"
+        pattern="[a-zA-Z ]*"
+      />
+      <span class="material-symbols-outlined"> done_all </span>
+    </div>
+    <!-- <p
+      class="help-block"
+      *ngIf="!signupForm.email.valid && signupForm.email.touched"
+    >
+      Please enter a valid Email-Address
+    </p> -->
+    <div class="email">
+      <input
+        class="email__input userinput"
+        type="email"
+        name="email"
+        formControlName="email"
+        placeholder="Email Address"
+        email
+      />
+      <span class="material-symbols-outlined"> done_all </span>
+    </div>
+    <!-- <p
+      class="help-block"
+      *ngIf="!signupForm.password.valid && signupForm.password.touched"
+    >
+      Min. 8 characters required.
+    </p> -->
+    <div class="password">
+      <input
+        class="password__input userinput"
+        name="password"
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+        pattern=".{8,}"
+      />
+      <span class="material-symbols-outlined"> done_all </span>
+    </div>
+
+    <div class="checkbox">
+      <input
+        class="checkbox__input userinput"
+        type="checkbox"
+        name="TC"
+        id="TC"
+      />
+      <p class="desc--middle" for="">
+        I agree to
+        <span><a href="">Terms & Conditions</a></span>
+      </p>
+    </div>
+    <!-- <p class="help-block-auth" *ngIf="isSubmitted && authsignError">
+      {{ authsignMessage }}
+    </p> -->
+    <button class="signupbtn" type="submit">
+      <!-- [disabled]="!signupFormGroup.valid" -->
+      Register
+    </button>
+  </form>
+  <div class="signupC__link">
+    Already have an account? Click
+    <span><a href="">here</a></span>
+    to login
+  </div>
+</div>
+
