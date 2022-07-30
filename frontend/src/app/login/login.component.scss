@@ -1,17 +1,221 @@
 @import "../../assets/variables.scss";
 
-.loginC {
-  height: 15rem;
-  width: 30rem;
-  background-color: $color-white;
-  .loginC--title {
-    color: $color-primary;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+.container {
+  background-color: #edf2f0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110em;
+    height: 50em;
+
+    .left-side {
+      background-color: $neu-1;
+      box-shadow: 4px 4px 10px $neu-2, -4px -4px 10px $white;
+      height: 100%;
+      width: 65%;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &__title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .heading {
+          font-family: "Kanit", sans-serif;
+          color: $color-black;
+          font-size: 4rem;
+          font-weight: 700;
+          margin-bottom: 0.3em;
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          font-size: 1.5rem;
+          gap: 0.5em;
+          color: $color-grey-dark-3-hover;
+          margin-bottom: 1em;
+
+          .icon {
+            padding: 0 0.4em;
+            text-align: center;
+            border: solid 1px $color-grey-dark-3-hover;
+            border-radius: 50%;
+            transition: all 0.2s;
+
+            &:hover {
+              color: $button-blue;
+              cursor: pointer;
+              border: solid 1px $button-blue;
+            }
+          }
+        }
+
+        .desc--top {
+          font-family: "Quicksand", sans-serif;
+          color: $color-grey-dark-2;
+          font-size: 1.3rem;
+          font-weight: 500;
+          margin-bottom: 0.5em;
+        }
+      }
+      &__form {
+        width: 45%;
+        input {
+          border-style: none;
+          border-radius: 8px;
+          font-family: "Kanit", sans-serif;
+          font-size: 1.2rem;
+          color: $color-black;
+          padding: 0.8em 1em;
+          margin-bottom: 0.5em;
+          width: 100%;
+          background-color: $neu-1;
+          box-shadow: inset 2px 2px 4px $neu-2, inset -2px -2px 4px $white;
+
+          &:focus {
+            box-shadow: inset 4px 4px 4px $neu-2, inset -4px -4px 4px $white;
+          }
+        }
+        ::placeholder {
+          font-family: "Kanit", sans-serif;
+          font-size: 1.2rem;
+          color: $input-text-inactive;
+          font-weight: 500;
+        }
+
+        .help-block {
+          color: black;
+          font-family: "Quicksand", sans-serif;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+
+        .help-block-auth {
+          color: black;
+          font-family: "Quicksand", sans-serif;
+          font-size: 1.1rem;
+          padding-bottom: 1em;
+          display: block;
+          text-align: center;
+          font-weight: 500;
+        }
+
+        .link {
+          a {
+            text-decoration: underline;
+            margin-top: 2.5rem;
+            font-family: "Kanit", sans-serif;
+            font-size: 1.5rem;
+            color: $color-grey-dark-2;
+            display: block;
+            text-align: center;
+          }
+        }
+
+        .btnC {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 5em;
+
+          .loginbtn {
+            padding: 1rem 4rem;
+            border: none;
+            outline: none;
+            background: none;
+            background-color: $button-blue;
+            color: $white;
+            box-shadow: 8px 8px 16px $neu-2, -8px -8px 16px $white;
+            text-transform: uppercase;
+            font-family: "Kanit", sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.2s;
+
+            &:disabled {
+              visibility: hidden;
+            }
+            &:hover:not([disabled]) {
+              background-color: $color-secondary;
+              color: $color-white;
+              cursor: pointer;
+            }
+
+            &:active:not([disabled]) {
+              box-shadow: 0 0.5rem 1rem rgba($color-black, 0.05);
+            }
+          }
+        }
+      }
+    }
+    .right-side {
+      background-color: $neu-1;
+      box-shadow: 4px 4px 10px $neu-2, -4px -4px 10px $white;
+      height: 100%;
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      position: relative;
+      overflow: hidden;
+
+      &__circle {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: $neu-1;
+        box-shadow: inset 8px 8px 12px $neu-2, inset -8px -8px 12px $white;
+        bottom: -70%;
+        left: 10%;
+      }
+      &__circle--2 {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: $neu-1;
+        box-shadow: inset 8px 8px 12px $neu-2, inset -8px -8px 12px $white;
+        bottom: 80%;
+        left: 0%;
+      }
+
+      .title {
+        font-family: "Kanit", sans-serif;
+        color: $color-black;
+        font-size: 4rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .desc {
+        font-family: "Quicksand", sans-serif;
+        color: $color-grey-dark-2;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
   }
-  // .loginC--form {
-  // }
-  // .loginC--link {
-  // }
 }
