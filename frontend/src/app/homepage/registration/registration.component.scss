@@ -79,7 +79,12 @@ input.ng-valid.ng-touched ~ .material-symbols-outlined {
       margin-bottom: 1.5rem;
       border-radius: 2px;
       padding: 1rem 1.6rem;
-      background: $input-background;
+      background-image: radial-gradient(
+        circle at 0% 0%,
+        #373b52,
+        #252736 51%,
+        #1d1e26
+      );
 
       &:after {
         content: "";
@@ -109,9 +114,16 @@ input.ng-valid.ng-touched ~ .material-symbols-outlined {
     .webflow-style-input input {
       flex-grow: 1;
       color: $input-text-active;
+      background: none;
       font-size: 1.5rem;
       &::-webkit-input-placeholder {
         color: $input-text-inactive;
+        background-image: radial-gradient(
+          circle at 0% 0%,
+          #373b52,
+          #252736 51%,
+          #1d1e26
+        );
       }
 
       &.ng-valid.ng-touched ~ .material-symbols-outlined {

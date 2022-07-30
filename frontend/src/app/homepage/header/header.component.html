@@ -16,7 +16,9 @@
     <a class="nav__links__link">Contact Us</a>
   </div>
   <div class="nav__buttons">
-    <button class="btn loginbtn" (click)="loginClicked()">Login</button>
+    <button class="btn loginbtn" routerLinkActive="active" routerLink="/login">
+      Login
+    </button>
     <button class="btn signupbtn" (click)="signupClicked()">Signup</button>
   </div>
 </div>
