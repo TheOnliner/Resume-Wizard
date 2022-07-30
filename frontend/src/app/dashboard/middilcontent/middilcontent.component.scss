@@ -25,24 +25,28 @@
 }
 .card-body{
     color:blue;
-    background-color:rgb(166, 158, 183);
+    background-color:rgb(5, 68, 104);
 }
 .card-title{
     text-align: center;
     font-size: x-large;
+    color: white;
 }
 h1{
     margin-left: 10%;
-    color: blue;
+    color:white;
 }
 h2{ margin-left: 18%;
-    color: blue;
+    color: white;
     font-style: italic;
 }
     
 
 .body{ 
-    margin-top: 8%;
-     margin-left:25% ; 
+    margin-top: 5%;
+     margin-left:15% ; 
     
+}
+.card-text{
+    color: white;
 }
