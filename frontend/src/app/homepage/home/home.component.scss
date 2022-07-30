@@ -1,7 +1,6 @@
 @import "../../../assets/variables.scss";
 
 .section1 {
-  background-color: red;
   height: 100vh;
   .img {
     width: 100%;
@@ -32,7 +31,6 @@
     background: linear-gradient(to top, $neu-1, #c9e6ff);
   }
   .part2 {
-    // background: linear-gradient(to left, #ff7b00, #fca001);
     background: linear-gradient(to top, $neu-1, #c9e6ff);
   }
 }
