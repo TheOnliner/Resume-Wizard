@@ -19,6 +19,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './userDashboard/sidebar/sidebar/sidebar.component';
+import { UserNavbarComponent } from './userDashboard/userNavbar/user-navbar/user-navbar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SidebarComponent } from './userDashboard/sidebar/sidebar/sidebar.compon
     RegistrationComponent,
     LoginComponent,
     SidebarComponent,
+    UserNavbarComponent,
   ],
   imports: [
     BrowserModule,
