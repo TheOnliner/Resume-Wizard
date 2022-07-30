@@ -18,8 +18,14 @@ import { LoginComponent } from './login/login.component';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './userDashboard/sidebar/sidebar/sidebar.component';
-import { UserNavbarComponent } from './userDashboard/userNavbar/user-navbar/user-navbar.component';
+
+
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
+import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
+import { NavbarComponent } from './dashboard/navbar/navbar.component';
+import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +38,11 @@ import { UserNavbarComponent } from './userDashboard/userNavbar/user-navbar/user
     ContactComponent,
     RegistrationComponent,
     LoginComponent,
-    SidebarComponent,
-    UserNavbarComponent,
+    DashboardComponent,
+    RightsidebarComponent,
+    LeftsidebarComponent,
+    NavbarComponent,
+    MiddilcontentComponent,
   ],
   imports: [
     BrowserModule,
