@@ -18,7 +18,9 @@ import { LoginComponent } from './login/login.component';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './userDashboard/sidebar/sidebar/sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
+import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { SidebarComponent } from './userDashboard/sidebar/sidebar/sidebar.compon
     ContactComponent,
     RegistrationComponent,
     LoginComponent,
-    SidebarComponent,
+    DashboardComponent,
+    RightsidebarComponent,
+    LeftsidebarComponent,
   ],
   imports: [
     BrowserModule,
