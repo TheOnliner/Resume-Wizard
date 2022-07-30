@@ -1,12 +1,13 @@
 section {
-    margin-left: 100rem;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
-    background-color: #f1f4fa;
+    margin-top: -590px;
+    margin-left: 90rem;
+    // padding-top: 1rem;
+    // padding-bottom: 5rem;
+    background-color: rgb(5, 68, 104);
 }
 
 .container {
-    width: 30rem;
+    width: 50rem;
 }
 
 .wrap {
@@ -19,7 +20,7 @@ section {
 }
 
 .wrap:hover {
-    background: linear-gradient(135deg, #404d68 0%, #0a193b 100%);
+    background: linear-gradient(135deg, #404d68 0%,  #0a193b 100%);
     color: white;
 }
 
