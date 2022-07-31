@@ -3,6 +3,7 @@ const app = express();
 const morgan = require("morgan");
 require("dotenv/config");
 const errorHandler = require("./helpers/error-handler");
+const authJwt = require("./helpers/jwt");
 
 const mongoose = require("mongoose");
 const cors = require("cors");

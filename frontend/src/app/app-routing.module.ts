@@ -1,8 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './auth-guard.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
-const routes: Routes = [{ path: '', component: HomepageComponent }];
+const routes: Routes = [
+  {
+    path: '',
+    component: HomepageComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'admin', component: AdminComponent },
+    ],
+  },
+];
 
 @NgModule({
   imports: [
