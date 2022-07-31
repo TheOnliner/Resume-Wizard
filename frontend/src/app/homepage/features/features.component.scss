@@ -1,13 +1,13 @@
 @import "../../../assets/variables.scss";
 
-.container {
+.fcontainer {
   background: linear-gradient(to right, #350f96, #511bda, #350f96);
   display: flex;
   padding: 1em 1em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  height: 50em;
 
   &__heading {
     font-family: "Quicksand", sans-serif;
@@ -99,7 +99,7 @@
   align-items: center;
   justify-content: center;
   padding: 5em 8em;
-  height: 105vh;
+  height: 68em;
 
   &__images {
     background: linear-gradient(to bottom left, #350aa1, #6224ff);
@@ -114,7 +114,7 @@
     overflow: hidden;
 
     &__image {
-      height: 40vh;
+      height: 25em;
       margin-bottom: 13em;
       box-shadow: rgba(3, 3, 3, 0.397) 0px 8px 24px;
       animation: scrolling 35s linear infinite;

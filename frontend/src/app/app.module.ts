@@ -27,6 +27,7 @@ import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.com
 import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
+import { AdminComponent } from './admin/admin.component';
 
  
 
@@ -47,6 +48,7 @@ import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.
     LeftsidebarComponent,
     NavbarComponent,
     MiddilcontentComponent,
+    AdminComponent,
 
   
   ],
