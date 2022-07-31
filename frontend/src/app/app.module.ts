@@ -19,6 +19,18 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
+import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
+import { NavbarComponent } from './dashboard/navbar/navbar.component';
+import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
+
+ 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +41,14 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     RegistrationComponent,
     LoginComponent,
+
+    DashboardComponent,
+    RightsidebarComponent,
+    LeftsidebarComponent,
+    NavbarComponent,
+    MiddilcontentComponent,
+
+  
   ],
   imports: [
     BrowserModule,
