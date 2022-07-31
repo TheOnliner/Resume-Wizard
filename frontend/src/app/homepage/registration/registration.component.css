@@ -1,0 +1,234 @@
+a {
+  text-decoration: none;
+}
+
+input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+:host ::ng-deep .pi-times:before {
+  font-size: 1.5em;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+  padding: 1rem;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-content {
+  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+  overflow: hidden;
+}
+
+input.ng-valid.ng-touched ~ .material-symbols-outlined {
+  color: #bfd2ff;
+}
+
+.signupC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+.signupC__title .heading {
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.signupC__title .desc--1 {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.2em;
+  margin-bottom: 5rem;
+}
+
+.signupC__form .webflow-style-input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  padding: 1rem 1.6rem;
+  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+}
+
+.signupC__form .webflow-style-input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: -webkit-gradient(linear, left top, right top, from(#b294ff), color-stop(#57e6e6), color-stop(#feffb8), color-stop(#57e6e6), color-stop(#b294ff), to(#57e6e6));
+  background: linear-gradient(to right, #b294ff, #57e6e6, #feffb8, #57e6e6, #b294ff, #57e6e6);
+  background-size: 500% auto;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+
+.signupC__form .webflow-style-input input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #bfd2ff;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.signupC__form .webflow-style-input input::-webkit-input-placeholder {
+  color: #7881a1;
+  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+}
+
+.signupC__form .webflow-style-input input.ng-valid.ng-touched ~ .material-symbols-outlined {
+  color: #bfd2ff;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
+
+.signupC__form .material-symbols-outlined {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
+
+.signupC__form .material-symbols-outlined:hover {
+  color: #bfd2ff;
+}
+
+.signupC__form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.signupC__form .checkbox .desc--middle {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.signupC__form .checkbox .desc--middle a {
+  text-decoration: underline;
+  color: #00bbd8;
+}
+
+.signupC__form .help-block {
+  color: #eeff00;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+}
+
+.signupC__form .help-block-auth {
+  color: #eeff00;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  padding-bottom: 1em;
+  display: block;
+  text-align: center;
+}
+
+.signupC__form .signupbtn {
+  background-color: #fff;
+  color: #4314b6;
+  border-radius: 3px;
+  padding: 0.8em 8em;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin: auto auto;
+  margin-bottom: 2em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.signupC__form .signupbtn:disabled {
+  background-color: #777;
+  color: #eee;
+  -webkit-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0);
+          box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0);
+}
+
+.signupC__form .signupbtn:hover:not([disabled]) {
+  background-color: #00bbd8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signupC__form .signupbtn:active:not([disabled]) {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.signupC__link {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+}
+
+.signupC__link a {
+  text-decoration: underline;
+  color: #00bbd8;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+/*# sourceMappingURL=registration.component.css.map */

@@ -6,9 +6,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
+  { path: '', component: HomepageComponent },
   {
     path: '',
-    component: HomepageComponent,
     canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent },

@@ -12,18 +12,22 @@ import { LocalstorageService } from './localstorage.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(
-    private localStorageToken: LocalstorageService,
-    private router: Router
+    private router: Router,
+    private localStorageToken: LocalstorageService
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const token = this.localStorageToken.getToken();
 
-    // if (token) {
-    //   return true;
-    // }
+    if (token) {
+      const tokenDecode = JSON.parse(atob(token.split('.')[1]));
+      if (!this._tokenExpired(tokenDecode.exp)) return true;
+    }
 
-    // this.router.navigate(['/login']);
+    this.router.navigate(['/login']);
     return false;
+  }
+  private _tokenExpired(expiration: any): boolean {
+    return Math.floor(new Date().getTime() / 1000) >= expiration;
   }
 }
