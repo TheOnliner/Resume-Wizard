@@ -10,17 +10,14 @@ import { HeaderComponent } from './homepage/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './homepage/features/features.component';
 import { HomeComponent } from './homepage/home/home.component';
+import { UsersModule } from './users.module';
 
 import { ContactComponent } from './homepage/contact/contact.component';
 import { RegistrationComponent } from './homepage/registration/registration.component';
-import { LoginComponent } from './login/login.component';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
@@ -28,9 +25,6 @@ import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.compon
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
-
- 
-
 
 @NgModule({
   declarations: [
@@ -41,16 +35,12 @@ import { AdminComponent } from './admin/admin.component';
     HomeComponent,
     ContactComponent,
     RegistrationComponent,
-    LoginComponent,
-
     DashboardComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
     NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
-
-  
   ],
   imports: [
     BrowserModule,
@@ -61,6 +51,7 @@ import { AdminComponent } from './admin/admin.component';
     FormsModule,
     ReactiveFormsModule,
     DialogModule,
+    UsersModule,
     ButtonModule,
   ],
   providers: [],
