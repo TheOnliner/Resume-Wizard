@@ -39,13 +39,15 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign(
       {
         userId: user.id,
-        // isAdmin: user.isAdmin,
+        isAdmin: user.isAdmin,
       },
       secret,
       { expiresIn: "1d" }
     );
 
-    res.status(200).send({ email: user.email, token: token });
+    res
+      .status(200)
+      .send({ email: user.email, token: token, isAdmin: user.isAdmin });
   } else {
     return res.status(400).send("password is wrong");
   }

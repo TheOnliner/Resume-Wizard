@@ -9,6 +9,7 @@ import {
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private auth: AuthService,
-    private localstorageService: LocalstorageService
+    private localstorageService: LocalstorageService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -59,6 +61,13 @@ export class LoginComponent implements OnInit {
       (user) => {
         this.authError = false;
         this.localstorageService.setToken(user.token);
+        if (user.isAdmin) {
+          console.log('Admin accessed');
+          this.router.navigate(['/admin']);
+        } else {
+          console.log('Admin access denied');
+          this.router.navigate(['/dashboard']);
+        }
       },
       (error: HttpErrorResponse) => {
         console.log(error);
