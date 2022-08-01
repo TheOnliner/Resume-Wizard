@@ -24,6 +24,7 @@ import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.compon
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AdminComponent } from './admin/admin.component';
     ContactComponent,
     RegistrationComponent,
     DashboardComponent,
+    LoginComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
     NavbarComponent,
