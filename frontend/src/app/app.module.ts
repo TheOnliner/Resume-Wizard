@@ -10,7 +10,6 @@ import { HeaderComponent } from './homepage/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeaturesComponent } from './homepage/features/features.component';
 import { HomeComponent } from './homepage/home/home.component';
-import { UsersModule } from './users.module';
 
 import { ContactComponent } from './homepage/contact/contact.component';
 import { RegistrationComponent } from './homepage/registration/registration.component';
@@ -51,7 +50,7 @@ import { AdminComponent } from './admin/admin.component';
     FormsModule,
     ReactiveFormsModule,
     DialogModule,
-    UsersModule,
+    FontAwesomeModule,
     ButtonModule,
   ],
   providers: [],
