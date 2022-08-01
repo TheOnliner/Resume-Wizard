@@ -24,6 +24,7 @@ import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.compon
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
+import { UsersModule } from './users.module';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AdminComponent } from './admin/admin.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    UsersModule,
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,

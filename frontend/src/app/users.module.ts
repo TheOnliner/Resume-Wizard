@@ -4,19 +4,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomepageComponent } from './homepage/homepage.component';
 
-// const routes: Routes = [
-//   {
-//     path: 'login',
-//     component: LoginComponent,
-//   },
-// ];
+
+const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+];
 
 @NgModule({
   imports: [
     CommonModule,
-    // RouterModule.forChild(routes),
+    RouterModule.forChild(routes),
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
