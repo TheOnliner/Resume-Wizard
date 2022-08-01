@@ -1,6 +1,14 @@
 @import "../../../assets/variables.scss";
 
 
+
+
+.active{
+  background-color: $color-navy-blue-hover;
+  border-top: solid 1.5px $color-white;
+}
+
+
 .sidebarcontainer{
   display: flex;
   width: 28em;
@@ -34,7 +42,7 @@
       flex-direction: column;
       font-size: 2rem;
       height: 82%;
-      margin-bottom: 15px;
+
   
       li{
       cursor: pointer;
@@ -47,17 +55,12 @@
       padding-left: 10px;
       border-top: solid 1.5px $color-navy-blue;
       border-bottom: solid 1px $color-white;
-      transform: translateY(-2px);
       transition: all 0.2s;
   
       &:hover{
         background-color: $color-navy-blue-hover;
         border-top: solid 1.5px $color-white;
 
-      }
-
-      &:active{
-        transform: translateY(0px);
       }
   
       a{
