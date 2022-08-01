@@ -26,6 +26,9 @@ import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.
 import { AdminComponent } from './admin/admin.component';
 import { UsersModule } from './users.module';
 import { LoginComponent } from './login/login.component';
+import { SidenavComponent } from './admin/sidenav/sidenav.component';
+import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
+import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
+    SidenavComponent,
+    UserprofilesComponent,
+    AdminhomeComponent,
   ],
   imports: [
     BrowserModule,
