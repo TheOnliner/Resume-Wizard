@@ -29,4 +29,18 @@ router.get("/", async (req, res) => {
   res.send(userList);
 });
 
+router.post("/login", async (req, res) => {
+  const user = await User.findOne({ email: req.body.email });
+  const secret = process.env.secret;
+  if (!user) return res.status(400).send("The user not found");
+
+  if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+    res
+      .status(200)
+      .send({ email: user.email, token: token, isAdmin: user.isAdmin });
+  } else {
+    return res.status(400).send("password is wrong");
+  }
+});
+
 module.exports = router;

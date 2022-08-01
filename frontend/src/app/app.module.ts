@@ -13,23 +13,18 @@ import { HomeComponent } from './homepage/home/home.component';
 
 import { ContactComponent } from './homepage/contact/contact.component';
 import { RegistrationComponent } from './homepage/registration/registration.component';
-import { LoginComponent } from './login/login.component';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
 import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
-
- 
-
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,18 +33,15 @@ import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.
     HeaderComponent,
     FeaturesComponent,
     HomeComponent,
-  
     ContactComponent,
     RegistrationComponent,
-    LoginComponent,
-
     DashboardComponent,
+    LoginComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
     NavbarComponent,
     MiddilcontentComponent,
-
-  
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +52,7 @@ import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.
     FormsModule,
     ReactiveFormsModule,
     DialogModule,
+    FontAwesomeModule,
     ButtonModule,
   ],
   providers: [],

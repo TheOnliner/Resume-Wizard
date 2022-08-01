@@ -4,13 +4,21 @@
     <h3>ResumeWiz</h3>
   </div>
   <div class="nav__links">
-    <a class="nav__links__link">Home</a>
-    <a class="nav__links__link">Features</a>
+    <a
+      class="nav__links__link"
+      routerLinkActive="active"
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a class="nav__links__link" routerLink="." fragment="features">Features</a>
     <a class="nav__links__link">Testimonials</a>
-    <a class="nav__links__link">Contact Us</a>
+    <a class="nav__links__link" routerLink="." fragment="contact">Contact Us</a>
   </div>
   <div class="nav__buttons">
-    <button class="btn loginbtn">Login</button>
+    <button class="btn loginbtn" routerLinkActive="active" routerLink="/login">
+      Login
+    </button>
     <button class="btn signupbtn" (click)="signupClicked()">Signup</button>
   </div>
 </div>

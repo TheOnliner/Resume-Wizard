@@ -1,0 +1,59 @@
+.row {
+  margin-left: 2%;
+}
+
+.card {
+  height: 250px;
+}
+
+.btn {
+  width: auto;
+  height: 15%;
+  margin-top: 12px;
+}
+
+#space {
+  margin-left: 2%;
+}
+
+#space1 {
+  margin-left: 38%;
+}
+
+#img {
+  margin-top: 0em;
+  margin-left: 43%;
+  height: 79px;
+}
+
+.card-body {
+  color: blue;
+  background-color: #054468;
+}
+
+.card-title {
+  text-align: center;
+  font-size: x-large;
+  color: white;
+}
+
+h1 {
+  margin-left: 10%;
+  color: white;
+}
+
+h2 {
+  margin-left: 18%;
+  color: white;
+  font-style: italic;
+}
+
+.body {
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+.card-text {
+  color: white;
+}
+/*# sourceMappingURL=middilcontent.component.css.map */
