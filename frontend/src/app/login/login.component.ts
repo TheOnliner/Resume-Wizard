@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/auth.service';
-import { LocalstorageService } from '../localstorage.service';
 
 import {
   faFacebook,
@@ -26,12 +24,7 @@ export class LoginComponent implements OnInit {
   authError = false;
   authMessage = '*Email or password is incorrect, Please try again';
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private auth: AuthService,
-    private localstorageService: LocalstorageService,
-    private router: Router
-  ) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this._initLoginForm();
@@ -57,25 +50,5 @@ export class LoginComponent implements OnInit {
       email: this.loginForm?.['email'].value,
       password: this.loginForm?.['password'].value,
     };
-    this.auth.login(loginData.email, loginData.password).subscribe(
-      (user) => {
-        this.authError = false;
-        this.localstorageService.setToken(user.token);
-        if (user.isAdmin) {
-          console.log('Admin accessed');
-          this.router.navigate(['/admin']);
-        } else {
-          console.log('Admin access denied');
-          this.router.navigate(['/dashboard']);
-        }
-      },
-      (error: HttpErrorResponse) => {
-        console.log(error);
-        this.authError = true;
-        if (error.status !== 400) {
-          this.authMessage = 'Error in the server, Please try again later';
-        }
-      }
-    );
   }
 }
