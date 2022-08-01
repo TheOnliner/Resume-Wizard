@@ -25,6 +25,7 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
 import { UsersModule } from './users.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { UsersModule } from './users.module';
     FeaturesComponent,
     HomeComponent,
     ContactComponent,
+    LoginComponent,
     RegistrationComponent,
     DashboardComponent,
     RightsidebarComponent,

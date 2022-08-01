@@ -12,7 +12,7 @@ export class LocalstorageService {
     localStorage.setItem(TOKEN, data);
   }
   getToken(): string {
-    return JSON.parse(localStorage.getItem(TOKEN)!);
+    return (localStorage.getItem(TOKEN)!);
   }
   removeToken() {
     localStorage.removeItem(TOKEN);
