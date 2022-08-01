@@ -1,0 +1,113 @@
+@import "../../../assets/variables.scss";
+
+
+.sidebarcontainer{
+  display: flex;
+  width: 28em;
+  flex-direction: column;
+  background-color: 
+  $color-navy-blue;
+  height: 64.9em;
+
+  h3{
+    align-self: flex-start;
+    justify-self: flex-start;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-family: "Pacifico", cursive;
+    color: $color-white;
+    font-size: 2.5rem;
+    transition: all 0.5s;
+      &:hover{
+        color:$color-yellow;
+        cursor: pointer;
+      }
+    }
+    .links{
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: 'Kanit', sans-serif;
+      flex-direction: column;
+      font-size: 2rem;
+      height: 82%;
+      margin-bottom: 15px;
+  
+      li{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 20px;
+      height: 15%;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-top: solid 1.5px $color-navy-blue;
+      border-bottom: solid 1px $color-white;
+      transform: translateY(-2px);
+      transition: all 0.2s;
+  
+      &:hover{
+        background-color: $color-navy-blue-hover;
+        border-top: solid 1.5px $color-white;
+
+      }
+
+      &:active{
+        transform: translateY(0px);
+      }
+  
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.1em;
+        color: $color-white;
+  
+        .pi{
+          color: $color-white;
+          padding-right: 15px;
+          font-size: 2.5rem;
+        }
+  }
+        
+  }
+    }
+    .button{
+      background-color: $color-white;
+      justify-self: center;
+      align-self: center;
+      padding: 0.8em 0em;
+      text-align: center;
+      width: 90%;
+      border-radius: 10px;
+      transition: all 0.2s;
+      transform: translateY(-3px);
+      &:hover {
+        background-color: $color-yellow;
+        color: $color-black;
+        cursor: pointer;
+  
+      }
+      &:hover > a {
+        color: $color-black;
+      }
+  &:active{
+    transform: translateY(0px);
+  }
+      a{
+        color: $color-black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 800;
+      }
+    } 
+  }
+
+  
+  

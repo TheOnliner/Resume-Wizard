@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-
+  faHatWizard=faHatWizard;
   constructor() { }
 
   ngOnInit(): void {
