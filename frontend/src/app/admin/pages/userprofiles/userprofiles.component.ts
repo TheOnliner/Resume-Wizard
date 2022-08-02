@@ -7,43 +7,53 @@ import { timer } from 'rxjs';
 @Component({
   selector: 'app-userprofiles',
   templateUrl: './userprofiles.component.html',
-  styleUrls: ['./userprofiles.component.scss']
+  styleUrls: ['./userprofiles.component.scss'],
 })
 export class UserprofilesComponent implements OnInit {
-users: User[] = [];
+  users: User[] = [];
 
-  constructor(private usersService: UsersService,private messageService: MessageService,private confirmationService: ConfirmationService) { }
+  constructor(
+    private usersService: UsersService,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService
+  ) {}
 
   ngOnInit(): void {
     this._getUsers();
   }
 
-  deleteUser(userid:string){
+  deleteUser(userid: string) {
     this.confirmationService.confirm({
       message: 'Are you sure that you want to delete the user?',
       header: 'Delete User',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.usersService.deleteUser(userid).subscribe(res=>{
-          this._getUsers();
-          this.messageService.add({severity:'success', summary:'Success', detail:'The selected user has been deleted'})
-        },
-        (error)=>{
-          this.messageService.add({severity:'error', summary:'Error', detail:'Cannot delete user'});
-        });
-          // this.messageService.add({severity:'info', summary:'Confirmed', detail:'You have accepted'});
+        this.usersService.deleteUser(userid).subscribe(
+          (res) => {
+            this._getUsers();
+            this.messageService.add({
+              severity: 'success',
+              summary: 'Success',
+              detail: 'The selected user has been deleted',
+            });
+          },
+          (error) => {
+            this.messageService.add({
+              severity: 'error',
+              summary: 'Error',
+              detail: 'Cannot delete user',
+            });
+          }
+        );
+        // this.messageService.add({severity:'info', summary:'Confirmed', detail:'You have accepted'});
       },
-      reject: () => {
-      }
-  });
-  
-   }
-
-
-private _getUsers(){
-  this.usersService.getUsers().subscribe(userdata=>{
-    this.users = userdata;
-  })
-}
-
+      reject: () => {},
+    });
   }
+
+  private _getUsers() {
+    this.usersService.getUsers().subscribe((userdata) => {
+      this.users = userdata;
+    });
+  }
+}
