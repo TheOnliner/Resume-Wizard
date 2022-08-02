@@ -12,20 +12,21 @@
     </div>
     <div class="p-grid">
       <div class="p-col-12">
-        <p-table [value]="users" responsiveLayout="scroll" styleClass="p-datatable-gridlines">
+        <p-table [value]="users" responsiveLayout="scroll" styleClass="p-datatable-gridlines" selectionMode="single" [scrollable]="true" scrollHeight="400px">
           <ng-template pTemplate="header">
               <tr>
-                  <th>Name</th>
-                  <th>Email</th>
+                  <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
+                  <th pSortableColumn="email">Email <p-sortIcon field="price"></p-sortIcon> </th>
                   <th>Admin</th>
                   <th></th>
               </tr>
           </ng-template>
           <ng-template pTemplate="body" let-user>
-              <tr>
+              <tr  [pSelectableRow]="user">
                   <td>{{user.name}}</td>
                   <td>{{user.email}}</td>
-                  <td>{{user.isAdmin}}</td>
+                  <!-- <td>{{user.isAdmin}}</td> -->
+                  <td><i style="font-size: 1.5rem" class="pi" [ngClass]="user.isAdmin? 'pi-user': ''"></i></td>
                   <td>
                     <p-button (click)="updateUser(user.id)"   styleClass="p-button-success mr-4" label="Edit" icon="pi pi-pencil" routerLink="forms"></p-button>
                     <p-button (click)="deleteUser(user.id)" styleClass="p-button-danger" icon="pi pi-trash"></p-button> 
