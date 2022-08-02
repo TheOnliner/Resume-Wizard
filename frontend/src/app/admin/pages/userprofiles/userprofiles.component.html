@@ -5,46 +5,87 @@
       <div class="p-col-12">
         <p-toolbar>
           <div class="p-toolbar-group-left">
-            <p-button label="New" icon="pi pi-plus" routerLink="forms"></p-button>
+            <p-button
+              label="New"
+              icon="pi pi-plus"
+              routerLink="forms"
+            ></p-button>
           </div>
         </p-toolbar>
       </div>
     </div>
     <div class="p-grid">
       <div class="p-col-12">
-        <p-table #dt1 [value]="users" responsiveLayout="scroll" styleClass="p-datatable-gridlines" selectionMode="single" [scrollable]="true" scrollHeight="400px"
-        [globalFilterFields]="['name']">
+        <p-table
+          #dt1
+          [value]="users"
+          responsiveLayout="scroll"
+          styleClass="p-datatable-gridlines"
+          selectionMode="single"
+          [scrollable]="true"
+          scrollHeight="400px"
+          [globalFilterFields]="['name']"
+        >
           <ng-template pTemplate="caption">
             <div class="flex">
-                <span class="p-input-icon-right mr-auto">
-                    <i class="pi pi-search"></i>
-                    <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Search name" />
-                </span>
+              <span class="p-input-icon-right mr-auto">
+                <i class="pi pi-search"></i>
+                <input
+                  pInputText
+                  type="text"
+                  (input)="dt1.filterGlobal($event.target.value, 'contains')"
+                  placeholder="Search name"
+                />
+              </span>
             </div>
-        </ng-template>
+          </ng-template>
           <ng-template pTemplate="header">
-              <tr>
-                  <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
-                  <th pSortableColumn="email">Email <p-sortIcon field="price"></p-sortIcon> </th>
-                  <th>Admin</th>
-                  <th></th>
-              </tr>
+            <tr>
+              <th pSortableColumn="name">
+                Name<p-sortIcon field="name"></p-sortIcon>
+              </th>
+              <th pSortableColumn="email">
+                Email <p-sortIcon field="price"></p-sortIcon>
+              </th>
+              <th>Admin</th>
+              <th></th>
+            </tr>
           </ng-template>
           <ng-template pTemplate="body" let-user>
-              <tr  [pSelectableRow]="user">
-                  <td>{{user.name}}</td>
-                  <td>{{user.email}}</td>
-                  <!-- <td>{{user.isAdmin}}</td> -->
-                  <td><i style="font-size: 1.5rem" class="pi" [ngClass]="user.isAdmin? 'pi-user': ''"></i></td>
-                  <td>
-                    <p-button (click)="updateUser(user.id)"   styleClass="p-button-success mr-4" label="Edit" icon="pi pi-pencil" routerLink="forms"></p-button>
-                    <p-button (click)="deleteUser(user.id)" styleClass="p-button-danger" icon="pi pi-trash"></p-button> 
-                  </td>
-              </tr>
+            <tr [pSelectableRow]="user">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <!-- <td>{{user.isAdmin}}</td> -->
+              <td>
+                <i
+                  style="font-size: 1.5rem"
+                  class="pi"
+                  [ngClass]="user.isAdmin ? 'pi-user' : ''"
+                ></i>
+              </td>
+              <td>
+                <p-button
+                  (click)="updateUser(user.id)"
+                  styleClass="p-button-success mr-4"
+                  label="Edit"
+                  icon="pi pi-pencil"
+                  routerLink="forms"
+                ></p-button>
+                <p-button
+                  (click)="deleteUser(user.id)"
+                  styleClass="p-button-danger"
+                  icon="pi pi-trash"
+                ></p-button>
+              </td>
+            </tr>
           </ng-template>
-      </p-table>
+        </p-table>
       </div>
     </div>
   </p-card>
 </div>
-<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>
+<p-confirmDialog
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+  rejectButtonStyleClass="p-button-text"
+></p-confirmDialog>
