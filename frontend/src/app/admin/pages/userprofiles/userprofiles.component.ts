@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { User } from '../../../models/user';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-userprofiles',
@@ -10,12 +12,38 @@ import { User } from '../../../models/user';
 export class UserprofilesComponent implements OnInit {
 users: User[] = [];
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService,private messageService: MessageService,private confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {
-    this.usersService.getUsers().subscribe(userdata=>{
-this.users = userdata;
-    })
+    this._getUsers();
   }
 
+  deleteUser(userid:string){
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to delete the user?',
+      header: 'Delete User',
+      icon: 'pi pi-exclamation-triangle',
+      accept: () => {
+        this.usersService.deleteUser(userid).subscribe(res=>{
+          this._getUsers();
+          this.messageService.add({severity:'success', summary:'Success', detail:'The selected user has been deleted'})
+        },
+        (error)=>{
+          this.messageService.add({severity:'error', summary:'Error', detail:'Cannot delete user'});
+        });
+          // this.messageService.add({severity:'info', summary:'Confirmed', detail:'You have accepted'});
+      },
+      reject: () => {
+      }
+  });
+  
+   }
+
+
+private _getUsers(){
+  this.usersService.getUsers().subscribe(userdata=>{
+    this.users = userdata;
+  })
 }
+
+  }

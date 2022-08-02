@@ -37,13 +37,15 @@ import {TableModule} from 'primeng/table';
 import { UsersService } from './admin/services/users.service';
 import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
 import {ToastModule} from 'primeng/toast';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 const ADMIN_MODULE = [
   CardModule,
   ToolbarModule,
   TableModule,
   ToastModule,
+  ConfirmDialogModule
 ];
 
 @NgModule({
@@ -81,7 +83,7 @@ const ADMIN_MODULE = [
     ButtonModule,
     ...ADMIN_MODULE
   ],
-  providers: [UsersService,MessageService],
+  providers: [UsersService,MessageService,ConfirmationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
