@@ -1,12 +1,12 @@
 <p-toast></p-toast>
 <div class="userforms">
-  <p-card header="Add User" subheader="Create/Edit users here">
+  <p-card [header]="isEdit? 'Edit User' : 'Add User' " subheader="Create/Edit users here">
     <div class="p-grid mb-5">
       <div class="p-col-12">
         <p-toolbar>
           <div class="p-toolbar-group-right"></div>
           <div>
-            <p-button label="Confirm" icon="pi pi-check-circle" styleClass="p-button-primary mr-4" (click)="onSubmit()"></p-button>
+            <p-button [label]="isEdit? 'Update user' : 'Create User'" icon="pi pi-check-circle" styleClass="p-button-primary mr-4" (click)="onSubmit()"></p-button>
             <p-button 
             styleClass="p-button-secondary"  
             label="Cancel" icon="pi pi-times-circle"></p-button>

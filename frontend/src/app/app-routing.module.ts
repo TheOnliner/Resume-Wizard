@@ -19,7 +19,8 @@ const routes: Routes = [
     children:[
       {path: 'home', component: AdminhomeComponent},
       {path: 'userprofiles', component : UserprofilesComponent},
-      {path: 'userprofiles/forms', component : UserformsComponent}
+      {path: 'userprofiles/forms', component : UserformsComponent},
+      {path: 'userprofiles/forms/:id', component : UserformsComponent}
     ] },
     ],
   },

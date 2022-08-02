@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     passwordHash: bcrypt.hashSync(req.body.password, 10),
-    isAdmin:req.body.isAdmin,
+    isAdmin: req.body.isAdmin,
   });
   const usernew = await User.findOne({ email: req.body.email });
 
@@ -29,6 +29,33 @@ router.get("/", async (req, res) => {
     res.status(500).json({ success: false });
   }
   res.send(userList);
+});
+
+router.get("/:id", async (req, res) => {
+  const user = await User.findById(req.params.id).select("-passwordHash");
+
+  if (!user) {
+    res.status(500).json({ success: false });
+  }
+  res.status(200).send(user);
+});
+
+router.put("/:id", async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.params.id,
+    {
+      name: req.body.name,
+      email: req.body.email,
+      passwordHash: bcrypt.hashSync(req.body.password, 10),
+      isAdmin: req.body.isAdmin,
+    },
+    { new: true }
+  );
+
+  if (!user) {
+    res.status(500).json({ success: false });
+  }
+  res.status(200).send(user);
 });
 
 router.delete("/:id", (req, res) => {

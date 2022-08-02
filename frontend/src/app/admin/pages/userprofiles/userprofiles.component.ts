@@ -3,6 +3,7 @@ import { UsersService } from '../../services/users.service';
 import { User } from '../../../models/user';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userprofiles',
@@ -15,7 +16,8 @@ export class UserprofilesComponent implements OnInit {
   constructor(
     private usersService: UsersService,
     private messageService: MessageService,
-    private confirmationService: ConfirmationService
+    private confirmationService: ConfirmationService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -45,10 +47,14 @@ export class UserprofilesComponent implements OnInit {
             });
           }
         );
-        // this.messageService.add({severity:'info', summary:'Confirmed', detail:'You have accepted'});
       },
       reject: () => {},
     });
+  }
+
+  updateUser(userId:string){
+    this.router.navigateByUrl(`admin/userprofiles/forms/${userId}`)
+   
   }
 
   private _getUsers() {

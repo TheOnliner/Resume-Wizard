@@ -13,6 +13,17 @@ export class UsersService {
     return this.http.get<User[]>('http://localhost:3000/api/resumewiz/users');
   }
 
+  getUser(userId:string): Observable<User> {
+    return this.http.get<User>(`http://localhost:3000/api/resumewiz/users/${userId}`);
+  }
+
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(
+      `http://localhost:3000/api/resumewiz/users/${user.id}`,
+      user
+    );
+  }
+
   createUser(user: User): Observable<User> {
     return this.http.post<User>(
       'http://localhost:3000/api/resumewiz/users',
