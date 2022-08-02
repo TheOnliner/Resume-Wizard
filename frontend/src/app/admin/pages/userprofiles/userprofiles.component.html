@@ -12,7 +12,16 @@
     </div>
     <div class="p-grid">
       <div class="p-col-12">
-        <p-table [value]="users" responsiveLayout="scroll" styleClass="p-datatable-gridlines" selectionMode="single" [scrollable]="true" scrollHeight="400px">
+        <p-table #dt1 [value]="users" responsiveLayout="scroll" styleClass="p-datatable-gridlines" selectionMode="single" [scrollable]="true" scrollHeight="400px"
+        [globalFilterFields]="['name']">
+          <ng-template pTemplate="caption">
+            <div class="flex">
+                <span class="p-input-icon-right mr-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Search name" />
+                </span>
+            </div>
+        </ng-template>
           <ng-template pTemplate="header">
               <tr>
                   <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
