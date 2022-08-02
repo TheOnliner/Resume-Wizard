@@ -30,6 +30,20 @@ import { SidenavComponent } from './admin/sidenav/sidenav.component';
 import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
 
+
+import {CardModule} from 'primeng/card';
+import {ToolbarModule} from 'primeng/toolbar';
+import {TableModule} from 'primeng/table';
+
+const ADMIN_MODULE = [
+  CardModule,
+  ToolbarModule,
+  TableModule
+];
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +76,7 @@ import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component'
     DialogModule,
     FontAwesomeModule,
     ButtonModule,
+    ...ADMIN_MODULE
   ],
   providers: [],
   bootstrap: [AppComponent],
