@@ -34,6 +34,7 @@ import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component'
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TableModule} from 'primeng/table';
+import { UsersService } from './admin/services/users.service';
 
 const ADMIN_MODULE = [
   CardModule,
@@ -78,7 +79,7 @@ const ADMIN_MODULE = [
     ButtonModule,
     ...ADMIN_MODULE
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../../services/users.service';
+import { User } from '../../../models/user';
 
 @Component({
   selector: 'app-userprofiles',
@@ -6,29 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userprofiles.component.scss']
 })
 export class UserprofilesComponent implements OnInit {
+users: User[] = [];
 
-
-  users = [
-    {
-      name:"Abhi",
-      email: "jbabhi@gmail.com",
-      isAdmin: "No"
-    },
-    {
-      name:"Sasi",
-      email: "sasi@gmail.com",
-      isAdmin: "Yes"
-    },
-    {
-      name:"Vivek",
-      email: "vivek@gmail.com",
-      isAdmin: "No"
-    }
-  ]
-
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
+    this.usersService.getUsers().subscribe(userdata=>{
+this.users = userdata;
+    })
   }
 
 }
