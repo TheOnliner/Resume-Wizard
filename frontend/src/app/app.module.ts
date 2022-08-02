@@ -35,6 +35,7 @@ import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TableModule} from 'primeng/table';
 import { UsersService } from './admin/services/users.service';
+import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
 
 const ADMIN_MODULE = [
   CardModule,
@@ -64,6 +65,7 @@ const ADMIN_MODULE = [
     SidenavComponent,
     UserprofilesComponent,
     AdminhomeComponent,
+    UserformsComponent,
   ],
   imports: [
     BrowserModule,

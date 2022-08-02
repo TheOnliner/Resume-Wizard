@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
+import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
 import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
 import { AuthGuard } from './auth-guard.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: 'admin', component: AdminComponent,
     children:[
       {path: 'home', component: AdminhomeComponent},
-      {path: 'userprofiles', component : UserprofilesComponent}
+      {path: 'userprofiles', component : UserprofilesComponent},
+      {path: 'userprofiles/forms', component : UserformsComponent}
     ] },
     ],
   },
