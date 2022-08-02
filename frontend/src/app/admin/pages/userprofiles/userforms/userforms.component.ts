@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
+import { UsersService } from 'src/app/admin/services/users.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-userforms',
@@ -10,7 +13,7 @@ export class UserformsComponent implements OnInit {
   form: FormGroup;
   isSubmitted:boolean= false;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,private userservice:UsersService, private messageService: MessageService ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -26,11 +29,20 @@ export class UserformsComponent implements OnInit {
     if(this.form.invalid){
       return;    
     }
+    
+    const user: User ={
+      name: this.userForm?.['username'].value,
+      email: this.userForm?.['email'].value,
+      password: this.userForm?.['password'].value,
+      isAdmin: this.userForm?.['isadmin'].value,
 
-    console.log(this.form.controls?.['username'].value);
-    console.log(this.form.controls?.['email'].value);
-    console.log(this.form.controls?.['password'].value);
-    console.log(this.form.controls?.['isadmin'].value);
+    }
+    this.userservice.createUser(user).subscribe(res=>{
+      this.messageService.add({severity:'success', summary:'Success', detail:'User added'});
+    },
+    (error)=>{
+      this.messageService.add({severity:'error', summary:'Error', detail:'Cannot add user'});
+    });
   }
 
   get userForm(){

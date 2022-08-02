@@ -13,4 +13,8 @@ export class UsersService {
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>('http://localhost:3000/api/resumewiz/users')
   }
+
+  createUser(user:User): Observable<User>{
+    return this.http.post<User>('http://localhost:3000/api/resumewiz/users',user)
+  }
 }

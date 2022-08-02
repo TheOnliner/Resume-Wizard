@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div class="userforms">
   <p-card header="Add User" subheader="Create/Edit users here">
     <div class="p-grid mb-5">
@@ -24,7 +25,7 @@
                     <input formControlName="username"  id="username" type="text" 
                     pattern="[a-zA-Z ]*"
                     class="text-base text-white text-xl surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-                    <small *ngIf="!userForm['name']?.valid && isSubmitted" class="p-error text-lg">*Username required <br> (only letters allowed)</small>
+                    <small *ngIf="!userForm['username']?.valid && isSubmitted" class="p-error text-lg">*Username required <br> (only letters allowed)</small>
                 </div>
                 <div class="field col">
                     <label for="email" 
