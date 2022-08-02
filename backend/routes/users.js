@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     passwordHash: bcrypt.hashSync(req.body.password, 10),
+    isAdmin:req.body.isAdmin,
   });
   const usernew = await User.findOne({ email: req.body.email });
 
