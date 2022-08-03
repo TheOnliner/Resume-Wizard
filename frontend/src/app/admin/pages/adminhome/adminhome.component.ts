@@ -25,13 +25,13 @@ makePieChart(){
         {
             data: [this.adminlength, this.userlength],
             backgroundColor: [
-                "#FF6384",
-                "#36A2EB",
+                "#0d6efd",
+                "#fd7e14",
                 "#FFCE56"
             ],
             hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
+                "#0d6efd",
+                "#fd7e14",
                 "#FFCE56"
             ]
         }

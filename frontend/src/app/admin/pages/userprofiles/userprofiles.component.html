@@ -1,12 +1,13 @@
 <p-toast></p-toast>
 <div class="userprofile">
-  <p-card header="Users" subheader="List of all users">
+  <p-card styleClass="text-xl" header="Users" subheader="List of all users">
     <div class="p-grid">
       <div class="p-col-12">
         <p-toolbar>
           <div class="p-toolbar-group-left">
             <p-button
               label="New"
+              styleClass="text-xl"
               icon="pi pi-plus"
               routerLink="forms"
             ></p-button>
@@ -23,16 +24,17 @@
           styleClass="p-datatable-gridlines"
           selectionMode="single"
           [scrollable]="true"
-          scrollHeight="400px"
+          scrollHeight="500px"
           [globalFilterFields]="['name']"
         >
           <ng-template pTemplate="caption">
             <div class="flex">
-              <span class="p-input-icon-right mr-auto">
-                <i class="pi pi-search"></i>
+              <span class="p-input-icon-right mr-auto text-2xl">
+                <i class="pi pi-search text-xl"></i>
                 <input
                   pInputText
                   type="text"
+                  style="padding-left: 10px;"
                   (input)="dt1.filterGlobal($event.target.value, 'contains')"
                   placeholder="Search name"
                 />
@@ -41,40 +43,45 @@
           </ng-template>
           <ng-template pTemplate="header">
             <tr>
-              <th pSortableColumn="name">
+              <th pSortableColumn="name" style="height: 55px; font-size: 2rem; background-color: 
+              #008cff;">
                 Name<p-sortIcon field="name"></p-sortIcon>
               </th>
-              <th pSortableColumn="email">
+              <th pSortableColumn="email" style="height: 55px; font-size: 2rem; background-color: 
+              #00aeff;">
                 Email <p-sortIcon field="price"></p-sortIcon>
               </th>
-              <th>Admin</th>
-              <th></th>
+              <th style="height: 55px; font-size: 2rem; background-color: 
+              #008cff;">Admin</th>
+              <th style="background-color: 
+              #00aeff;"></th>
             </tr>
           </ng-template>
           <ng-template pTemplate="body" let-user>
             <tr [pSelectableRow]="user">
-              <td>{{ user.name }}</td>
-              <td>{{ user.email }}</td>
+              <td style="height:50px; font-size: 1.3rem;">{{ user.name }}</td>
+              <td style="height:50px; font-size: 1.3rem;">{{ user.email }}</td>
               <!-- <td>{{user.isAdmin}}</td> -->
-              <td>
+              <td style="height:50px;">
                 <i
-                  style="font-size: 1.5rem"
+                  style="font-size: 1.3rem"
                   class="pi"
                   [ngClass]="user.isAdmin ? 'pi-user' : ''"
                 ></i>
               </td>
-              <td>
+              <td style="height:50px; font-size: 1.3rem;">
                 <p-button
                   (click)="updateUser(user.id)"
-                  styleClass="p-button-success mr-4"
+                  styleClass="p-button-secondary mr-4 text-lg"
                   label="Edit"
                   icon="pi pi-pencil"
                   routerLink="forms"
                 ></p-button>
                 <p-button
                   (click)="deleteUser(user.id)"
-                  styleClass="p-button-danger"
-                  icon="pi pi-trash"
+                  styleClass="p-button-danger "
+                  label="Delete"
+                  icon="pi pi-trash text-2xl"
                 ></p-button>
               </td>
             </tr>
