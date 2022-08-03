@@ -39,13 +39,16 @@ import { UserformsComponent } from './admin/pages/userprofiles/userforms/userfor
 import {ToastModule} from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ChartModule} from 'primeng/chart';
+
 
 const ADMIN_MODULE = [
   CardModule,
   ToolbarModule,
   TableModule,
   ToastModule,
-  ConfirmDialogModule
+  ConfirmDialogModule,
+  ChartModule
 ];
 
 @NgModule({
