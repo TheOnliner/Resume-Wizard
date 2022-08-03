@@ -40,6 +40,7 @@ import {ToastModule} from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ChartModule} from 'primeng/chart';
+import {BadgeModule} from 'primeng/badge';
 
 
 const ADMIN_MODULE = [
@@ -48,7 +49,8 @@ const ADMIN_MODULE = [
   TableModule,
   ToastModule,
   ConfirmDialogModule,
-  ChartModule
+  ChartModule,
+  BadgeModule
 ];
 
 @NgModule({

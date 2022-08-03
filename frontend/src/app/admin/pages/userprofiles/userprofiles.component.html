@@ -66,16 +66,16 @@
                 ></i>
               </td>
               <td style="height:50px; font-size: 1.3rem;">
-                <p-button
+                <p-button 
                   (click)="updateUser(user.id)"
-                  styleClass="p-button-secondary mr-4 text-lg"
+                  styleClass="p-button-raised p-button-success mr-4 text-lg"
                   label="Edit"
                   icon="pi pi-pencil"
                   routerLink="forms"
                 ></p-button>
                 <p-button
                   (click)="deleteUser(user.id)"
-                  styleClass="p-button-danger "
+                  styleClass="p-button-danger p-button-raised"
                   label="Delete"
                   icon="pi pi-trash text-2xl"
                 ></p-button>
