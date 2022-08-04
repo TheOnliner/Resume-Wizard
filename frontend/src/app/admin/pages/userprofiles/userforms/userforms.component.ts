@@ -32,6 +32,9 @@ export class UserformsComponent implements OnInit {
     this._checkEdit();
   }
 
+  onCancel(){
+    this.location.back();
+  }
 
 
   onSubmit(){

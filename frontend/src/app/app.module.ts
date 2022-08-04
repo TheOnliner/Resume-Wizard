@@ -41,6 +41,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ChartModule} from 'primeng/chart';
 import {BadgeModule} from 'primeng/badge';
+import {ScrollTopModule} from 'primeng/scrolltop';
+import { FooterComponent } from './homepage/footer/footer.component';
 
 
 const ADMIN_MODULE = [
@@ -50,7 +52,8 @@ const ADMIN_MODULE = [
   ToastModule,
   ConfirmDialogModule,
   ChartModule,
-  BadgeModule
+  BadgeModule,
+  ScrollTopModule
 ];
 
 @NgModule({
@@ -73,6 +76,7 @@ const ADMIN_MODULE = [
     UserprofilesComponent,
     AdminhomeComponent,
     UserformsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

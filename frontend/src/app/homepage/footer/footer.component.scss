@@ -1,0 +1,43 @@
+@import "../../../assets/variables.scss";
+
+.linkcontainer {
+  background-color: $color-primary;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 200px;
+    min-width: 600px;
+  }
+}
+
+.items {
+  color: $color-secondary;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(12rem, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem;
+  font-size:1.4rem;
+
+}
+
+.item {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: $color-white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  grid-column: 1/-1;
+}
+
+.rtcle_desc {
+  grid-column: 1/-1;
+  text-align: center;
+}
