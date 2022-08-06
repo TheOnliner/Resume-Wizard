@@ -25,6 +25,10 @@ import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { Template3Component } from './dashboard/template3/template3.component';
+import { CareerObjectiveComponent } from './dashboard/career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/summary/summary.component';
+import { UserNavbarComponent } from './dashboard/user-navbar/user-navbar.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
+    Template3Component,
+    CareerObjectiveComponent,
+    SummaryComponent,
+    UserNavbarComponent,
   ],
   imports: [
     BrowserModule,
