@@ -31,13 +31,13 @@ import { SidenavComponent } from './admin/sidenav/sidenav.component';
 import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
 
-import { EducationComponent } from './dashboard/forms/education/education.component';
+import { EducationComponent } from './dashboard/forms/1.education/education.component';
 import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
 import { Template1Component } from './dashboard/templates/template1/template1.component';
-import { ResumecontactComponent } from './dashboard/forms/resumecontact/resumecontact.component';
+import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resumecontact.component';
 import { Template3Component } from './dashboard/templates/template3/template3.component';
-import { CareerObjectiveComponent } from './dashboard/forms/career-objective/career-objective.component';
-import { SummaryComponent } from './dashboard/forms/summary/summary.component';
+import { CareerObjectiveComponent } from './dashboard/forms/5.career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
 import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
 
 
@@ -55,6 +55,8 @@ import {ScrollTopModule} from 'primeng/scrolltop';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { TestimonialsComponent } from './homepage/testimonials/testimonials.component';
 import {CarouselModule} from 'primeng/carousel';
+import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
+import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 
 
 const ADMIN_MODULE = [
@@ -101,6 +103,8 @@ const ADMIN_MODULE = [
     CareerObjectiveComponent,
     SummaryComponent,
     UserNavbarComponent,
+    ExperienceComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

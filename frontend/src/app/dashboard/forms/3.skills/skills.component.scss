@@ -1,0 +1,48 @@
+.formcontainer {
+  background-color: #00d5af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55em;
+  width: 70%;
+  margin-top: 11%;
+  margin-right: 45%;
+  margin-bottom: 15%;
+}
+
+.skillcontainer {
+  margin-top: 11%;
+  margin-left: 0%;
+  height: 500px;
+  width: 70em;
+  padding: 20px;
+  background-color: rgb(237, 232, 246);
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.form-control {
+  height: 40px;
+  background-color: rgb(237, 232, 246);
+}
+
+.form-select {
+  background-color: rgb(237, 232, 246);
+  height: 40px;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+#next {
+  width: 20%;
+  height: 35px;
+  margin-left: 100%;
+}
+
+#back {
+  width: 20%;
+  height: 35px;
+  margin-left: 100%;
+}

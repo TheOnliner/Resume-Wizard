@@ -1,0 +1,36 @@
+.formcontainer {
+  display: flex;
+  background-color: #00d5af;
+  height: 90rem;
+  align-items: center;
+}
+
+.experiencecontainer {
+  margin-top: 11%;
+  margin-left: 20%;
+  width: 50%;
+  background-color: rgb(237, 232, 246);
+  height: 45%;
+  text-align: center;
+}
+
+.form-control {
+  height: 40px;
+  background-color: rgb(237, 232, 246);
+}
+
+.form-select {
+  background-color: rgb(237, 232, 246);
+  height: 30px;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+.btn save {
+  width: 20%;
+  height: 35px;
+  margin-bottom: 20%;
+  margin-left: 90%;
+}

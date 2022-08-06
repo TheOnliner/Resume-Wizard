@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+backToSkills(){
+  this.router.navigate(['dashboard/form-skills'])
+}
 
+toObjective(){
+  this.router.navigate(['dashboard/form-career-objective'])
+}
 }

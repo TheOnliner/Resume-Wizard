@@ -43,8 +43,10 @@ app.use((req, res, next) => {
 
 //Routes
 const usersRoutes = require("./routes/users");
+const profilesRoutes = require("./routes/profiles");
 
 app.use(`${api}/users`, usersRoutes);
+app.use(`${api}/profiles`, profilesRoutes);
 
 app.listen(PORT, () => {
   console.log("Server is listening");
