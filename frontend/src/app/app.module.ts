@@ -29,6 +29,10 @@ import { EducationComponent } from './dashboard/education/education.component';
 import { TemplatemodelComponent } from './dashboard/templatemodel/templatemodel.component';
 import { Template1Component } from './dashboard/template1/template1.component';
 import { ResumecontactComponent } from './dashboard/resumecontact/resumecontact.component';
+import { Template3Component } from './dashboard/template3/template3.component';
+import { CareerObjectiveComponent } from './dashboard/career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/summary/summary.component';
+import { UserNavbarComponent } from './dashboard/user-navbar/user-navbar.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import { ResumecontactComponent } from './dashboard/resumecontact/resumecontact.
     TemplatemodelComponent,
     Template1Component,
     ResumecontactComponent,
+    Template3Component,
+    CareerObjectiveComponent,
+    SummaryComponent,
+    UserNavbarComponent,
   ],
   imports: [
     BrowserModule,

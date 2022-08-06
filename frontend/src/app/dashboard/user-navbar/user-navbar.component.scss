@@ -1,0 +1,106 @@
+@import "../../../assets/variables.scss";
+
+.nav {
+  background-color: rgb(7, 148, 61);
+  height: fit-content;
+  display: flex;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+    margin: 0 1rem;
+    width: 20%;
+
+    .icon {
+      padding: 0 0.2em;
+      text-align: center;
+      color: $color-primary;
+      font-size: 4rem;
+      cursor: pointer;
+      transition: all 0.5s;
+      z-index: 2;
+    }
+
+    h3 {
+      display: block;
+      text-align: center;
+      font-family: "Pacifico", cursive;
+      color: $color-primary;
+      font-weight: 100;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: all 1s;
+      z-index: 1;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+
+    &__link {
+      list-style: none;
+      margin: 0 0.5em;
+      font-weight: 400;
+      border-bottom: solid 1px $color-white;
+      text-decoration: none;
+      font-family: "Quicksand", sans-serif;
+      color: $color-grey-dark;
+      font-size: 1.8rem;
+      transition: all 0.1s;
+
+      cursor: pointer;
+      &:hover {
+        border-bottom: solid 2px $color-primary;
+        color: $color-primary;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    margin: 0 2rem;
+    margin-left: 20em;
+
+    .btn {
+      padding: 0.8em 3em;
+      margin: 0 0.8em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .loginbtn {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 600;
+      border: solid 1px $color-grey-dark-3;
+      background-color: $color-white;
+      color: $color-grey-dark-3;
+      font-size: 1.5rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #ffb900;
+        border: solid 1px #ffb900;
+        color: white;
+      }
+    }
+    .signupbtn {
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      background-color: $color-primary;
+      color: $color-white;
+      border: solid 1px $color-primary;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-primary-hover;
+        border: solid 1px $color-primary-hover;
+      }
+    }
+  }
+}
