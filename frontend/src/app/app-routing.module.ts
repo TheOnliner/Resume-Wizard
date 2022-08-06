@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
@@ -6,6 +6,10 @@ import { UserformsComponent } from './admin/pages/userprofiles/userforms/userfor
 import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
 import { AuthGuard } from './auth-guard.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EducationComponent } from './dashboard/education/education.component';
+import { ResumecontactComponent } from './dashboard/resumecontact/resumecontact.component';
+import { Template1Component } from './dashboard/template1/template1.component';
+import { TemplatemodelComponent } from './dashboard/templatemodel/templatemodel.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
@@ -24,6 +28,10 @@ const routes: Routes = [
     ] },
     ],
   },
+  { path: 'education', component: EducationComponent},
+  { path: 'resumecontact', component: ResumecontactComponent},
+  { path: 'template1', component: Template1Component},
+  { path: 'templatemodel', component: TemplatemodelComponent}
 ];
 
 @NgModule({

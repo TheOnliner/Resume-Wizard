@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-user-navbar',
+  templateUrl: './user-navbar.component.html',
+  styleUrls: ['./user-navbar.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class UserNavbarComponent implements OnInit {
   faHatWizard = faHatWizard;
   constructor() { }
 

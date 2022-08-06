@@ -24,11 +24,21 @@ import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.compon
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
+
 import { UsersModule } from './users.module';
 import { LoginComponent } from './login/login.component';
 import { SidenavComponent } from './admin/sidenav/sidenav.component';
 import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
+
+import { EducationComponent } from './dashboard/education/education.component';
+import { TemplatemodelComponent } from './dashboard/templatemodel/templatemodel.component';
+import { Template1Component } from './dashboard/template1/template1.component';
+import { ResumecontactComponent } from './dashboard/resumecontact/resumecontact.component';
+import { Template3Component } from './dashboard/template3/template3.component';
+import { CareerObjectiveComponent } from './dashboard/career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/summary/summary.component';
+import { UserNavbarComponent } from './dashboard/user-navbar/user-navbar.component';
 
 
 import {CardModule} from 'primeng/card';
@@ -47,7 +57,6 @@ import { TestimonialsComponent } from './homepage/testimonials/testimonials.comp
 import {CarouselModule} from 'primeng/carousel';
 
 
-
 const ADMIN_MODULE = [
   CardModule,
   ToolbarModule,
@@ -60,6 +69,7 @@ const ADMIN_MODULE = [
   CarouselModule
 ];
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +81,7 @@ const ADMIN_MODULE = [
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
+    LoginComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
     NavbarComponent,
@@ -82,6 +93,14 @@ const ADMIN_MODULE = [
     UserformsComponent,
     FooterComponent,
     TestimonialsComponent,
+    EducationComponent,
+    TemplatemodelComponent,
+    Template1Component,
+    ResumecontactComponent,
+    Template3Component,
+    CareerObjectiveComponent,
+    SummaryComponent,
+    UserNavbarComponent,
   ],
   imports: [
     BrowserModule,
