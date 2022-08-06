@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import "../../../assets/variables.scss";
+
+.headingcontainer{
+  padding-top: 6rem;
+  background-color: $color-grey-light-1;
+  .heading{
+    font-family:'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  blockquote {
+    padding: 0;
+    margin: 0;
+  }
+
+  .t-bq-wrapper1.t-bq-wrapper-boxed1 {
+    max-width: 85%;
+    transform: scale(0.8);
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+
+  .t-bq-wrapper2.t-bq-wrapper-boxed2 {
+    max-width: 85%;
+    transform: scale(0.8);
+    margin: 0 auto;
+    margin-right: 5px;
+  }
+
+  .t-bq-wrapper3.t-bq-wrapper-boxed3 {
+    max-width: 85%;
+    transform: scale(0.8);
+    margin: 0 auto;
+    margin-left: 5px;
+  }
+  /* ========== 05. Paul ========== */
+
+  .t-bq-quote-paul {
+    position: relative;
+    display: flex;
+
+    flex-direction: row;
+    min-height: 250px;
+    box-shadow: 2px 2px 25px #cecece;
+    border-radius: 10px;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-pattern {
+    flex-basis: 80px;
+    background: url("https://t3.ftcdn.net/jpg/02/14/87/48/360_F_214874836_7Dn96bNbUaZ1OuUjhVz4ZNRXDMuWkM6h.jpg")
+      no-repeat;
+background-position:40% 50%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-base {
+    flex-basis: calc(100% - 80px);
+    background: #ffffff;
+    padding: 40px 30px 50px 80px;
+    font-size: 15pt;
+    line-height: 1.62em;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-qmark {
+    position: absolute;
+    top: 50px;
+    left: 105px;
+    font-family: Garamond, Georgia, "Times New Roman", serif;
+    font-size: 42pt;
+    color: #2179fd;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-userpic {
+    position: absolute;
+    top: 80px;
+    left: 45px;
+    width: 70px;
+    height: 70px;
+
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-meta {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 2px dotted #777777;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-author,
+  .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-source {
+    color: #777777;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-author {
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-author cite {
+    font-style: normal;
+  }
+
+  .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-source {
+    font-size: 9pt;
+  }
+
+  // /* ========== 06. Jasper ========== */
+
+  .t-bq-quote-jasper {
+    position: relative;
+    box-shadow: 2px 2px 25px #cecece;
+    border-radius: 10px;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-pattern {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    background: url("https://i.pinimg.com/originals/9b/d0/81/9bd081c20628e5e970399bbca38dc388.jpg")
+      no-repeat;
+      background-position: 10% 45%;
+      background-size: 1200px 1000px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-pattern .t-bq-quote-jasper-qmark {
+    flex-basis: 100px;
+    font-family: Garamond, Georgia, "Times New Roman", serif;
+    font-size: 60pt;
+    color: rgb(0, 247, 255);
+    text-align: center;
+    height: 80px;
+    line-height: 90pt;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-userpic {
+    position: absolute;
+    top: 45px;
+    left: calc(50% - 35px);
+    width: 70px;
+    height: 70px;
+
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-base {
+    flex-basis: calc(100% - 80px);
+    background: #ffffff;
+    padding: 60px 30px 50px 100px;
+    font-size: 15pt;
+    line-height: 1.62em;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 2px dotted #777777;
+    text-align: center;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta .t-bq-quote-jasper-author,
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta .t-bq-quote-jasper-source {
+    color: #777777;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta .t-bq-quote-jasper-author {
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 10pt;
+    font-weight: bold;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta .t-bq-quote-jasper-author cite {
+    font-style: normal;
+  }
+
+  .t-bq-quote-jasper .t-bq-quote-jasper-meta .t-bq-quote-jasper-source {
+    font-size: 9pt;
+  }
+}

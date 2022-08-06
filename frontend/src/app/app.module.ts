@@ -43,6 +43,9 @@ import {ChartModule} from 'primeng/chart';
 import {BadgeModule} from 'primeng/badge';
 import {ScrollTopModule} from 'primeng/scrolltop';
 import { FooterComponent } from './homepage/footer/footer.component';
+import { TestimonialsComponent } from './homepage/testimonials/testimonials.component';
+import {CarouselModule} from 'primeng/carousel';
+
 
 
 const ADMIN_MODULE = [
@@ -53,7 +56,8 @@ const ADMIN_MODULE = [
   ConfirmDialogModule,
   ChartModule,
   BadgeModule,
-  ScrollTopModule
+  ScrollTopModule,
+  CarouselModule
 ];
 
 @NgModule({
@@ -77,6 +81,7 @@ const ADMIN_MODULE = [
     AdminhomeComponent,
     UserformsComponent,
     FooterComponent,
+    TestimonialsComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
 .items {
   color: $color-secondary;
   display: grid;
-  grid-template-columns: repeat(5, minmax(12rem, 1fr));
+  grid-template-columns: repeat(5, minmax(12rem, 1fr));  
   gap: 2.5rem;
   padding: 2.5rem;
   font-size:1.4rem;
@@ -34,7 +34,7 @@ a {
 }
 
 hr {
-  grid-column: 1/-1;
+  grid-column: 1/-1;   
 }
 
 .rtcle_desc {
