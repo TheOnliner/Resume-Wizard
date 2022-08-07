@@ -18,21 +18,23 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { RightsidebarComponent } from './dashboard/rightsidebar/rightsidebar.component';
-import { LeftsidebarComponent } from './dashboard/leftsidebar/leftsidebar.component';
-import { NavbarComponent } from './dashboard/navbar/navbar.component';
-import { MiddilcontentComponent } from './dashboard/middilcontent/middilcontent.component';
+import { DashboardComponent } from './dashboard/dashboardhome/dashboard.component';
+import { RightsidebarComponent } from './dashboard/dashboardhome/rightsidebar/rightsidebar.component';
+import { LeftsidebarComponent } from './dashboard/dashboardhome/leftsidebar/leftsidebar.component';
+import { NavbarComponent } from './dashboard/dashboardhome/navbar/navbar.component';
+import { MiddilcontentComponent } from './dashboard/dashboardhome/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
-import { EducationComponent } from './dashboard/education/education.component';
-import { TemplatemodelComponent } from './dashboard/templatemodel/templatemodel.component';
-import { Template1Component } from './dashboard/template1/template1.component';
-import { ResumecontactComponent } from './dashboard/resumecontact/resumecontact.component';
-import { Template3Component } from './dashboard/template3/template3.component';
-import { CareerObjectiveComponent } from './dashboard/career-objective/career-objective.component';
-import { SummaryComponent } from './dashboard/summary/summary.component';
-import { UserNavbarComponent } from './dashboard/user-navbar/user-navbar.component';
+import { EducationComponent } from './dashboard/forms/education/education.component';
+import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
+import { Template1Component } from './dashboard/templates/template1/template1.component';
+import { ResumecontactComponent } from './dashboard/forms/resumecontact/resumecontact.component';
+import { Template3Component } from './dashboard/templates/template3/template3.component';
+import { CareerObjectiveComponent } from './dashboard/forms/career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/forms/summary/summary.component';
+import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
+import { SkillComponent } from './dashboard/forms/skill/skill.component';
+import { ExperienceComponent } from './dashboard/forms/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { UserNavbarComponent } from './dashboard/user-navbar/user-navbar.compone
     CareerObjectiveComponent,
     SummaryComponent,
     UserNavbarComponent,
+    SkillComponent,
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
