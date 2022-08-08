@@ -13,10 +13,10 @@ export class SummaryComponent implements OnInit {
   ngOnInit(): void {
   }
 backToSkills(){
-  this.router.navigate(['dashboard/form-skills'])
+  this.router.navigate(['dashboard/form/skills'])
 }
 
 toObjective(){
-  this.router.navigate(['dashboard/form-career-objective'])
+  this.router.navigate(['dashboard/form/career-objective'])
 }
 }

@@ -16,6 +16,7 @@ import { TemplatemodelComponent } from './dashboard/forms/templatemodel/template
 import { HomepageComponent } from './homepage/homepage.component';
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
+import { FormComponent } from './dashboard/forms/form.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -23,13 +24,22 @@ const routes: Routes = [
     path: '',
     children: [
       { path: 'dashboard', component: DashboardComponent},
-      { path: 'dashboard/form-education', component: EducationComponent},
-      { path: 'dashboard/form-experience', component: ExperienceComponent},
-      { path: 'dashboard/form-skills', component: SkillsComponent},
-      { path: 'dashboard/form-summary', component: SummaryComponent},
-      { path: 'dashboard/form-career-objective', component: CareerObjectiveComponent},
-      { path: 'dashboard/form-contact', component: ResumecontactComponent},
-      { path: 'dashboard/templates', component: TemplatemodelComponent},
+      {path:'dashboard/form', component: FormComponent,children:[
+        { path: 'education', component: EducationComponent},
+        { path: 'experience', component: ExperienceComponent},
+        { path: 'skills', component: SkillsComponent},
+        { path: 'summary', component: SummaryComponent},
+        { path: 'career-objective', component: CareerObjectiveComponent},
+        { path: 'contact', component: ResumecontactComponent},
+        { path: 'templates', component: TemplatemodelComponent},
+      ]},
+      // { path: 'dashboard/form-education', component: FormComponent},
+      // { path: 'dashboard/form-experience', component: ExperienceComponent},
+      // { path: 'dashboard/form-skills', component: SkillsComponent},
+      // { path: 'dashboard/form-summary', component: SummaryComponent},
+      // { path: 'dashboard/form-career-objective', component: CareerObjectiveComponent},
+      // { path: 'dashboard/form-contact', component: ResumecontactComponent},
+      // { path: 'dashboard/templates', component: TemplatemodelComponent},
       { path: 'dashboard/templates/1', component: Template1Component},
       { path: 'dashboard/templates/3', component: Template3Component},  
       { path: 'admin', component: AdminComponent, 

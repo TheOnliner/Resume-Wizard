@@ -13,9 +13,9 @@ export class ResumecontactComponent implements OnInit {
   ngOnInit(): void {
   }
   backToCareerObjective(){
-    this.route.navigate(['dashboard/form-career-objective'])
+    this.route.navigate(['dashboard/form/career-objective'])
   }
   toTemplates(){
-    this.route.navigate(['dashboard/templates'])
+    this.route.navigate(['dashboard/form/templates'])
   }
 }

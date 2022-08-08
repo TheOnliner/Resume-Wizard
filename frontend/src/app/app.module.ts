@@ -57,6 +57,9 @@ import { TestimonialsComponent } from './homepage/testimonials/testimonials.comp
 import {CarouselModule} from 'primeng/carousel';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
+import { FormComponent } from './dashboard/forms/form.component';
+
+import {StepsModule} from 'primeng/steps';
 
 
 const ADMIN_MODULE = [
@@ -68,7 +71,8 @@ const ADMIN_MODULE = [
   ChartModule,
   BadgeModule,
   ScrollTopModule,
-  CarouselModule
+  CarouselModule,
+  StepsModule,
 ];
 
 
@@ -105,6 +109,7 @@ const ADMIN_MODULE = [
     UserNavbarComponent,
     ExperienceComponent,
     SkillsComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,7 +123,7 @@ const ADMIN_MODULE = [
     DialogModule,
     FontAwesomeModule,
     ButtonModule,
-    ...ADMIN_MODULE
+    ...ADMIN_MODULE,
   ],
   providers: [UsersService,MessageService,ConfirmationService],
   bootstrap: [AppComponent],

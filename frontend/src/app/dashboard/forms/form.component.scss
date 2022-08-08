@@ -1,0 +1,16 @@
+@import "../../../assets/variables.scss";
+
+.card {
+  background-color: $color-primary;
+  height: 10rem;
+}
+
+:host ::ng-deep .p-steps-title {
+  font-size: 1.5rem;
+}
+
+:host ::ng-deep .p-steps .p-steps-item .p-menuitem-link .p-steps-number {
+  height: 5.5rem;
+  min-width: 6rem;
+  font-size: 1.5rem;
+}

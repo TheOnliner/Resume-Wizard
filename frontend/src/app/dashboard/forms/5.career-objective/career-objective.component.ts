@@ -13,9 +13,9 @@ export class CareerObjectiveComponent implements OnInit {
   ngOnInit(): void {
   }
   backToSummary(){
-    this.router.navigate(['dashboard/form-summary'])
+    this.router.navigate(['dashboard/form/summary'])
   }
   toContact(){
-this.router.navigate(['dashboard/form-contact'])
+this.router.navigate(['dashboard/form/contact'])
   }
 }

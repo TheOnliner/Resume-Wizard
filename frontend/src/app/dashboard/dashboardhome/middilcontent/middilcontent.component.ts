@@ -15,6 +15,6 @@ export class MiddilcontentComponent implements OnInit {
   }
 
   createResume(){
-   this.router.navigate(['/dashboard/form-education'])
+   this.router.navigate(['/dashboard/form/education'])
   }
 }
