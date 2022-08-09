@@ -19,6 +19,8 @@ export class ExperienceComponent implements OnInit {
   backToEducation(){
     this.router
     .navigate(['dashboard/form/education'])
+
+    
   }
 
   private _initExperienceForm(){

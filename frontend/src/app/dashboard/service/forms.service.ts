@@ -1,21 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Education, Profile } from '../../models/profile';
+import { Profile } from '../../models/profile';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormsService {
-  apiURLUsers = environment.apiURL + 'profiles/form';
+  apiURLProfiles = environment.apiURL + 'profiles/form';
 
-  savedData :Profile[] = [];
+  savedData: { [key: string]: Profile[] } = {};
 
   constructor(private http: HttpClient) { }
 
   save(formfields:any,name:string){
-    let key = name;
-    this.savedData.push({[`${key}`] : formfields})
+    this.savedData[name as keyof Profile] = formfields;
     console.log(this.savedData);
+}
+
+  saveprofile():Observable<Profile>{
+    console.log(this.savedData);
+    console.log('The  above is the saved Data');
+    return this.http.post<Profile>(`${this.apiURLProfiles}`,this.savedData);
   }
 }

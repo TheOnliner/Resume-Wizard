@@ -25,5 +25,9 @@ export class TemplatemodelComponent implements OnInit {
     }
   
     this.formService.save(templateFormData,'template');
+
+    this.formService.saveprofile().subscribe(data=>{
+      console.log(data);
+    })
   }
 }

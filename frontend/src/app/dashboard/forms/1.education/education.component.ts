@@ -33,6 +33,12 @@ get educationForm() {
 
   backToDashboard(){
     this.router.navigate(['dashboard'])
+
+    // this.educationForm?.['school'].setValue(this.educationData.['school']);
+    // this.educationForm?.['degree'].setValue(educationData.degree);
+    // this.educationForm?.['major'].setValue(educationData.major);
+    // this.educationForm?.['from'].setValue(educationData.from);
+    // this.educationForm?.['to'].setValue(educationData.to);
   }
 
   onSubmit(){
@@ -44,8 +50,16 @@ get educationForm() {
       to: this.educationForm?.['to'].value,
     };
 
-    this.formService.save(educationData,'education');
-    this.router.navigate(['dashboard/form/experience'])
+    this.formService.save(educationData,'education')
+    
+
+    // this.educationForm['school'].setValue(educationData.school);
+  //  this.educationForm['school'].setValue(educationData.school)
+   this.router.navigate(['dashboard/form/experience'])
+    // this.educationForm?.['degree'].setValue(educationData.degree);
+    // this.educationForm?.['major'].setValue(educationData.major);
+    // this.educationForm?.['from'].setValue(educationData.from);
+    // this.educationForm?.['to'].setValue(educationData.to);
   }
 
 }
