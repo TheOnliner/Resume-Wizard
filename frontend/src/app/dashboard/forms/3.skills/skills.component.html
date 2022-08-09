@@ -4,29 +4,36 @@
 
         <h1>Skill</h1><br>
     <br>
+    <form [formGroup]="skillFormGroup">
 <div class="row">
     <div class="col">
         <label for="form-select" class="form-label">Skill-1</label>
-      <input type="text" class="form-control" placeholder="skill" >
+      <input type="text"  name="skill1"
+      formControlName="skill1"
+      class="form-control" placeholder="skill" >
     </div>
     <div class="col">
         <label for="form-select" class="form-label">Skill-2</label>
-      <input type="text" class="form-control" placeholder="skill" >
+      <input type="text" name="skill2"
+      formControlName="skill2" class="form-control" placeholder="skill" >
     </div>
   </div>
 
   <div class="row">
     <div class="col"><label for="form-select" class="form-label">Skill-3</label>
-      <input type="text" class="form-control" placeholder="skill" >
+      <input type="text" name="skill3"
+      formControlName="skill3" class="form-control" placeholder="skill" >
     </div>
     <div class="col"><label for="form-select" class="form-label">Skill-4</label>
-      <input type="text" class="form-control" placeholder="skill" >
+      <input type="text" name="skill4"
+      formControlName="skill4" class="form-control" placeholder="skill" >
     </div>
   </div>
 
   <div class="col-md-4">
     <label for="inputState" class="form-label">Language</label>
-    <select id="inputState" class="form-select">
+    <select id="inputState" name="language"
+    formControlName="language" class="form-select">
       <option selected>English</option>
       <option>Malayalam</option>
       <option>Hindi</option>
@@ -34,11 +41,12 @@
   </div>
 <div class="row">
   <div class="col-5">
-    <button type="submit" class="btn " id="back" (click)="backToExperience()">Back</button>
+    <button type="button" class="btn " id="back" (click)="backToExperience()">Back</button>
   </div>
   <div class="col-5">
-    <button type="submit" class="btn btn-primary" id="next" (click)="toSummary()">Next</button>
+    <button type="submit" class="btn btn-primary" id="next" (click)="onSubmit()">Next</button>
   </div>
 </div>
+</form>
   </div>
 </div>

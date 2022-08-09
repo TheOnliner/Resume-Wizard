@@ -44,9 +44,7 @@ get educationForm() {
       to: this.educationForm?.['to'].value,
     };
 
-    console.log(educationData);
-
-    this.formService.save(educationData);
+    this.formService.save(educationData,'education');
     this.router.navigate(['dashboard/form/experience'])
   }
 

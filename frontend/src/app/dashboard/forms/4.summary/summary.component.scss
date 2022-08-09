@@ -20,6 +20,17 @@
     display: inline-block;
   }
   
+  input[type=button] {
+    background-color: #1a7ae7;
+    color: white;
+    margin-left: 25%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+  }
   input[type=submit] {
     background-color: #1a7ae7;
     color: white;
@@ -33,6 +44,9 @@
   }
   
   input[type=submit]:hover {
+    background-color: #729bd8;
+  }
+  input[type=button]:hover {
     background-color: #729bd8;
   }
   

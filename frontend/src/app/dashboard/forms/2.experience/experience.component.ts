@@ -44,7 +44,8 @@ onSubmit(){
     to: this.experienceForm?.['to'].value,
   }
 
-  this.formService.save(experienceData);
+  this.formService.save(experienceData,'experience');
+
   this.router.navigate(['dashboard/form/skills'])
 }
 }

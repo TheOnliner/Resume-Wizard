@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormsService } from '../../service/forms.service';
 
 @Component({
   selector: 'app-career-objective',
@@ -7,15 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./career-objective.component.scss']
 })
 export class CareerObjectiveComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  careerObjectiveFormGroup: FormGroup;
+  constructor(private router: Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
+    this._initCareerObjectiveForm();
   }
   backToSummary(){
     this.router.navigate(['dashboard/form/summary'])
   }
-  toContact(){
-this.router.navigate(['dashboard/form/contact'])
+
+  private _initCareerObjectiveForm(){
+    this.careerObjectiveFormGroup = this.formBuilder.group({
+      objective:['',Validators.required],
+    });
+  }
+
+  get careerObjectiveForm() {
+    return this.careerObjectiveFormGroup.controls;
+  }
+
+  onSubmit(){
+    const careerObjectiveData = {
+      objective: this.careerObjectiveForm?.['objective'].value,
+    }
+
+    this.formService.save(careerObjectiveData,'careerObjective');
+    this.router.navigate(['dashboard/form/contact'])
   }
 }

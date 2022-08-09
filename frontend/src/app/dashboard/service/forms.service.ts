@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Education, Profile } from '../../models/profile';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,13 @@ import { environment } from 'src/environments/environment';
 export class FormsService {
   apiURLUsers = environment.apiURL + 'profiles/form';
 
-  savedData : any[] = [];
+  savedData :Profile[] = [];
 
   constructor(private http: HttpClient) { }
 
-  save(formfields:Object){
-  this.savedData.push(formfields);
-  console.log(this.savedData);
+  save(formfields:any,name:string){
+    let key = name;
+    this.savedData.push({[`${key}`] : formfields})
+    console.log(this.savedData);
   }
 }

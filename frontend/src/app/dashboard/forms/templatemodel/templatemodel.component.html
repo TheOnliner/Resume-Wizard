@@ -1,11 +1,6 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!-- details card section starts from here -->
 <section class="details-card">
     <div class="container">
+        <form [formGroup]="templateFormGroup">
         <div class="row">
             <div class="col-md-4">
                 <div class="card-content">
@@ -14,35 +9,33 @@
                     </div>
                     <div class="card-desc">
                         <h4>Simple</h4>
-                    <a href="#" class="btn-card">Select</a>   
+                    <a class="btn-card" (click)="onSubmit('Simple')">Select</a>   
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="assets/image/temp1.jpeg" alt="">
-                        
+                        <img src="assets/image/temp1.jpeg" alt="">                       
                     </div>
                     <div class="card-desc">
-                        <h4>Classic</h4>
-                       
-                            <a href="#" class="btn-card">Select</a>   
+                        <h4>Classic</h4>                      
+                            <a class="btn-card" (click)="onSubmit('Classic')">Select</a>   
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card-content">
                     <div class="card-img">
-                        <img src="assets/image/temp1.jpeg" alt="">
-                       
+                        <img src="assets/image/temp1.jpeg" alt="">                      
                     </div>
                     <div class="card-desc">
                         <h4>Modern</h4>
-                        <a href="#" class="btn-card">Select</a>   
+                        <a class="btn-card" (click)="onSubmit('Modern')">Select</a>   
                     </div>
                 </div>
             </div>
         </div>
+    </form>
     </div>
 </section>
