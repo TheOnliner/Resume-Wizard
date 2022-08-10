@@ -19,6 +19,10 @@ export class FormsService {
     console.log(this.savedData);
 }
 
+getData(name:string){
+  return this.savedData?.[name]
+}
+
   saveprofile():Observable<Profile>{
     console.log(this.savedData);
     console.log('The  above is the saved Data');
