@@ -37,9 +37,21 @@ export class TemplatemodelComponent implements OnInit {
     }
   
     this.formService.save(templateFormData,'template');
-
+    
     this.formService.saveprofile().subscribe(data=>{
       console.log(data);
+
+      console.log(templateFormData.selection)
+
+    if(templateFormData.selection === 'Simple'){
+      this.router.navigate(['dashboard/templates/simple'])
+    }
+    if(templateFormData.selection === 'Classic'){
+      this.router.navigate(['dashboard/templates/classic'])
+    }
+    if(templateFormData.selection === 'Modern'){
+      this.router.navigate(['dashboard/templates/modern'])
+    }
     })
   }
 }

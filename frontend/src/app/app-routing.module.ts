@@ -12,11 +12,12 @@ import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resume
 import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
 import { Template1Component } from './dashboard/templates/template1/template1.component';
 import { Template3Component } from './dashboard/templates/template3/template3.component';
-import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
+import { TemplatemodelComponent } from './dashboard/forms/7.templatemodel/templatemodel.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { FormComponent } from './dashboard/forms/form.component';
+import { Template2Component } from './dashboard/templates/template2/template2.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -40,8 +41,9 @@ const routes: Routes = [
       // { path: 'dashboard/form-career-objective', component: CareerObjectiveComponent},
       // { path: 'dashboard/form-contact', component: ResumecontactComponent},
       // { path: 'dashboard/templates', component: TemplatemodelComponent},
-      { path: 'dashboard/templates/1', component: Template1Component},
-      { path: 'dashboard/templates/3', component: Template3Component},  
+      { path: 'dashboard/templates/simple', component: Template1Component},
+      { path: 'dashboard/templates/modern', component: Template2Component},
+      { path: 'dashboard/templates/classic', component: Template3Component},  
       { path: 'admin', component: AdminComponent, 
     children:[
       {path: 'home', component: AdminhomeComponent},

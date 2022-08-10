@@ -32,7 +32,7 @@ import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.c
 import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
 
 import { EducationComponent } from './dashboard/forms/1.education/education.component';
-import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
+import { TemplatemodelComponent } from './dashboard/forms/7.templatemodel/templatemodel.component';
 import { Template1Component } from './dashboard/templates/template1/template1.component';
 import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resumecontact.component';
 import { Template3Component } from './dashboard/templates/template3/template3.component';
@@ -60,6 +60,7 @@ import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { FormComponent } from './dashboard/forms/form.component';
 
 import {StepsModule} from 'primeng/steps';
+import { Template2Component } from './dashboard/templates/template2/template2.component';
 
 
 const ADMIN_MODULE = [
@@ -110,6 +111,7 @@ const ADMIN_MODULE = [
     ExperienceComponent,
     SkillsComponent,
     FormComponent,
+    Template2Component,
   ],
   imports: [
     BrowserModule,
