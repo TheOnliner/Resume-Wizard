@@ -15,6 +15,17 @@ export class ResumecontactComponent implements OnInit {
 
   ngOnInit(): void {
     this._initContactForm();
+
+    let data:any = this.formService.getData('contact');
+    if(data){
+      this.contactForm?.['firstName'].setValue(data.firstName);
+      this.contactForm?.['lastName'].setValue(data.lastName);
+      this.contactForm?.['email'].setValue(data.email);
+      this.contactForm?.['phoneNumber'].setValue(data.phoneNumber);
+      this.contactForm?.['address'].setValue(data.address);
+      this.contactForm?.['city'].setValue(data.city);
+      this.contactForm?.['state'].setValue(data.state);
+    }
   }
   backToCareerObjective(){
     this.router.navigate(['dashboard/form/career-objective'])

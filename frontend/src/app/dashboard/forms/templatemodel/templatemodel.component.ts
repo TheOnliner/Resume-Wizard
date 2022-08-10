@@ -14,9 +14,17 @@ export class TemplatemodelComponent implements OnInit {
   constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
+    this._initTemplateForm()
+  }
+
+  private _initTemplateForm(){
     this.templateFormGroup = this.formBuilder.group({
       selection:'',
     });
+}
+
+  get templateForm() {
+    return this.templateFormGroup.controls;
   }
 
   onSubmit(value:String){

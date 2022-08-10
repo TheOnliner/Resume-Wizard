@@ -14,6 +14,11 @@ export class CareerObjectiveComponent implements OnInit {
 
   ngOnInit(): void {
     this._initCareerObjectiveForm();
+
+    let data:any = this.formService.getData('careerObjective');
+    if(data){
+      this.careerObjectiveForm?.['objective'].setValue(data.objective);
+    }
   }
   backToSummary(){
     this.router.navigate(['dashboard/form/summary'])

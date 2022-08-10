@@ -11,16 +11,23 @@ import { FormsService } from '../../service/forms.service';
 export class ExperienceComponent implements OnInit {
   experienceFormGroup: FormGroup;
 
-  constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
+  constructor(private router:Router, private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
     this._initExperienceForm();
+
+    let data:any = this.formService.getData('experience');
+    if(data){
+      this.experienceForm?.['title'].setValue(data.title);
+      this.experienceForm?.['company'].setValue(data.company);
+      this.experienceForm?.['description'].setValue(data.description);
+      this.experienceForm?.['from'].setValue(data.from);
+      this.experienceForm?.['to'].setValue(data.to);
+    }
   }
   backToEducation(){
     this.router
-    .navigate(['dashboard/form/education'])
-
-    
+    .navigate(['dashboard/form/education']) 
   }
 
   private _initExperienceForm(){
@@ -47,7 +54,6 @@ onSubmit(){
   }
 
   this.formService.save(experienceData,'experience');
-
   this.router.navigate(['dashboard/form/skills'])
 }
 }

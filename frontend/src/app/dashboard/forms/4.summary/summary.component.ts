@@ -15,6 +15,11 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this._initPrSummaryForm();
+
+    let data:any = this.formService.getData('professionalSummary');
+    if(data){
+      this.prSummaryForm?.['summary'].setValue(data.summary);
+    }
   }
 backToSkills(){
   this.router.navigate(['dashboard/form/skills'])

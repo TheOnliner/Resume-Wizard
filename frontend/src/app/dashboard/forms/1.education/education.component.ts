@@ -22,7 +22,6 @@ export class EducationComponent implements OnInit {
   
     let data:any = this.formService.getData('education');
     if(data){
-      console.log(data.school)
       this.educationForm?.['school'].setValue(data.school);
       this.educationForm?.['degree'].setValue(data.degree);
       this.educationForm?.['major'].setValue(data.major);

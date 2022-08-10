@@ -15,6 +15,15 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this._initSkillForm();
+
+    let data:any = this.formService.getData('skills');
+    if(data){
+      this.skillForm?.['skill1'].setValue(data.skill1);
+      this.skillForm?.['skill2'].setValue(data.skill2);
+      this.skillForm?.['skill3'].setValue(data.skill3);
+      this.skillForm?.['skill4'].setValue(data.skill4);
+      this.skillForm?.['language'].setValue(data.language);
+    }
   }
 
 backToExperience(){
