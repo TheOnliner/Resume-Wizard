@@ -35,6 +35,7 @@ import { SummaryComponent } from './dashboard/forms/summary/summary.component';
 import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
 import { SkillComponent } from './dashboard/forms/skill/skill.component';
 import { ExperienceComponent } from './dashboard/forms/experience/experience.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { ExperienceComponent } from './dashboard/forms/experience/experience.com
     UserNavbarComponent,
     SkillComponent,
     ExperienceComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
