@@ -31,8 +31,8 @@ router.post('/form',async(req,res)=>{
     skills:{
       skill1:  req.body.skills.skill1,
       skill2: req.body.skills.skill2,
-      skill3: req.body.skills.description,
-      skill4: req.body.skills.from,
+      skill3: req.body.skills.skill3,
+      skill4: req.body.skills.skill4,
       language:  req.body.skills.language
         },
     professionalSummary:{

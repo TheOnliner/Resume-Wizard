@@ -27,6 +27,10 @@ export class TemplatemodelComponent implements OnInit {
     return this.templateFormGroup.controls;
   }
 
+  backToContact(){
+    this.router.navigate(['dashboard/form/contact'])
+  }
+
   onSubmit(value:String){
     const templateFormData = {
       selection: value
