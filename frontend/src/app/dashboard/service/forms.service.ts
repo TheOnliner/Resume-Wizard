@@ -23,6 +23,10 @@ getData(name:string){
   return this.savedData?.[name]
 }
 
+getProfile(){
+  return this.savedData
+}
+
   saveprofile():Observable<Profile>{
     console.log(this.savedData);
     console.log('The  above is the saved Data');

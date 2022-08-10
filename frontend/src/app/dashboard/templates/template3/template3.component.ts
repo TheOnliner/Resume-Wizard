@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { jsPDF } from "jspdf";
+import { FormsService } from '../../service/forms.service';
 
 @Component({
   selector: 'app-template3',
@@ -8,17 +9,27 @@ import { jsPDF } from "jspdf";
 })
 export class Template3Component implements OnInit {
   @ViewChild('doc3', {static:false}) el!: ElementRef;
-  constructor() { }
+  constructor(private formService:FormsService) { }
+  data:any;
 
   ngOnInit(): void {
+    this.getData();
+    console.log(this.data.education.school)
   }
+
+getData(){
+ this.data = this.formService.getProfile()
+//  console.log(this.data);
+}
+  
+
   downloadpdf(){
-    let pdf = new jsPDF('p', 'mm', [970, 820]);
+                                // Height,width
+    let pdf = new jsPDF('p', 'mm', [1700, 950]);
     pdf.html(this.el.nativeElement,{
-    callback:(pdf: any)=>{
-    pdf.save("Resume.pdf");
+      callback:(pdf)=>{
+        pdf.save("Resume.pdf");
+      }
+    });
   }
-  });
-  }
- 
 }
