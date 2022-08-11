@@ -11,6 +11,10 @@ import { Template3Component } from './dashboard/templates/template3/template3.co
 import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
+import { SkillComponent } from './dashboard/forms/skill/skill.component';
+import { ExperienceComponent } from './dashboard/forms/experience/experience.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -26,10 +30,13 @@ const routes: Routes = [
       {path: 'dashboard/form-career-objective',component:CareerObjectiveComponent},
       {path:'dashboard/form-contact',component:ResumecontactComponent},
       {path:'dashboard/form-summary',component:SummaryComponent},
+      {path:'dashboard/form-skill',component:SkillComponent},
+      {path:'dashboard/form-experience',component:ExperienceComponent},
       {path:'dashboard/templates',component:TemplatemodelComponent},
       {path:'dashboard/templates/1',component:Template1Component},
       {path:'dashboard/templates/3',component:Template3Component},
-        
+        {path:'dashboard/pages-profile',component:ProfileComponent},
+        {path:'dashboard/pages-settings',component:SettingsComponent},
       { path:'admin', component: AdminComponent },
     ],
   },
