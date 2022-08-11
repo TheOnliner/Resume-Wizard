@@ -24,8 +24,8 @@ getData(){
   
 
   downloadpdf(){
-                                // Height,width
-    let pdf = new jsPDF('p', 'mm', [1700, 950]);
+                                // Height,width [1300, 1040]
+    let pdf = new jsPDF('p', 'mm', [1300, 950]);
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
         pdf.save("Resume.pdf");

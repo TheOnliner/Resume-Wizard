@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormsService } from '../../service/forms.service';
@@ -10,6 +10,7 @@ import { FormsService } from '../../service/forms.service';
 })
 export class TemplatemodelComponent implements OnInit {
   templateFormGroup: FormGroup;
+
 
   constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
@@ -44,13 +45,13 @@ export class TemplatemodelComponent implements OnInit {
       console.log(templateFormData.selection)
 
     if(templateFormData.selection === 'Simple'){
-      this.router.navigate(['dashboard/templates/simple'])
+      this.router.navigate(['dashboard/form/download/simple'])
     }
     if(templateFormData.selection === 'Classic'){
-      this.router.navigate(['dashboard/templates/classic'])
+      this.router.navigate(['dashboard/form/download/classic'])
     }
     if(templateFormData.selection === 'Modern'){
-      this.router.navigate(['dashboard/templates/modern'])
+      this.router.navigate(['dashboard/form/download/modern'])
     }
     })
   }
