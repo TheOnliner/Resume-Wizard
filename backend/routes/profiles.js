@@ -11,6 +11,26 @@ router.get('/form',async(req,res)=>{
   res.send(formList);
 })
 
+// router.get(`/get/userorders/:userid`, async (req, res) =>{
+//     const userOrderList = await Order.find({user: req.params.userid}).populate({ 
+//         path: 'orderItems', populate: {
+//             path : 'product', populate: 'category'} 
+//         }).sort({'dateOrdered': -1});
+
+//     if(!userOrderList) {
+//         res.status(500).json({success: false})
+//     } 
+//     res.send(userOrderList);
+// })
+
+router.get(`/form/userprofile/:userid`, async (req, res) =>{
+  const userProfile = await Profile.find({user: req.params.userid})
+
+  if(!userProfile) {
+      res.status(500).json({success: false})
+  } 
+  res.send(userProfile);
+})
 
 router.post('/form',async(req,res)=>{
   let profile = new Profile({
@@ -52,7 +72,8 @@ router.post('/form',async(req,res)=>{
         }, 
     template:{
       selection:  req.body.template.selection,
-      }
+      },
+      user: req.body.user
   });
   if (!profile) return res.status(400).send("the profile form cannot be created!");
   

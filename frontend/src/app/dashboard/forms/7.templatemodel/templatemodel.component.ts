@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalstorageService } from 'src/app/localstorage.service';
 import { FormsService } from '../../service/forms.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class TemplatemodelComponent implements OnInit {
   templateFormGroup: FormGroup;
   disable:boolean = false;
 
-  constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
+  constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService, private localStorage:LocalstorageService) { }
 
   ngOnInit(): void {
     this._initTemplateForm()
@@ -41,6 +42,9 @@ export class TemplatemodelComponent implements OnInit {
     }
   
     this.formService.save(templateFormData,'template');
+
+    const userId = this.localStorage.getUserId()
+    this.formService.save(userId,'user');
     
     this.formService.saveprofile().subscribe(data=>{
       console.log(data);
@@ -56,6 +60,6 @@ export class TemplatemodelComponent implements OnInit {
     if(templateFormData.selection === 'Modern'){
       this.router.navigate(['dashboard/form/download/modern'])
     }
-    })
+    })  
   }
 }

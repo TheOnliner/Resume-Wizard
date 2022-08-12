@@ -2,6 +2,7 @@ const { User } = require("../models/user");
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
+const jwt = require('jsonwebtoken');
 
 router.post("/", async (req, res) => {
   let user = new User({
@@ -81,6 +82,16 @@ router.post("/login", async (req, res) => {
   if (!user) return res.status(400).send("The user not found");
 
   if (user && bcrypt.compareSync(req.body.password, user.passwordHash)) {
+
+    const token = jwt.sign(
+      {
+          userId: user.id,
+          isAdmin: user.isAdmin
+      },
+      secret,
+      {expiresIn : '1d'}
+  )
+
     res
       .status(200)
       .send({ email: user.email, token: token, isAdmin: user.isAdmin });

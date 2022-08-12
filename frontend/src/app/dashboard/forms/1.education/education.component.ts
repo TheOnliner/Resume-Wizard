@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormsService } from '../../service/forms.service';
 import { MessageService } from 'primeng/api';
+import { LocalstorageService } from 'src/app/localstorage.service';
 
 @Component({
   selector: 'app-education',
@@ -11,25 +12,31 @@ import { MessageService } from 'primeng/api';
 })
 export class EducationComponent implements OnInit {
   educationFormGroup: FormGroup;
+  isEditMode:boolean;
 
   constructor(
     private router: Router,
-    private messageService: MessageService,
     private formBuilder: FormBuilder,
-    private formService: FormsService
+    private formService: FormsService,
   ) {}
 
   ngOnInit() {
     this._initEducationForm();
-  
+    // this.isEditMode= this.formService.isEdit();
+    // if(this.isEditMode){
+    // console.log('Edit mode')
+    // const userId = this.localStorage.getUserId();
+    // this.formService.getUserProfile(userId);
+    // }
     let data:any = this.formService.getData('education');
+    // console.log(data)
     if(data){
       this.educationForm?.['school'].setValue(data.school);
       this.educationForm?.['degree'].setValue(data.degree);
       this.educationForm?.['major'].setValue(data.major);
       this.educationForm?.['from'].setValue(data.from);
       this.educationForm?.['to'].setValue(data.to);
-    }
+    } 
   }
 
   private _initEducationForm() {

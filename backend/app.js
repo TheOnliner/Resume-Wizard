@@ -8,10 +8,11 @@ const cors = require("cors");
 
 const api = process.env.API_URL;
 
+const authJwt = require('./helpers/jwt');
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-
+app.use(authJwt());
 app.use(express.json());
 app.use(morgan("tiny"));
 

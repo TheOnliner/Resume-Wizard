@@ -4,10 +4,6 @@
   href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css"
   media="all"
 />
-<div class="buttonContainer">
-<h3><a id="pdf" class="download" (click)="downloadpdf()">Download PDF</a></h3>
-</div>
-
 <div id="doc2" class="yui-t7">
   <div id="inner" #classic>
     <div id="hd">
@@ -25,7 +21,6 @@
             <h3>{{ data.contact.address }}</h3>
             <h3>{{ data.contact.phoneNumber }}</h3>
           </div>
-          <!--// .contact-info -->
         </div>
       </div>
       <!--// .yui-gc -->
@@ -45,7 +40,6 @@
               </p>
             </div>
           </div>
-          <!--// .yui-gf -->
 
           <div class="yui-gf">
             <div class="yui-u first">
@@ -63,16 +57,9 @@
               </div>
               <div class="talent">
                 <h2>{{ data.education.school }}</h2>
-                <!-- <p>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </p> -->
               </div>
-              <!-- <div class="talent">
-									<h2>Indiana University - Bloomington, Indiana</h2>
-									<p>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </p>
-
-								</div> -->
             </div>
           </div>
-          <!--// .yui-gf -->
 
           <div class="yui-gf">
             <div class="yui-u first">
@@ -91,13 +78,11 @@
               </ul>
             </div>
           </div>
-          <!--// .yui-gf-->
 
           <div class="yui-gf">
             <div class="yui-u first">
               <h2>Experience</h2>
             </div>
-            <!--// .yui-u -->
 
             <div class="yui-u">
               <div class="job">
@@ -107,9 +92,7 @@
                 <p>{{ data.experience.description }}</p>
               </div>
             </div>
-            <!--// .yui-u -->
           </div>
-          <!--// .yui-gf -->
 
           <div class="yui-gf">
             <div class="yui-u first">
@@ -122,9 +105,7 @@
             </div>
           </div>
         </div>
-        <!--// .yui-b -->
       </div>
-      <!--// yui-main -->
     </div>
     <!--// bd -->
 
@@ -137,4 +118,8 @@
     <!--// footer -->
   </div>
   <!-- // inner -->
+  <div class="buttonContainer">
+    <h3><a id="pdf" class="download" (click)="downloadpdf()">Download PDF</a></h3>
+    </div>
 </div>
+

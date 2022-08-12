@@ -7,9 +7,9 @@
              <h5 class="card-title">Resume</h5>
              
              <h3 class="card-text">Pick from our dozens of professionally designed resume templates to create your resume. </h3>
-             <a class="btn btn-primary" id="space" (click)="createResume()">Create Resume</a>
+             <a class="btn btn-primary" id="space" [hidden]="createbtn" (click)="createResume()">Create Resume</a>
    
-             <a class="btn btn-primary" id="space">Edit Resume</a>
+             <a class="btn btn-primary" id="space" [hidden]="editbtn" (click)="editResume()">Edit Resume</a>
              
              <a class="btn btn-primary" id="space1">Download Resume</a>
            </div>

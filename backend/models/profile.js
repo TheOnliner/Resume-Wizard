@@ -39,7 +39,11 @@ const profileSchema = new mongoose.Schema({
     },
     template:{
         selection: { type: String},
-    }
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
 })
 
 profileSchema.virtual("id").get(function () {
