@@ -1,8 +1,11 @@
 @import "../../../assets/variables.scss";
 
+$color-highlight : rgba(255, 255, 255, 0.301);
+
 .card {
+  padding-top: 2rem;
   background-color: $color-primary;
-  height: 10rem;
+  height: 13rem;
 }
 
 :host ::ng-deep .p-steps-title {
@@ -13,4 +16,24 @@
   height: 5.5rem;
   min-width: 6rem;
   font-size: 1.5rem;
+  border: 1px solid $color-highlight;
+  background: $color-primary;
+}
+
+:host ::ng-deep .p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: #f7f7f7;
+  border-radius: 5px;
+  color: $color-primary;
+ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+:host ::ng-deep .p-steps .p-steps-item:before {
+  content: " ";
+  border-top: 1px solid $color-highlight;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  display: block;
+  position: absolute;
+  margin-top: -1rem;
 }

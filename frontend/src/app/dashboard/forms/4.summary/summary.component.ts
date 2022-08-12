@@ -10,6 +10,7 @@ import { FormsService } from '../../service/forms.service';
 })
 export class SummaryComponent implements OnInit {
   prSummaryFormGroup: FormGroup;
+  disable:boolean = false;
 
   constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
@@ -20,6 +21,9 @@ export class SummaryComponent implements OnInit {
     if(data){
       this.prSummaryForm?.['summary'].setValue(data.summary);
     }
+
+    let prevData:any = this.formService.getData('skills')
+    if(!prevData) this.disable = true;
   }
 backToSkills(){
   this.router.navigate(['dashboard/form/skills'])

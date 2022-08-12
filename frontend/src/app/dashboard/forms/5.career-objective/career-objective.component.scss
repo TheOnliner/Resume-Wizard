@@ -1,83 +1,95 @@
 
 .formcontainer {
-    background-color: #00d5af;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 55em;
-  }
-  
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-  }
-  
-  input[type=submit] {
-    background-color: #1a7ae7;
-    color: white;
-    margin-left: 25%;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-    text-align: center;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #729bd8;
-  }
-  
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55em;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.btngrp{
+  display: flex;
+  margin-left: 2.2rem;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+
   input[type=button] {
-    background-color: #1a7ae7;
-    color: white;
-    margin-left: 25%;
+    background-color:#082bdc;
+    color:white;
     padding: 12px 20px;
+    align-items: center;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     float: left;
     text-align: center;
   }
+  input[type=button]:hover  {
+    background-color: #001ca8;
+  }
   
-  input[type=button]:hover {
+  input[type=button]:disabled{
     background-color: #729bd8;
+    cursor:not-allowed;
   }
-  .container {
-    border-radius: 5px;
-    height: 425px;
-    width: 50em;
-    background-color: #f3eaea;
-    padding: 20px;
+
+  input[type=button]:disabled :hover{
+    background-color: #729bd8;
+    cursor:not-allowed;
   }
-  
-  .col-25 {
-    float: none;
+}
+
+.container {
+  border-radius: 5px;
+  height: 425px;
+  width: 50em;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.col-25 {
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin-top: -2%;
+}
+
+textarea{
+  background-color: rgb(239, 233, 243);
+  color: black;
+
+  &::placeholder{
+    color: black;
+    font-size: 1.5rem;
+  }
+}
+
+.col-75 {
+  float: none;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 6px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
     width: 100%;
-    text-align: center;
-    margin-top: -2%;
+    margin-top: 0;
   }
-  
-  .col-75 {
-    float: none;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 6px;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
-  
+}

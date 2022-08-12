@@ -31,19 +31,22 @@
         <div class="col-12">
           <label for="inputAddress" class="form-label">Address</label>
           <input type="text" name="address"
-          formControlName="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          formControlName="address" class="form-control" id="inputAddress" placeholder="N-12, Sec-6, Vashi, Navi Mumbai, Maharashtra, 400703
+          ">
         </div>
         
         <div class="col-md-6">
           <label for="inputCity"  class="form-label">City</label>
           <input type="text" name="city"
-          formControlName="city" class="form-control" id="inputCity">
+          formControlName="city" class="form-control" placeholder="City" id="inputCity">
         </div>
         <div class="col-md-6">
           <label for="inputState" class="form-label">State</label>
           <select id="inputState" name="state"
           formControlName="state" class="form-select">
-            <option selected>Choose...</option>
+          <option value="" selected="selected" disabled="disabled">
+            -- Select your State --
+          </option>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
               <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -88,7 +91,7 @@
           <button type="button" class="btn btn-primary" id="back" (click)="backToCareerObjective()" >Back</button>
         </div>
         <div class="col-6">
-          <button type="button" class="btn btn-primary" id="next" (click)="onSubmit()">Next</button>
+          <button type="button" class="btn btn-primary" id="next" [disabled]="disable" (click)="onSubmit()">Next</button>
         </div>
       </div>
     </form>

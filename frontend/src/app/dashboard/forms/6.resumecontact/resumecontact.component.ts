@@ -10,7 +10,8 @@ import { FormsService } from '../../service/forms.service';
 })
 export class ResumecontactComponent implements OnInit {
   contactFormGroup: FormGroup;
-
+  disable:boolean = false;
+  
   constructor(private router:Router, private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
@@ -26,6 +27,9 @@ export class ResumecontactComponent implements OnInit {
       this.contactForm?.['city'].setValue(data.city);
       this.contactForm?.['state'].setValue(data.state);
     }
+
+    let prevData:any = this.formService.getData('careerObjective')
+    if(!prevData) this.disable = true;
   }
   backToCareerObjective(){
     this.router.navigate(['dashboard/form/career-objective'])

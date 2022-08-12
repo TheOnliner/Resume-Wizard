@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { jsPDF } from "jspdf";
 import { FormsService } from '../../service/forms.service';
 
@@ -9,17 +10,19 @@ import { FormsService } from '../../service/forms.service';
 })
 export class Template3Component implements OnInit {
   @ViewChild('doc3', {static:false}) el!: ElementRef;
-  constructor(private formService:FormsService) { }
+  constructor(private formService:FormsService, private router:Router) { }
   data:any;
 
   ngOnInit(): void {
     this.getData();
-    console.log(this.data.education.school)
   }
 
 getData(){
  this.data = this.formService.getProfile()
-//  console.log(this.data);
+
+ if(!this.data.education){
+  this.router.navigate(['/dashboard/form/education'])
+      }
 }
   
 

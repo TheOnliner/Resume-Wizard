@@ -10,12 +10,15 @@ import { FormsService } from '../../service/forms.service';
 })
 export class TemplatemodelComponent implements OnInit {
   templateFormGroup: FormGroup;
-
+  disable:boolean = false;
 
   constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
     this._initTemplateForm()
+
+    let prevData:any = this.formService.getData('contact')
+    if(!prevData) this.disable = true;
   }
 
   private _initTemplateForm(){

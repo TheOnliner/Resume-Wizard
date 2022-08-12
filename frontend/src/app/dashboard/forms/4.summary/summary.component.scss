@@ -1,6 +1,6 @@
 
 .formcontainer {
-    background-color: #00d5af;
+    background-color: #f7f7f7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,47 +14,58 @@
     border-radius: 4px;
     resize: vertical;
   }
-  
+
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    
+  }
+  .form-control{
+    height: 40px;
+    font-size: 1.2rem;
+    background-color: rgb(234, 229, 243);
+  }
+
+  .btngrp{
+    display: flex;
+    margin-left: 2.2rem;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+
+    input[type=button] {
+      background-color:#082bdc;
+      color:white;
+      padding: 12px 20px;
+      align-items: center;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: left;
+      text-align: center;
+    }
+    input[type=button]:hover  {
+      background-color: #001ca8;
+    }
+    
+    input[type=button]:disabled{
+      background-color: #729bd8;
+      cursor:not-allowed;
+    }
+  
+    input[type=button]:disabled :hover{
+      background-color: #729bd8;
+      cursor:not-allowed;
+    }
   }
   
-  input[type=button] {
-    background-color: #1a7ae7;
-    color: white;
-    margin-left: 25%;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-    text-align: center;
-  }
-  input[type=submit] {
-    background-color: #1a7ae7;
-    color: white;
-    margin-left: 25%;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-    text-align: center;
-  }
   
-  input[type=submit]:hover {
-    background-color: #729bd8;
-  }
-  input[type=button]:hover {
-    background-color: #729bd8;
-  }
   
   .container {
     border-radius: 5px;
     height: 425px;
     width: 50em;
-    background-color: #f3eaea;
+    background-color: #f7f7f7;
     padding: 20px;
   }
   
@@ -63,6 +74,16 @@
     width: 100%;
     text-align: center;
     margin-top: -2%;
+  }
+
+  textarea{
+    background-color: rgb(239, 233, 243);
+    color: black;
+
+    &::placeholder{
+      color: black;
+      font-size: 1.5rem;
+    }
   }
   
   .col-75 {

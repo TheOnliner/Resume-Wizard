@@ -10,6 +10,7 @@ import { FormsService } from '../../service/forms.service';
 })
 export class SkillsComponent implements OnInit {
   skillFormGroup: FormGroup;
+  disable:boolean = false;
   
   constructor(private router:Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
@@ -24,6 +25,9 @@ export class SkillsComponent implements OnInit {
       this.skillForm?.['skill4'].setValue(data.skill4);
       this.skillForm?.['language'].setValue(data.language);
     }
+
+    let prevData:any = this.formService.getData('experience')
+    if(!prevData) this.disable = true;
   }
 
 backToExperience(){

@@ -10,6 +10,7 @@ import { FormsService } from '../../service/forms.service';
 })
 export class CareerObjectiveComponent implements OnInit {
   careerObjectiveFormGroup: FormGroup;
+  disable:boolean = false;
   constructor(private router: Router,private formBuilder: FormBuilder,private formService:FormsService) { }
 
   ngOnInit(): void {
@@ -19,6 +20,10 @@ export class CareerObjectiveComponent implements OnInit {
     if(data){
       this.careerObjectiveForm?.['objective'].setValue(data.objective);
     }
+
+    let prevData:any = this.formService.getData('professionalSummary')
+    if(!prevData) this.disable = true;
+    
   }
   backToSummary(){
     this.router.navigate(['dashboard/form/summary'])
