@@ -29,8 +29,8 @@ const profileSchema = new mongoose.Schema({
         objective:{ type: String},
     },
     contact:{
-        firstname: { type: String},
-        lastname: { type: String},
+        firstName: { type: String},
+        lastName: { type: String},
         address: { type: String},
         city: { type: String},
         state: { type: String},

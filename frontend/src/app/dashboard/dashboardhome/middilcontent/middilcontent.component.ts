@@ -21,6 +21,7 @@ export class MiddilcontentComponent implements OnInit {
     const userId = this.localStorage.getUserId()
     // console.log(userId);
     this.formService.checkProfile(userId).subscribe((data)=>{
+      console.log(data);
       if(data.length !== 0){
           this.createbtn = true;
           this.editbtn = false;

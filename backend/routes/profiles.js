@@ -29,7 +29,9 @@ router.get(`/form/userprofile/:userid`, async (req, res) =>{
   if(!userProfile) {
       res.status(500).json({success: false})
   } 
+  
   res.send(userProfile);
+  console.log(userProfile);
 })
 
 router.post('/form',async(req,res)=>{
@@ -62,8 +64,8 @@ router.post('/form',async(req,res)=>{
           objective:  req.body.careerObjective.objective,
         },
     contact:{
-      firstname : req.body.contact.firstname,
-      lastname : req.body.contact.lastname,
+      firstName : req.body.contact.firstName,
+      lastName : req.body.contact.lastName,
       address: req.body.contact.address,
       city:req.body.contact.city,
       state: req.body.contact.state,
@@ -80,6 +82,7 @@ router.post('/form',async(req,res)=>{
   profile = await profile.save();
 
   res.send(profile);
+  console.log(profile);
 });
 
 module.exports = router;
