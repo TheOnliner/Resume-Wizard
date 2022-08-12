@@ -82,7 +82,7 @@ export class UserformsComponent implements OnInit {
 
   private _updateUser(user:User){
     this.userservice.updateUser(user).subscribe(res=>{
-      this.messageService.add({severity:'success', summary:'Success', detail:'User added'})
+      this.messageService.add({severity:'success', summary:'Success', detail:'User updated'})
       timer(1500).toPromise().then(finish =>{
         this.location.back();
       })

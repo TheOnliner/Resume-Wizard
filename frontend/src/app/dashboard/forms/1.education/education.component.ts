@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormsService } from '../../service/forms.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-education',
@@ -13,6 +14,7 @@ export class EducationComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private messageService: MessageService,
     private formBuilder: FormBuilder,
     private formService: FormsService
   ) {}
@@ -57,7 +59,8 @@ export class EducationComponent implements OnInit {
       to: this.educationForm?.['to'].value,
     };
 
-    this.formService.save(educationData, 'education');
+    this.formService.save(educationData, 'education')
+    
     this.router.navigate(['dashboard/form/experience']);
   }
 }

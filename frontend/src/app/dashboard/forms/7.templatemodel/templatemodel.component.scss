@@ -127,7 +127,17 @@ a.btn-card {
     height: 35px;
 }
 
-
+#back{
+    margin-top: 30px;
+    background-color:#082bdc;
+    color:white;
+       width: 20%;
+       height: 35px;
+       &:hover{
+        background-color: #001ca8;
+        color:white;
+       }
+   }
 .card:hover {
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
