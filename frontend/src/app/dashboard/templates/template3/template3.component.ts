@@ -9,9 +9,10 @@ import { FormsService } from '../../service/forms.service';
   styleUrls: ['./template3.component.scss']
 })
 export class Template3Component implements OnInit {
-  @ViewChild('doc3', {static:false}) el!: ElementRef;
-  constructor(private formService:FormsService, private router:Router) { }
+  @ViewChild('classic', {static:false}) el!: ElementRef;
   data:any;
+  constructor(private formService:FormsService, private router:Router) { }
+
 
   ngOnInit(): void {
     this.getData();

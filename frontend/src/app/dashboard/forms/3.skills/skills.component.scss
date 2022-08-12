@@ -42,15 +42,10 @@ h1{
   color:white;
 }
 
-input[type=button]:disabled{
-  background-color: #729bd8;
-  cursor:not-allowed;
-}
 #next{
   margin-top: 10%;
   width: 30%;
   height: 35px;
-   margin-left: 112%;
 
    &:hover{
     background-color: #001ca8;
@@ -76,8 +71,9 @@ input[type=button]:disabled{
 
 #back{
   margin-top: 10%;
-  width: 30%;
+  width: 20%;
   height: 35px;
+
   &:hover{
     background-color: #001ca8;
     color:white;
