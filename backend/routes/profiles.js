@@ -11,29 +11,6 @@ router.get('/form',async(req,res)=>{
   res.send(formList);
 })
 
-// router.get(`/get/userorders/:userid`, async (req, res) =>{
-//     const userOrderList = await Order.find({user: req.params.userid}).populate({ 
-//         path: 'orderItems', populate: {
-//             path : 'product', populate: 'category'} 
-//         }).sort({'dateOrdered': -1});
-
-//     if(!userOrderList) {
-//         res.status(500).json({success: false})
-//     } 
-//     res.send(userOrderList);
-// })
-
-router.get(`/form/userprofile/:userid`, async (req, res) =>{
-  const userProfile = await Profile.find({user: req.params.userid})
-
-  if(!userProfile) {
-      res.status(500).json({success: false})
-  } 
-  
-  res.send(userProfile);
-  console.log(userProfile);
-})
-
 router.post('/form',async(req,res)=>{
   let profile = new Profile({
     education: {
@@ -84,6 +61,49 @@ router.post('/form',async(req,res)=>{
   res.send(profile);
   console.log(profile);
 });
+
+router.delete("/form/userprofile/:userid",(req, res) => {
+  console.log(Profile.findById({user: req.params.userid}));
+  Profile.findOneAndRemove({user: req.params.userid})
+    .then((profile) => {
+      if (profile) {
+        return res
+          .status(200)
+          .json({ success: true, message: "the profile is deleted" });
+      } else {
+        return res
+          .status(404)
+          .json({ success: false, message: "the profile not found" });
+      }
+    })
+    .catch((err) => {
+      return res.status(500).json({ success: false, error: err });
+    });
+});
+
+
+router.get(`/form/userprofile/:userid`, async (req, res) =>{
+  
+  const userProfile = await Profile.find({user: req.params.userid})
+  console.log(userProfile);
+  if(!userProfile) {
+      res.status(500).json({success: false})
+  } 
+  
+  res.send(userProfile);
+  console.log(userProfile);
+})
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;
 

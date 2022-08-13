@@ -45,6 +45,13 @@ export class TemplatemodelComponent implements OnInit {
 
     const userId = this.localStorage.getUserId()
     this.formService.save(userId,'user');
+
+    if(this.formService.isEditMode) 
+    {
+      this.formService.deleteprofile(userId).subscribe((data)=>{
+        console.log(data);
+      })
+    }
     
     this.formService.saveprofile().subscribe(data=>{
       console.log(data);

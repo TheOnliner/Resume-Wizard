@@ -28,6 +28,8 @@ export class MiddilcontentComponent implements OnInit {
           // this.formService.toggleEditMode(true);
           // console.log('Edit mode')
           // const userId = this.localStorage.getUserId();
+          console.log('Edit mode')
+          this.formService.toggleEditMode(true);
           this.formService.getUserProfile(userId);
       }else{
           this.createbtn = false;

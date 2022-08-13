@@ -12,23 +12,23 @@ export class FormsService {
   apiURLProfiles = environment.apiURL + 'profiles/form';
   apiURLusers = environment.apiURL + 'users';
 
-  // isEditMode: boolean;
-  // EditModeChange: Subject<boolean> = new Subject<boolean>();
+  isEditMode: boolean;
+  EditModeChange: Subject<boolean> = new Subject<boolean>();
 
   savedData: { [key: string]: Profile[] } = {};
 
   constructor(private http: HttpClient) {
-    // this.isEditMode = false;
+    this.isEditMode = false;
   }
 
-  //    toggleEditMode(value:boolean) {
-  //     this.isEditMode = value;
-  //     this.EditModeChange.next(this.isEditMode);
-  // }
+     toggleEditMode(value:boolean) {
+      this.isEditMode = value;
+      this.EditModeChange.next(this.isEditMode);
+  }
 
-  // isEdit(){
-  //   return this.isEditMode
-  //   }
+  isEdit(){
+    return this.isEditMode
+    }
 
   save(formfields: any, name: string) {
     this.savedData[name as keyof Profile] = formfields;
@@ -62,4 +62,9 @@ export class FormsService {
     console.log('The  above is the saved Data');
     return this.http.post<Profile>(`${this.apiURLProfiles}`, this.savedData);
   }
+
+  deleteprofile(userId: string):Observable<Profile> {
+    return this.http.delete<Profile>(this.apiURLProfiles + `/userprofile/${userId}`)
+}
+
 }
