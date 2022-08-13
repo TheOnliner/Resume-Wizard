@@ -21,18 +21,24 @@ export class FormheaderComponent implements OnInit {
   ngOnInit(): void {}
 
   onHome() {
-    console.log(window.location.pathname);
-    this.confirmationService.confirm({
-      message: 'Changes made here will not be saved',
-      header: 'Are you sure you want to leave this page?',
-      icon: 'pi pi-exclamation-triangle',
-      accept: () => {
-        this.router.navigate(['/dashboard']);
-        this.formService.savedData = {};
-      },
-      reject: () => {},
-    });
-  }
+    if((window.location.pathname !== '/dashboard/form/download/simple') &&
+       (window.location.pathname !== '/dashboard/form/download/classic') && 
+       (window.location.pathname !== '/dashboard/form/download/modern'))
+    {
+      this.confirmationService.confirm({
+        message: 'Changes made here will not be saved',
+        header: 'Are you sure you want to leave this page?',
+        icon: 'pi pi-exclamation-triangle',
+        accept: () => {
+          this.router.navigate(['/dashboard']);
+          this.formService.savedData = {};
+        },
+        reject: () => {},
+      });
+    } else {
+      this.router.navigate(['/dashboard']);
+    }
+    }
 
   onLogout() {
     this.localStorage.removeToken();

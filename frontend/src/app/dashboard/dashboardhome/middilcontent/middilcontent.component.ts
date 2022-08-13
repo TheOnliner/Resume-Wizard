@@ -12,27 +12,20 @@ export class MiddilcontentComponent implements OnInit {
   url="./assets/image/logo1.png";
   url1="./assets/image/pro.png";
 
-  createbtn:boolean = false;
   editbtn:boolean = false
 
   constructor(private router:Router, private formService:FormsService, private localStorage:LocalstorageService) { }
 
   ngOnInit() {
     const userId = this.localStorage.getUserId()
-    // console.log(userId);
     this.formService.checkProfile(userId).subscribe((data)=>{
       console.log(data);
       if(data.length !== 0){
-          this.createbtn = true;
           this.editbtn = false;
-          // this.formService.toggleEditMode(true);
-          // console.log('Edit mode')
-          // const userId = this.localStorage.getUserId();
-          console.log('Edit mode')
+          console.log('Edit mode set to true')
           this.formService.toggleEditMode(true);
           this.formService.getUserProfile(userId);
       }else{
-          this.createbtn = false;
           this.editbtn = true;
       }
     })

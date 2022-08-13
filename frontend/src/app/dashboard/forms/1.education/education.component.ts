@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormsService } from '../../service/forms.service';
-import { MessageService } from 'primeng/api';
-import { LocalstorageService } from 'src/app/localstorage.service';
 
 @Component({
   selector: 'app-education',
@@ -22,14 +20,7 @@ export class EducationComponent implements OnInit {
 
   ngOnInit() {
     this._initEducationForm();
-    // this.isEditMode= this.formService.isEdit();
-    // if(this.isEditMode){
-    // console.log('Edit mode')
-    // const userId = this.localStorage.getUserId();
-    // this.formService.getUserProfile(userId);
-    // }
     let data:any = this.formService.getData('education');
-    // console.log(data)
     if(data){
       this.educationForm?.['school'].setValue(data.school);
       this.educationForm?.['degree'].setValue(data.degree);

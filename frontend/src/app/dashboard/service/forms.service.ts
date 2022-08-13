@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { User } from 'src/app/models/user';
 import { environment } from 'src/environments/environment';
 import { Profile } from '../../models/profile';
 
@@ -32,7 +31,6 @@ export class FormsService {
 
   save(formfields: any, name: string) {
     this.savedData[name as keyof Profile] = formfields;
-    console.log(this.savedData);
   }
 
   getData(name: string) {
@@ -48,7 +46,6 @@ export class FormsService {
       .get<Profile[]>(this.apiURLProfiles + `/userprofile/${userId}`)
       .toPromise();
     this.savedData = data[0];
-    // console.log(this.savedData);
   }
 
   checkProfile(userId: string): Observable<Profile[]> {
@@ -58,12 +55,10 @@ export class FormsService {
   }
 
   saveprofile(): Observable<Profile> {
-    console.log(this.savedData);
-    console.log('The  above is the saved Data');
     return this.http.post<Profile>(`${this.apiURLProfiles}`, this.savedData);
   }
 
-  deleteprofile(userId: string):Observable<Profile> {
+  deleteProfile(userId: string):Observable<Profile> {
     return this.http.delete<Profile>(this.apiURLProfiles + `/userprofile/${userId}`)
 }
 
