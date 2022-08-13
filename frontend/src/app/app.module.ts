@@ -24,19 +24,59 @@ import { LeftsidebarComponent } from './dashboard/dashboardhome/leftsidebar/left
 import { NavbarComponent } from './dashboard/dashboardhome/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/dashboardhome/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
+
+import { UsersModule } from './users.module';
 import { LoginComponent } from './login/login.component';
-import { EducationComponent } from './dashboard/forms/education/education.component';
-import { TemplatemodelComponent } from './dashboard/forms/templatemodel/templatemodel.component';
+import { SidenavComponent } from './admin/sidenav/sidenav.component';
+import { UserprofilesComponent } from './admin/pages/userprofiles/userprofiles.component';
+import { AdminhomeComponent } from './admin/pages/adminhome/adminhome.component';
+
+import { EducationComponent } from './dashboard/forms/1.education/education.component';
+import { TemplatemodelComponent } from './dashboard/forms/7.templatemodel/templatemodel.component';
 import { Template1Component } from './dashboard/templates/template1/template1.component';
-import { ResumecontactComponent } from './dashboard/forms/resumecontact/resumecontact.component';
+import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resumecontact.component';
 import { Template3Component } from './dashboard/templates/template3/template3.component';
-import { CareerObjectiveComponent } from './dashboard/forms/career-objective/career-objective.component';
-import { SummaryComponent } from './dashboard/forms/summary/summary.component';
+import { CareerObjectiveComponent } from './dashboard/forms/5.career-objective/career-objective.component';
+import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
 import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
-import { SkillComponent } from './dashboard/forms/skill/skill.component';
-import { ExperienceComponent } from './dashboard/forms/experience/experience.component';
-import { SettingsComponent } from './dashboard/pages/settings/settings.component';
-import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+
+
+import {CardModule} from 'primeng/card';
+import {ToolbarModule} from 'primeng/toolbar';
+import {TableModule} from 'primeng/table';
+import { UsersService } from './admin/services/users.service';
+import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
+import {ToastModule} from 'primeng/toast';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ChartModule} from 'primeng/chart';
+import {BadgeModule} from 'primeng/badge';
+import {ScrollTopModule} from 'primeng/scrolltop';
+import { FooterComponent } from './homepage/footer/footer.component';
+import { TestimonialsComponent } from './homepage/testimonials/testimonials.component';
+import {CarouselModule} from 'primeng/carousel';
+import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
+import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
+import { FormComponent } from './dashboard/forms/form.component';
+
+import {StepsModule} from 'primeng/steps';
+import { Template2Component } from './dashboard/templates/template2/template2.component';
+import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
+
+
+const ADMIN_MODULE = [
+  CardModule,
+  ToolbarModule,
+  TableModule,
+  ToastModule,
+  ConfirmDialogModule,
+  ChartModule,
+  BadgeModule,
+  ScrollTopModule,
+  CarouselModule,
+  StepsModule,
+];
+
 
 @NgModule({
   declarations: [
@@ -46,6 +86,7 @@ import { ProfileComponent } from './dashboard/pages/profile/profile.component';
     FeaturesComponent,
     HomeComponent,
     ContactComponent,
+    LoginComponent,
     RegistrationComponent,
     DashboardComponent,
     LoginComponent,
@@ -54,6 +95,12 @@ import { ProfileComponent } from './dashboard/pages/profile/profile.component';
     NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
+    SidenavComponent,
+    UserprofilesComponent,
+    AdminhomeComponent,
+    UserformsComponent,
+    FooterComponent,
+    TestimonialsComponent,
     EducationComponent,
     TemplatemodelComponent,
     Template1Component,
@@ -62,24 +109,28 @@ import { ProfileComponent } from './dashboard/pages/profile/profile.component';
     CareerObjectiveComponent,
     SummaryComponent,
     UserNavbarComponent,
-    SkillComponent,
     ExperienceComponent,
-    SettingsComponent,
-    ProfileComponent,
+    SkillsComponent,
+    FormComponent,
+    Template2Component,
+    FormheaderComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    UsersModule,
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
     DialogModule,
     FontAwesomeModule,
     ButtonModule,
+    ...ADMIN_MODULE,
   ],
-  providers: [],
+  providers: [UsersService,MessageService,ConfirmationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

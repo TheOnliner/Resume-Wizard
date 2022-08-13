@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { LocalstorageService } from 'src/app/localstorage.service';
+import { FormsService } from '../../service/forms.service';
+
 
 @Component({
   selector: 'app-middilcontent',
@@ -8,9 +12,32 @@ import { Component, OnInit } from '@angular/core';
 export class MiddilcontentComponent implements OnInit {
   url="./assets/image/logo1.png";
   url1="./assets/image/pro.png";
-  constructor() { }
 
-  ngOnInit(): void {
+  editbtn:boolean = false
+
+  constructor(private router:Router, private formService:FormsService, private localStorage:LocalstorageService) { }
+
+  ngOnInit() {
+    const userId = this.localStorage.getUserId()
+    this.formService.checkProfile(userId).subscribe((data)=>{
+      // console.log(data);
+      if(data.length !== 0){
+          this.editbtn = false;
+          this.formService.toggleEditMode(true);
+          this.formService.getUserProfile(userId);
+      }else{
+          this.editbtn = true;
+      }
+    })
   }
 
-}
+  createResume(){
+   this.router.navigate(['/dashboard/form/education'])
+  }
+
+  editResume(){
+    this.router.navigate(['/dashboard/form/education'])
+    
+    }
+  }
+

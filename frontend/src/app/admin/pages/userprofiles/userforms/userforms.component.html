@@ -1,0 +1,61 @@
+<p-toast></p-toast>
+<div class="userforms">
+  <p-card [header]="isEdit? 'Edit User' : 'Add User' " subheader="Create/Edit users here">
+    <div class="p-grid mb-5">
+      <div class="p-col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-right"></div>
+          <div>
+            <p-button [label]="isEdit? 'Update user' : 'Create User'" icon="pi pi-check-circle" styleClass="p-button-primary mr-4" (click)="onSubmit()"></p-button>
+            <p-button 
+            styleClass="p-button-secondary"  
+            label="Cancel" icon="pi pi-times-circle" (click)="onCancel()"></p-button>
+          </div>
+        </p-toolbar>
+      </div>
+    </div>
+    <div class="p-grid">
+      <div class="p-col-12">
+        <form [formGroup]="form">
+          <div class="card p-5">
+            <h5 class="text-black-alpha-90 text-xl mb-6">Please enter user details</h5>
+            <div class="formgrid grid">
+                <div class="field col">
+                    <label for="username" class="text-black-alpha-90 text-xl">Username</label>
+                    <input formControlName="username"  id="username" type="text" 
+                    pattern="[a-zA-Z ]*"
+                    class="text-base text-white text-xl surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <small *ngIf="!userForm['username']?.valid && isSubmitted" class="p-error text-lg">*Username required <br> (only letters allowed)</small>
+                </div>
+                <div class="field col">
+                    <label for="email" 
+                    class="text-black-alpha-90 text-xl">Email</label>
+                    <input id="email" type="text" 
+                    formControlName="email"
+                    class="text-base text-white text-xl surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <small *ngIf="!userForm['email']?.valid && isSubmitted" class="p-error text-lg">*Email required</small>
+                </div>
+                <div class="field col">
+                  <label for="password" class="text-black-alpha-90 text-xl">Password</label>
+                  <input id="password" type="text"
+                  formControlName="password" 
+                  pattern=".{8,}"
+                  class="text-base text-white text-xl surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                  <small *ngIf="!userForm['password']?.valid && isSubmitted" class="p-error text-lg">*Password required <br> (Min. 8 characters)</small>
+              </div>
+            </div>
+            </div>       
+            <div class="card p-3 mt-4 pt-5">
+              <div class="field-checkbox">
+                  <input type="checkbox" formControlName="isadmin" 
+                  id="isadmin">
+                  <label for="isadmin" class="text-black-alpha-90 text-xl">Admin</label>
+              </div>
+              </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+</div>
+
+

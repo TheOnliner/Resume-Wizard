@@ -1,0 +1,32 @@
+@import "../../assets/variables.scss";
+
+
+.admin-wrapper{
+  display: flex;
+
+  .admin-features{
+    background-color:$color-grey-light-2;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 28em;
+
+    .title-container{
+      background-color: $color-grey-light-1;
+      padding: 0.8em 2em;
+      h3{
+        font-family: 'PT Sans Narrow', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      }
+      p{
+        font-family: 'Quicksand', sans-serif;
+      font-size: 1.5rem;
+      }  
+    }
+    .admin-main{
+      padding:15px;
+    }
+  }
+}
+

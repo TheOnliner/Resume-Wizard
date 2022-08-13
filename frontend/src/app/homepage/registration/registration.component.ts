@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HomeService } from '../home.service';
+import { LocalstorageService } from 'src/app/localstorage.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -17,7 +20,8 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private homeService: HomeService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+private auth: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -51,5 +55,28 @@ export class RegistrationComponent implements OnInit {
       email: this.signupForm?.['email'].value,
       password: this.signupForm?.['password'].value,
     };
+
+    this.auth
+    .signup(signupData.name, signupData.email, signupData.password)
+    .subscribe(
+      (user) => {
+        this.authsignError = false;
+        this.signupFormGroup.reset();
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error);
+        this.authsignError = true;
+
+        if (error.status === 400) {
+          this.authsignMessage =
+            'Error in the server, Please try again later';
+        } else if (error.status === 500) {
+          this.authsignMessage =
+            'This mail id is already registered. Log in instead';
+        } else {
+          this.authsignMessage = 'Unexpected error occured, Please try again';
+        }
+      }
+    );
   }
 }

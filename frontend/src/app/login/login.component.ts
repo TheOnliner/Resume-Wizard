@@ -8,6 +8,8 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
+import { LocalstorageService } from '../localstorage.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
   authError = false;
   authMessage = '*Email or password is incorrect, Please try again';
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private LocalstorageService: LocalstorageService, private auth: AuthService) {}
 
   ngOnInit(): void {
     this._initLoginForm();
@@ -50,5 +52,23 @@ export class LoginComponent implements OnInit {
       email: this.loginForm?.['email'].value,
       password: this.loginForm?.['password'].value,
     };
+    this.auth.login(loginData.email, loginData.password).subscribe(
+      (user) => {
+        this.authError = false;
+        this.LocalstorageService.setToken(user.token);
+        if(user.isAdmin){
+          this.router.navigate(['/admin']);
+        }else{
+          this.router.navigate(['/dashboard']);
+        }
+      },
+      (error: HttpErrorResponse) => {
+        console.log(error);
+        this.authError = true;
+        if (error.status !== 400) {
+          this.authMessage = 'Error in the server, Please try again later';
+        }
+      }
+    );
   }
 }

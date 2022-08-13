@@ -1,0 +1,55 @@
+<div class="body" >
+
+    <div class="cont"  >
+
+        <h1>Tell us your Skills</h1><br>
+    <br>
+    <form [formGroup]="skillFormGroup">
+<div class="row">
+    <div class="col">
+        <label for="form-select" class="form-label">Skill-1</label>
+      <input type="text"  name="skill1"
+      formControlName="skill1"
+      class="form-control" placeholder="Enter your first Skill" >
+    </div>
+    <div class="col">
+        <label for="form-select" class="form-label">Skill-2</label>
+      <input type="text" name="skill2"
+      formControlName="skill2" class="form-control" placeholder="Enter your second Skill" >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"><label for="form-select" class="form-label">Skill-3</label>
+      <input type="text" name="skill3"
+      formControlName="skill3" class="form-control" placeholder="Enter your third Skill" >
+    </div>
+    <div class="col"><label for="form-select" class="form-label">Skill-4</label>
+      <input type="text" name="skill4"
+      formControlName="skill4" class="form-control" placeholder="Enter your fourth Skill" >
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Language</label>
+    <select id="inputState" name="language"
+    formControlName="language" class="form-select">
+    <option value="" selected="selected" disabled="disabled">
+      -- Select your Native Language --
+    </option>
+      <option selected>English</option>
+      <option>Malayalam</option>
+      <option>Hindi</option>
+    </select>
+  </div>
+<div class="row">
+  <div class="col-6">
+    <button type="button" class="btn " id="back" (click)="backToExperience()">Back</button>
+  </div>
+  <div class="col-6">
+    <button type="button" class="btn btn-primary" id="next" [disabled]="disable" (click)="onSubmit()">Next</button>
+  </div>
+</div>
+</form>
+  </div>
+</div>

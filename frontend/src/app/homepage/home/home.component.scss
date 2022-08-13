@@ -23,13 +23,14 @@ p {
 .sectioncontainer {
   background: linear-gradient(to right, #27b8ea, #30d3c2, #46f5a6);
   display: flex;
-  height: 120em;
+  height: 130em;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
+
   .section1 {
-    height: 70%;
+    height: 100%;
     img {
       width: 100%;
       object-fit: contain;

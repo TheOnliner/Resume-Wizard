@@ -1,0 +1,32 @@
+<div class="formcontainer">
+    <div class="container">
+        <form [formGroup]="prSummaryFormGroup">
+        <div>
+          <div class="col-25">
+            <h1><label for="fname"><b>PROFESSIONAL SUMMARY</b></label></h1>
+          </div>
+        </div>
+        <div>
+          <div class="col-25">
+            <label for="lname"><h3>Give us a short summary of your professional career...</h3></label>
+          </div>
+        </div>
+        <div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write here.." name="summary"
+            formControlName="summary"
+            style="height:200px"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-6">
+            <button type="button" class="btn " id="back" (click)="backToSkills()">Back</button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary" id="next" [disabled]="disable" (click)="onSubmit()">Next</button>
+          </div>
+        </div>
+        </form>
+      </div>
+  </div>
