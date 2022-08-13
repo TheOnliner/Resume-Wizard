@@ -3,50 +3,35 @@
     <form [formGroup]="templateFormGroup">
       <div class="row">
         <div class="col-md-4">
-          <div class="card-content">
+          <div class="card-content" (click)="onSubmit('Simple')">
             <div class="card-img">
               <img src="assets/image/temp1.jpeg" alt="" />
             </div>
             <div class="card-desc">
               <h4>Simple</h4>
-              <a
-                class="btn-card"
-                [hidden]="disable"
-                (click)="onSubmit('Simple')"
-                >Select</a
-              >
+              <div class="card-desc" *ngIf="!prevData" style="color: rgb(0, 238, 255); font-size:medium">*No data Found!</div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-content">
+          <div class="card-content" (click)="onSubmit('Functional')">
             <div class="card-img">
               <img src="assets/image/temp1.jpeg" alt="" />
             </div>
             <div class="card-desc">
-              <h4>Classic</h4>
-              <a
-                class="btn-card"
-                [hidden]="disable"
-                (click)="onSubmit('Classic')"
-                >Select</a
-              >
+              <h4>Functional</h4>
+              <div class="card-desc" *ngIf="!prevData" style="color: rgb(0, 238, 255); font-size:medium">*No data Found!</div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card-content">
+          <div class="card-content" (click)="onSubmit('Modern')">
             <div class="card-img">
               <img src="assets/image/temp1.jpeg" alt="" />
             </div>
             <div class="card-desc">
               <h4>Modern</h4>
-              <a
-                class="btn-card"
-                [hidden]="disable"
-                (click)="onSubmit('Modern')"
-                >Select</a
-              >
+              <div class="card-desc" *ngIf="!prevData" style="color: rgb(0, 238, 255); font-size:medium">*No data Found!</div>
             </div>
           </div>
         </div>

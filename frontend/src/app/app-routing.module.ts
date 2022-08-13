@@ -35,7 +35,7 @@ const routes: Routes = [
         { path: 'templates', component: TemplatemodelComponent},
         { path: 'download/simple', component: Template1Component},
         { path: 'download/modern', component: Template2Component},
-        { path: 'download/classic', component: Template3Component},  
+        { path: 'download/functional', component: Template3Component},  
       ]},
       // { path: 'dashboard/form-education', component: FormComponent},
       // { path: 'dashboard/form-experience', component: ExperienceComponent},

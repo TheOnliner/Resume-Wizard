@@ -11,7 +11,7 @@ import { FormsService } from '../../service/forms.service';
 })
 export class TemplatemodelComponent implements OnInit {
   templateFormGroup: FormGroup;
-  disable: boolean = false;
+  prevData:any;
 
   constructor(
     private router: Router,
@@ -23,8 +23,7 @@ export class TemplatemodelComponent implements OnInit {
   ngOnInit(): void {
     this._initTemplateForm();
 
-    let prevData: any = this.formService.getData('contact');
-    if (!prevData) this.disable = true;
+    this.prevData = this.formService.getData('contact');
   }
 
   private _initTemplateForm() {
@@ -42,6 +41,8 @@ export class TemplatemodelComponent implements OnInit {
   }
 
   onSubmit(value: String) {
+    if(!this.prevData) return
+
     const templateFormData = {
       selection: value,
     };
@@ -65,8 +66,8 @@ export class TemplatemodelComponent implements OnInit {
       if (templateFormData.selection === 'Simple') {
         this.router.navigate(['dashboard/form/download/simple']);
       }
-      if (templateFormData.selection === 'Classic') {
-        this.router.navigate(['dashboard/form/download/classic']);
+      if (templateFormData.selection === 'Functional') {
+        this.router.navigate(['dashboard/form/download/functional']);
       }
       if (templateFormData.selection === 'Modern') {
         this.router.navigate(['dashboard/form/download/modern']);

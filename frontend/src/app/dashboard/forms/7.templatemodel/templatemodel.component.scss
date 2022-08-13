@@ -5,7 +5,7 @@ section{
 }
 .details-card {
 	background: #f7f7f7;
-    height: 1000px;
+    height: 80em;
     width: 100%;
     
 
@@ -20,6 +20,16 @@ section{
     margin-right: 25px;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     border-radius: 10px;
+    transition: all 0.2s;
+
+    &:hover{
+        background: orange;
+    }
+
+    &:hover .card-desc h4{
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+    }
 }
 
 .card-img {
@@ -128,16 +138,19 @@ a.btn-card {
 }
 
 #back{
-    margin-top: 30px;
-    background-color:#082bdc;
-    color:white;
-       width: 20%;
-       height: 35px;
-       &:hover{
+    width: 30%;
+    height: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+  
+    &:hover{
         background-color: #001ca8;
         color:white;
        }
-   }
+  }
+  .col-6{
+    margin-top: 2rem;
+  }
 .card:hover {
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);

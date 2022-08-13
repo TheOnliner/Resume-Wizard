@@ -5,7 +5,7 @@
   media="all"
 />
 <div id="doc2" class="yui-t7">
-  <div id="inner" #classic>
+  <div id="inner" #functional>
     <div id="hd">
       <div class="yui-gc">
         <div class="yui-u first">
@@ -118,8 +118,12 @@
     <!--// footer -->
   </div>
   <!-- // inner -->
-  <div class="buttonContainer">
-    <h3><a id="pdf" class="download" (click)="downloadpdf()">Download PDF</a></h3>
+  <div class="btngrp">
+    <div class="buttonContainer2" (click)="changeTemplate()" >
+      <h3><a>Back</a></h3>
     </div>
-</div>
+  <div class="buttonContainer" (click)="downloadpdf()">
+    <h3><a id="pdf" class="download">Download PDF</a></h3>
+  </div>
+  </div>
 

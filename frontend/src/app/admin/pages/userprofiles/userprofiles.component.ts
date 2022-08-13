@@ -51,10 +51,6 @@ export class UserprofilesComponent implements OnInit {
     });
   }
 
-
-
-
-
   updateUser(userId:string){
     this.router.navigateByUrl(`admin/userprofiles/forms/${userId}`)
    

@@ -10,10 +10,9 @@ import { FormsService } from '../service/forms.service';
 export class FormComponent implements OnInit {
   items: MenuItem[];
 
-  constructor(private formService: FormsService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    let selection = 'simple';
     this.items = [
       {
         label: 'Education',

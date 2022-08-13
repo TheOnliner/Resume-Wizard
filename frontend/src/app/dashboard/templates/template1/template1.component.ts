@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsService } from '../../service/forms.service';
 import { jsPDF } from "jspdf";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-template1',
@@ -11,7 +12,7 @@ import { jsPDF } from "jspdf";
 export class Template1Component implements OnInit {
   @ViewChild('simple', {static:false}) el!: ElementRef;
   data:any;
-  constructor(private formService:FormsService, private router:Router) { }
+  constructor(private formService:FormsService, private router:Router, private location: Location) { }
 
 
   ngOnInit(): void {
@@ -26,7 +27,6 @@ getData(){
       }
 }
   
-
   downloadpdf(){
                                 // Height,width [1300, 1040]
     let pdf = new jsPDF('p', 'mm', [1000, 750]);
@@ -35,5 +35,9 @@ getData(){
         pdf.save("Resume.pdf");
       }
     });
+  }
+
+  changeTemplate(){
+    this.location.back()
   }
 }

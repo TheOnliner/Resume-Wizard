@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmationService } from 'primeng/api';
 import { LocalstorageService } from 'src/app/localstorage.service';
 import { FormsService } from '../../service/forms.service';
 
@@ -12,7 +12,6 @@ import { FormsService } from '../../service/forms.service';
 export class FormheaderComponent implements OnInit {
   constructor(
     private router: Router,
-    private messageService: MessageService,
     private confirmationService: ConfirmationService,
     private formService: FormsService,
     private localStorage: LocalstorageService
@@ -22,7 +21,7 @@ export class FormheaderComponent implements OnInit {
 
   onHome() {
     if((window.location.pathname !== '/dashboard/form/download/simple') &&
-       (window.location.pathname !== '/dashboard/form/download/classic') && 
+       (window.location.pathname !== '/dashboard/form/download/functional') && 
        (window.location.pathname !== '/dashboard/form/download/modern'))
     {
       this.confirmationService.confirm({

@@ -19,10 +19,9 @@ export class MiddilcontentComponent implements OnInit {
   ngOnInit() {
     const userId = this.localStorage.getUserId()
     this.formService.checkProfile(userId).subscribe((data)=>{
-      console.log(data);
+      // console.log(data);
       if(data.length !== 0){
           this.editbtn = false;
-          console.log('Edit mode set to true')
           this.formService.toggleEditMode(true);
           this.formService.getUserProfile(userId);
       }else{

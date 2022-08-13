@@ -26,38 +26,71 @@
     background-color: rgb(234, 229, 243);
   }
 
-  .btngrp{
-    display: flex;
-    margin-left: 2.2rem;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
+  // .btngrp{
+  //   display: flex;
+  //   margin-left: 2.2rem;
+  //   width: 90%;
+  //   justify-content: space-between;
+  //   align-items: center;
 
-    input[type=button] {
-      background-color:#082bdc;
-      color:white;
-      width: 20%;
-      height: 35px;
-      align-items: center;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: left;
-      text-align: center;
-    }
-    input[type=button]:hover  {
-      background-color: #001ca8;
-    }
+  //   input[type=button] {
+  //     background-color:#082bdc;
+  //     color:white;
+  //     width: 20%;
+  //     height: 35px;
+  //     align-items: center;
+  //     border: none;
+  //     border-radius: 4px;
+  //     cursor: pointer;
+  //     float: left;
+  //     text-align: center;
+  //   }
+  //   input[type=button]:hover  {
+  //     background-color: #001ca8;
+  //   }
     
-    input[type=button]:disabled{
-      background-color: #5c72e5;
-      cursor:not-allowed;
-    }
+  //   input[type=button]:disabled{
+  //     background-color: #5c72e5;
+  //     cursor:not-allowed;
+  //   }
   
-    input[type=button]:disabled :hover{
-      background-color: #729bd8;
-      cursor:not-allowed;
-    }
+  //   input[type=button]:disabled :hover{
+  //     background-color: #729bd8;
+  //     cursor:not-allowed;
+  //   }
+  // }
+
+  .btn{
+    background-color:#082bdc;
+    color:white;
+  }
+  
+  #next{
+    width: 60%;
+    height: 40px;
+    margin-left: 75%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+  
+    &:hover{
+        background-color: #001ca8;
+        color:white;
+       }
+  }
+  #back{
+    width: 45%;
+    height: 40px;
+    margin-left: -35%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+  
+    &:hover{
+        background-color: #001ca8;
+        color:white;
+       }
+  }
+  .col-6{
+    margin-top: 5rem;
   }
 
   .container {

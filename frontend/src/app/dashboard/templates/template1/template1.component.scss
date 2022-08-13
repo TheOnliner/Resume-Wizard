@@ -160,35 +160,71 @@
     }
   }
   
-  
-  .buttonContainer {
-    background-color: rgb(59, 59, 59);
-    margin: 5rem auto;
-    padding: 1em 2em;
-    width: 20%;
-    transition: all 0.2s;
-    h3{
-      text-align: center;
+  .btngrp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .buttonContainer {
+      background-color: rgb(59, 59, 59);
+      margin: 5rem auto;
+      padding: 1em 2em;
+      border-radius: 5px;
+      width: 15%;
       transition: all 0.2s;
-      a {
-        text-decoration: none;
-        color: white;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-        transition: all 0.2s;
+      h3{
         text-align: center;
-      }
-      &:hover a {
-        cursor: pointer;
+        transition: all 0.2s;
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          transition: all 0.2s;
+          text-align: center;
+        }
+        &:hover a {
+          cursor: pointer;
+          background-color: #4314b6;
+        }
+       
+      } &:hover {
         background-color: #4314b6;
+        cursor: pointer;
       }
-     
-    } &:hover {
-      background-color: #4314b6;
-      cursor: pointer;
+      
     }
     
+    .buttonContainer2 {
+      background-color:#082bdc;
+      color:white;
+      border-radius: 5px;
+      margin: 5rem auto;
+      padding: 1em 2em;
+      width: 10%;
+      transition: all 0.2s;
+      h3{
+        text-align: center;
+        transition: all 0.2s;
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          transition: all 0.2s;
+          text-align: center;
+        }
+        &:hover a {
+          cursor: pointer;
+          background-color: #001ca8;
+          color:white;
+        }
+       
+      } &:hover {
+        background-color: #001ca8;;
+        cursor: pointer;
+      }
   }
   
+    
+  }
   
   
   

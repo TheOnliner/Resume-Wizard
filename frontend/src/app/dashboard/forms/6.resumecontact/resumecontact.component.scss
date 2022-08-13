@@ -32,18 +32,6 @@
     cursor:not-allowed;
   }
 
-   #next{
-    background-color:#082bdc;
-    color:white;
-       width: 30%;
-       height: 35px;
-       margin-left: 70%;  
-       &:hover{
-        background-color: #001ca8;
-        color:white;
-       }
-   }
-
    .form-control{
     height: 40px;
     font-size: 1.2rem;
@@ -59,13 +47,34 @@
     width: 98.8%;
     font-size: 1.2rem;
   }
-   #back{
+  .btn{
     background-color:#082bdc;
     color:white;
-       width: 20%;
-       height: 35px;
-       &:hover{
+  }
+  
+  #next{
+    width: 40%;
+    height: 40px;
+    margin-left: 60%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+  
+    &:hover{
         background-color: #001ca8;
         color:white;
        }
-   }
+  }
+  #back{
+    width: 30%;
+    height: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+  
+    &:hover{
+        background-color: #001ca8;
+        color:white;
+       }
+  }
+  .col-6{
+    margin-top: 5rem;
+  }

@@ -39,8 +39,6 @@ export class UserformsComponent implements OnInit {
 
   onSubmit(){
     this.isSubmitted =true;
-    console.log(this.userForm?.['username'].value)
-    console.log(this.userForm?.['isadmin'].value)
     if(this.form.invalid){
       return;    
     }

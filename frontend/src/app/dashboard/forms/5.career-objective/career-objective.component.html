@@ -19,9 +19,13 @@
     </div>
   </div>
   <br>
-  <div class="btngrp">
-    <input type="button" value="Back" (click)="backToSummary()">
-    <input type="button" value="Next" [disabled]="disable" (click)="onSubmit()">
+  <div class="row">
+    <div class="col-6">
+      <button type="button" class="btn " id="back" (click)="backToSummary()">Back</button>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-primary" id="next" [disabled]="disable" (click)="onSubmit()">Next</button>
+    </div>
   </div>
   </form>
 </div>

@@ -11,17 +11,6 @@
 
   }
 
-  #next{
-    width: 20%;
-    height: 35px;
-    margin-left: 113%;
-  
-    &:hover{
-        background-color: #001ca8;
-        color:white;
-       }
-  }
-
 .form-control{
   height: 40px;
 
@@ -43,14 +32,30 @@ h1{
 }
 
 #next{
-  margin-top: 10%;
-  width: 30%;
-  height: 35px;
+  width: 40%;
+  height: 40px;
+  margin-left: 60%;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.8rem;
 
-   &:hover{
-    background-color: #001ca8;
-    color:white;
-   }
+  &:hover{
+      background-color: #001ca8;
+      color:white;
+     }
+}
+#back{
+  width: 30%;
+  height: 40px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.8rem;
+
+  &:hover{
+      background-color: #001ca8;
+      color:white;
+     }
+}
+.col-6{
+  margin-top: 5rem;
 }
 
 .form-control{
@@ -67,15 +72,4 @@ h1{
   height: 40px;
   width: 98.8%;
   font-size: 1.2rem;
-}
-
-#back{
-  margin-top: 10%;
-  width: 20%;
-  height: 35px;
-
-  &:hover{
-    background-color: #001ca8;
-    color:white;
-   }
 }

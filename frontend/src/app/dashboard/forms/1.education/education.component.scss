@@ -38,9 +38,11 @@ h1{
     color:white;
 }
 #next{
-    width: 30%;
-    height: 35px;
-    margin-left: 80%;
+    width: 40%;
+    height: 40px;
+    margin-left: 60%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
 
     &:hover{
         background-color: #001ca8;
@@ -48,13 +50,18 @@ h1{
        }
 }
 #back{
-    width: 20%;
-    height: 35px;
+    width: 30%;
+    height: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.8rem;
 
     &:hover{
         background-color: #001ca8;
         color:white;
        }
+}
+.col-6{
+    margin-top: 5rem;
 }
 
 

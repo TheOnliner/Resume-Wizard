@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { jsPDF } from "jspdf";
@@ -9,9 +10,9 @@ import { FormsService } from '../../service/forms.service';
   styleUrls: ['./template3.component.scss']
 })
 export class Template3Component implements OnInit {
-  @ViewChild('classic', {static:false}) el!: ElementRef;
+  @ViewChild('functional', {static:false}) el!: ElementRef;
   data:any;
-  constructor(private formService:FormsService, private router:Router) { }
+  constructor(private formService:FormsService, private router:Router, private location:Location) { }
 
 
   ngOnInit(): void {
@@ -35,5 +36,9 @@ getData(){
         pdf.save("Resume.pdf");
       }
     });
+  }
+
+  changeTemplate(){
+    this.location.back()
   }
 }

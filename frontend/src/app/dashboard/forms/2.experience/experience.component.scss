@@ -36,17 +36,6 @@ input[type=button]:disabled{
   cursor:not-allowed;
 }
 
-#next{
-  margin-top: 8%;
-  width: 20%;
-  height: 35px;
-  margin-left: 80%;
-
-  &:hover{
-    background-color: #001ca8;
-    color:white;
-   }
-}
 .form-control{
   height: 40px;
   font-size: 1.2rem;
@@ -63,9 +52,11 @@ input[type=button]:disabled{
   font-size: 1.2rem;
 }
 #next{
-  width: 30%;
-  height: 35px;
-  margin-left: 113%;
+  width: 40%;
+  height: 40px;
+  margin-left: 60%;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.8rem;
 
   &:hover{
       background-color: #001ca8;
@@ -73,12 +64,16 @@ input[type=button]:disabled{
      }
 }
 #back{
-  margin-top: 10%;
   width: 30%;
-  height: 35px;
+  height: 40px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1.8rem;
 
   &:hover{
-    background-color: #001ca8;
-    color:white;
-   }
+      background-color: #001ca8;
+      color:white;
+     }
+}
+.col-6{
+  margin-top: 5rem;
 }
