@@ -4,6 +4,7 @@ import { FormsService } from '../../service/forms.service';
 import { jsPDF } from "jspdf";
 import { Location } from '@angular/common';
 
+
 @Component({
   selector: 'app-template1',
   templateUrl: './template1.component.html',

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { jsPDF } from "jspdf";
 import { FormsService } from '../../service/forms.service';
 
+
 @Component({
   selector: 'app-template3',
   templateUrl: './template3.component.html',

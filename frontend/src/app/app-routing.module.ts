@@ -19,6 +19,7 @@ import { ExperienceComponent } from './dashboard/forms/2.experience/experience.c
 import { FormComponent } from './dashboard/forms/form.component';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 
+
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   {
@@ -37,13 +38,6 @@ const routes: Routes = [
         { path: 'download/modern', component: Template2Component},
         { path: 'download/functional', component: Template3Component},  
       ]},
-      // { path: 'dashboard/form-education', component: FormComponent},
-      // { path: 'dashboard/form-experience', component: ExperienceComponent},
-      // { path: 'dashboard/form-skills', component: SkillsComponent},
-      // { path: 'dashboard/form-summary', component: SummaryComponent},
-      // { path: 'dashboard/form-career-objective', component: CareerObjectiveComponent},
-      // { path: 'dashboard/form-contact', component: ResumecontactComponent},
-      // { path: 'dashboard/templates', component: TemplatemodelComponent},
       { path: 'dashboard/templates/simple', component: Template1Component},
       { path: 'dashboard/templates/modern', component: Template2Component},
       { path: 'dashboard/templates/classic', component: Template3Component},  
@@ -56,6 +50,7 @@ const routes: Routes = [
     ] },
     ]
   }
+
 ];
 
 @NgModule({

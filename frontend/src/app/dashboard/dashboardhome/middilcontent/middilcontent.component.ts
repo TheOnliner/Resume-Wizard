@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/localstorage.service';
 import { FormsService } from '../../service/forms.service';
 
+
 @Component({
   selector: 'app-middilcontent',
   templateUrl: './middilcontent.component.html',
@@ -29,7 +30,6 @@ export class MiddilcontentComponent implements OnInit {
       }
     })
   }
-
 
   createResume(){
    this.router.navigate(['/dashboard/form/education'])

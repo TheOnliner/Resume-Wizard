@@ -114,6 +114,7 @@ const ADMIN_MODULE = [
     FormComponent,
     Template2Component,
     FormheaderComponent,
+
   ],
   imports: [
     BrowserModule,
