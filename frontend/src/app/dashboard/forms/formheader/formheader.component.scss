@@ -1,0 +1,58 @@
+@import "../../../../assets/variables.scss";
+
+  #blurryeffect{
+    width: 100%;
+    height: 15rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+   
+    .form-header{
+    width: 100%;
+    height: 9rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4rem;
+  
+      .section-container{
+        .title{
+        font-family: "Pacifico", cursive;
+        color: $color-primary;
+        margin-top: 1.5rem;
+        font-weight: 100;
+        mix-blend-mode: difference;
+        font-size:2.5rem;
+          line-height: 1em;
+          }
+      
+          .para{
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;;
+            mix-blend-mode: difference;
+          }
+      } 
+      .button-grp{
+        display: flex;
+        width:10%;
+        justify-content: space-around;
+        align-items: center;
+  
+        .btn{
+          font-size: 3rem;
+          color: #333;
+          mix-blend-mode: difference;
+
+            &:hover{
+              cursor: pointer;
+              }
+        }
+    }
+    }
+    }
+
+

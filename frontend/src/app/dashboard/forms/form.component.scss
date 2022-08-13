@@ -6,6 +6,8 @@ $color-highlight : rgba(255, 255, 255, 0.301);
   padding-top: 2rem;
   background-color: $color-primary;
   height: 13rem;
+  margin-top: 9rem;
+  // z-index: 50;
 }
 
 :host ::ng-deep .p-steps-title {

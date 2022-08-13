@@ -1,0 +1,22 @@
+
+<div id="blurryeffect">
+  <div class="form-header"> 
+    <div class="section-container"> 
+      <div class="title">ResumeWizard</div>  
+      <div class="para">Forms</div>
+    </div>
+    <div class="button-grp">
+      <div class="dashboard-btn btn" (click)="onHome()"><span class="material-symbols-outlined">
+        home
+        </span></div>
+      <div class="logout-btn btn" (click)="onLogout()" ><span class="material-symbols-outlined">
+        logout
+        </span></div>
+    </div>
+  </div>
+</div>
+<p-confirmDialog
+  [style]="{ width: '50vw' , fontSize: '1.5rem'}"
+  [baseZIndex]="10000"
+  rejectButtonStyleClass="p-button-text"
+></p-confirmDialog>

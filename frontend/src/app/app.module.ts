@@ -61,6 +61,7 @@ import { FormComponent } from './dashboard/forms/form.component';
 
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
+import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
 
 
 const ADMIN_MODULE = [
@@ -112,6 +113,7 @@ const ADMIN_MODULE = [
     SkillsComponent,
     FormComponent,
     Template2Component,
+    FormheaderComponent,
   ],
   imports: [
     BrowserModule,
