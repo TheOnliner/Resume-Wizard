@@ -43,7 +43,7 @@
         <span class="links_name">Settings</span>
       </a>
     </li>
-    <li class="log_out">
+    <li class="log_out" (click)="onLogout()" >
       <a href="#">
         <i class='bx bx-log-out'></i>
         <span class="links_name">Log out</span>
@@ -54,12 +54,10 @@
 <section class="home-section">
 <nav>
   <div class="sidebar-button">
-    <i class='bx bx-menu sidebarBtn'></i>
     <span class="dashboard">Welcome to Your Resume Wizard Dashboard</span>
   </div>
   <div class="profile-details">
-    <!--<img src="images/profile.jpg" alt="">-->
-    <span class="admin_name">User's Name</span>
+    <span class="admin_name">Welcome, {{username | titlecase}}</span>
   </div>
 </nav>
 

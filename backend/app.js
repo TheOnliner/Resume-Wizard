@@ -29,6 +29,13 @@ mongoose
     console.log(err);
   });
 
+  //Routes
+const usersRoutes = require("./routes/users");
+const profilesRoutes = require("./routes/profiles");
+
+app.use(`${api}/users`, usersRoutes);
+app.use(`${api}/profiles`, profilesRoutes);
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -41,13 +48,6 @@ app.use((req, res, next) => {
   );
   next();
 });
-
-//Routes
-const usersRoutes = require("./routes/users");
-const profilesRoutes = require("./routes/profiles");
-
-app.use(`${api}/users`, usersRoutes);
-app.use(`${api}/profiles`, profilesRoutes);
 
 app.listen(PORT, () => {
   console.log("Server is listening");

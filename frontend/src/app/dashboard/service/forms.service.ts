@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Profile } from '../../models/profile';
+import { User } from '../../models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -39,6 +40,10 @@ export class FormsService {
 
   getProfile() {
     return this.savedData;
+  }
+
+  getUser(userId: string): Observable<User> {
+    return this.http.get<User>(this.apiURLusers +`/${userId}`)
   }
 
   async getUserProfile(userId: string) {
