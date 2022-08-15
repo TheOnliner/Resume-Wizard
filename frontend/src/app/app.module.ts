@@ -16,7 +16,7 @@ import { RegistrationComponent } from './homepage/registration/registration.comp
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { DashboardComponent } from './dashboard/dashboardhome/dashboard.component';
 import { RightsidebarComponent } from './dashboard/dashboardhome/rightsidebar/rightsidebar.component';
@@ -58,6 +58,7 @@ import {CarouselModule} from 'primeng/carousel';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { FormComponent } from './dashboard/forms/form.component';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
@@ -75,6 +76,7 @@ const ADMIN_MODULE = [
   ScrollTopModule,
   CarouselModule,
   StepsModule,
+  ProgressSpinnerModule,
 ];
 
 
@@ -130,7 +132,9 @@ const ADMIN_MODULE = [
     ButtonModule,
     ...ADMIN_MODULE,
   ],
-  providers: [UsersService,MessageService,ConfirmationService],
+  providers: [UsersService,MessageService,ConfirmationService,
+  // {provide: HTTP_INTERCEPTORS,  multi:true}
+],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
