@@ -238,6 +238,7 @@ html {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
+    float: left;
     margin: -14px 0  0 30px;
     position: relative;
     text-transform: uppercase;
@@ -309,7 +310,6 @@ html {
   .card-list::-webkit-scrollbar-track
   {
       -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
-      box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
       border-radius: 2px;
       background-color: #F5F5F5;
   }
@@ -324,7 +324,6 @@ html {
   {
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      box-shadow: inset 0 0 6px rgba(0,0,0,.2);
       background-color: #ddd;
   }
   
