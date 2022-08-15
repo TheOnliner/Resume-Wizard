@@ -1,230 +1,247 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html {
-    height: 100%;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;  
+}
+
+body {
+  min-height: 100%;  
+  background:#eee;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 14px;
+  line-height: 26px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 700px;   
+  background: #fff;
+  margin: 0px auto 0px; 
+  box-shadow: 1px 1px 2px #DAD7D7;
+  border-radius: 3px;  
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.header {
+  margin-bottom: 30px;
+  
+  color: blue;
+  
+  .full-name {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: rgb(63, 20, 220);
   }
   
-  body {
-    min-height: 100%;  
-    background:#eee;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #222;
-    font-size: 14px;
-    line-height: 26px;
-    padding-bottom: 50px;
+  .first-name {
+    font-weight: 200;
+    color: #1414dc;
   }
   
-  .container {
-    max-width: 700px;   
-    background: #fff;
-    margin: 0px auto 0px; 
-    box-shadow: 1px 1px 2px #DAD7D7;
-    border-radius: 3px;  
-    padding: 40px;
-    margin-top: 50px;
-  }
-  
-  .header {
-    margin-bottom: 30px;
+  .last-name {
+    font-weight: 200;
     
+  }
+  
+  .contact-info {
     color: blue;
-    
-    .full-name {
-      font-size: 40px;
-      text-transform: uppercase;
-      margin-bottom: 5px;
-      color: crimson;
-    }
-    
-    .first-name {
-      font-weight: 700;
-      color: crimson;
-    }
-    
-    .last-name {
-      font-weight: 300;
-      
-    }
-    
-    .contact-info {
-      margin-bottom: 20px;
-    }
-    
-    .email ,
-    .phone {
-      color: #999;
-      font-weight: 300;
-    } 
-    
-    .separator {
-      height: 10px;
-      display: inline-block;
-      border-left: 2px solid #999;
-      margin: 0px 10px;
-    }
-    
-    .position {
-      font-weight: bold;
-      display: inline-block;
-      margin-right: 10px;
-      text-decoration: underline;
-    }
+    font-size: medium;
+    margin-bottom: 20px;
   }
   
+  .email ,
+  .phone {
+    color:black;
+    font-size: medium;
+    font-weight: 500;
+  } 
   
-  .details {
-    line-height: 20px;
-    
-    .section {
-      margin-bottom: 40px;  
-    }
-    
-    .section:last-of-type {
-      margin-bottom: 0px;  
-    }
-    
-    .section__title {
-      letter-spacing: 2px;
-      color: blue;
-      font-weight: bold;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    
-    .section__list-item {
-      margin-bottom: 40px;
-    }
-    
-    .section__list-item:last-of-type {
-      margin-bottom: 0;
-    }
-    
-    .left ,
-    .right {
-      vertical-align: top;
-      display: inline-block;
-    }
-    
-    .left {
-      width: 60%;    
-    }
-    
-    .right {
-      text-align: right;
-      width: 39%;    
-    }
-    
-    .name {
-      font-weight: bold;
-    }
-    
-    a {
-      text-decoration: none;
-      color: #000;
-      font-style: italic;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-      color: #000;
-    }
-    
-      
-    
-      
-    .skills__item {
-      margin-bottom: 10px;  
-    }
-    
-    .skills__item .right {
-      input {
-        display: none;
-      }
-      
-      label {
-        display: inline-block;  
-        width: 20px;
-        height: 20px;
-        background: #C3DEF3;
-        border-radius: 20px;
-        margin-right: 3px;
-      }
-      
-      input:checked + label {
-        background: #79A9CE;
-      }
-    }
+  .separator {
+    height: 10px;
+    display: inline-block;
+    border-left: 2px solid rgb(48, 27, 237);
+    margin: 0px 10px;
   }
   
-  .btngrp{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .buttonContainer {
-      background-color: rgb(59, 59, 59);
-      margin: 5rem auto;
-      padding: 1em 2em;
-      border-radius: 5px;
-      width: 15%;
+  .position {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: underline;
+  }
+}
+.details {
+  line-height: 20px;
+  
+  .section {
+    margin-bottom: 40px;  
+  }
+  
+  .section:last-of-type {
+    margin-bottom: 0px;  
+  }
+  
+  .section__title {
+    
+    letter-spacing: 2px;
+    color: rgb(78, 46, 239);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .section__list-item {
+    color: blue;
+    font-size: larger;
+    margin-bottom: 40px;
+  }
+  
+  .section__list-item:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .left ,
+  .right {
+    vertical-align: top;
+    display: inline-block;
+  }
+  
+  .left {
+    font-size: larger;
+    width: 60%;    
+  }
+  .name {
+    color: blue;
+    font-weight: 400;
+    font-size: larger;
+  }
+  
+  // a {
+  //   text-decoration: none;
+  //   color: #000;
+  //   font-style: italic;
+  // }
+  
+  // a:hover {
+  //   text-decoration: underline;
+  //   color: #000;
+  // }
+  
+    
+  
+    
+  .skills__item {
+    margin-bottom: 10px;  
+  }
+  
+  .skills__item .right {
+    input {
+      display: none;
+    }
+    
+    label {
+      display: inline-block;  
+      width: 20px;
+      height: 20px;
+      background: #C3DEF3;
+      border-radius: 20px;
+      margin-right: 3px;
+    }
+    
+    input:checked + label {
+      background: #79A9CE;
+    }
+  }
+}
+
+
+.blue {
+  background: rgb(16, 117, 232);
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+
+
+.btngrp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .buttonContainer {
+    background-color: rgb(59, 59, 59);
+    margin: 5rem auto;
+    padding: 1em 2em;
+    border-radius: 5px;
+    width: 25%;
+    transition: all 0.2s;
+    h3{
+      text-align: center;
       transition: all 0.2s;
-      h3{
-        text-align: center;
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         transition: all 0.2s;
-        a {
-          text-decoration: none;
-          color: white;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-          transition: all 0.2s;
-          text-align: center;
-        }
-        &:hover a {
-          cursor: pointer;
-          background-color: #4314b6;
-        }
-       
-      } &:hover {
+        text-align: center;
+      }
+      &:hover a {
+        cursor: pointer;
         background-color: #4314b6;
-        cursor: pointer;
       }
-      
+     
+    } &:hover {
+      background-color: #4314b6;
+      cursor: pointer;
     }
     
-    .buttonContainer2 {
-      background-color:#082bdc;
-      color:white;
-      border-radius: 5px;
-      margin: 5rem auto;
-      padding: 1em 2em;
-      width: 10%;
-      transition: all 0.2s;
-      h3{
-        text-align: center;
-        transition: all 0.2s;
-        a {
-          text-decoration: none;
-          color: white;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-          transition: all 0.2s;
-          text-align: center;
-        }
-        &:hover a {
-          cursor: pointer;
-          background-color: #001ca8;
-          color:white;
-        }
-       
-      } &:hover {
-        background-color: #001ca8;;
-        cursor: pointer;
-      }
   }
   
-    
-  }
+  .buttonContainer2 {
+    background-color:#082bdc;
+    color:white;
+    border-radius: 5px;
+    margin: 5rem auto;
+    padding: 1em 2em;
+    width: 15%;
+    transition: all 0.2s;
+    h3{
+      text-align: center;
+      transition: all 0.2s;
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        transition: all 0.2s;
+        text-align: center;
+      }
+      &:hover a {
+        cursor: pointer;
+        background-color: #001ca8;
+        color:white;
+      }
+     
+    } &:hover {
+      background-color: #001ca8;;
+      cursor: pointer;
+    }
+}
+
+  
+}
+
+
+
+
+
+
   
   
   
