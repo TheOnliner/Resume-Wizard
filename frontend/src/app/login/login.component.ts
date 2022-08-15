@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
         this.authError = false;
         this.LocalstorageService.setToken(user.token);
         if(user.isAdmin){
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/home']);
         }else{
           this.router.navigate(['/dashboard']);
         }

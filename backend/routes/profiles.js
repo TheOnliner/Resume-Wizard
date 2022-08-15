@@ -81,7 +81,6 @@ router.delete("/form/userprofile/:userid",(req, res) => {
 
 
 router.get(`/form/userprofile/:userid`, async (req, res) =>{
-  
   const userProfile = await Profile.find({user: req.params.userid})
   if(!userProfile) {
       res.status(500).json({success: false})
