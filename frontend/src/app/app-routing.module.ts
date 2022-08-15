@@ -49,7 +49,7 @@ const routes: Routes = [
       {path: 'userprofiles/forms/:id', component : UserformsComponent}
     ] },
     ]
-  }
+  },
 
 ];
 
