@@ -173,7 +173,7 @@ html {
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
-    margin: -14px 0  0 30px;
+    margin: -50px 0  0 30px;
     position: relative;
     text-transform: uppercase;
     width: 20%;
@@ -190,6 +190,7 @@ html {
     position: relative;
     max-height: 100px;
     overflow: hidden;
+    font-size: 1.25rem;
     transition: all 600ms ease-out;
   }
   
@@ -239,6 +240,13 @@ html {
     overflow-x: scroll;
     padding: 0;
     white-space: nowrap;
+
+    li{
+      img{
+        height: 150px;
+        margin-right: 10px;
+      }
+    }
   }
   
   .card-list::-webkit-scrollbar-track
@@ -251,8 +259,8 @@ html {
   
   .card-list::-webkit-scrollbar
   {
-      height: 3px;
-      background-color: #F5F5F5;
+      height: 8px;
+      background-color: #f5f5f5;
   }
   
   .card-list::-webkit-scrollbar-thumb
@@ -260,7 +268,8 @@ html {
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
       box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      background-color: #ddd;
+      background-color: 
+      #498fbc;
   }
   
   .card-list li {

@@ -59,11 +59,9 @@ router.post('/form',async(req,res)=>{
   profile = await profile.save();
 
   res.send(profile);
-  console.log(profile);
 });
 
 router.delete("/form/userprofile/:userid",(req, res) => {
-  console.log(Profile.findById({user: req.params.userid}));
   Profile.findOneAndRemove({user: req.params.userid})
     .then((profile) => {
       if (profile) {
@@ -83,15 +81,12 @@ router.delete("/form/userprofile/:userid",(req, res) => {
 
 
 router.get(`/form/userprofile/:userid`, async (req, res) =>{
-  
   const userProfile = await Profile.find({user: req.params.userid})
-  console.log(userProfile);
   if(!userProfile) {
       res.status(500).json({success: false})
   } 
   
   res.send(userProfile);
-  console.log(userProfile);
 })
 
 module.exports = router;
