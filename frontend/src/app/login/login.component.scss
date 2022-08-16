@@ -131,8 +131,10 @@
         .btnC {
           display: flex;
           align-items: center;
+          flex-direction: column;
           justify-content: center;
           margin-top: 5em;
+          gap: 3rem;
 
           .loginbtn {
             padding: 1rem 4rem;
@@ -165,6 +167,7 @@
             }
           }
         }
+
       }
     }
     .right-side {
@@ -216,6 +219,44 @@
         font-size: 1.5rem;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .signup {
+        align-items: center;
+        background: $neu-1;
+        border: 0;
+        // border-radius: 8px;
+        border-radius: 50px;
+        box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+        box-sizing: border-box;
+        color: #000000;
+        cursor: pointer;
+        display: flex;
+        font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+        font-size: 1.4rem;
+        justify-content: center;
+        line-height: 1.5rem;
+        padding: 1rem 5rem;
+        position: relative;
+        text-align: center;
+        transition: .2s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: pre;
+        width: max-content;
+        word-break: normal;
+        word-spacing: normal;
+        box-shadow: -5px -5px 5px 0 #fff, 5px 5px 5px 0 #1d0dca17;
+        transform: translateY(-1px);
+      }
+      
+      .signup:hover {
+        background: #edf5ff;
+      }
+      .signup:active {
+        transform: translateY(0px);
       }
     }
   }

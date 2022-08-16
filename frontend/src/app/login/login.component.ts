@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HomeService } from '../homepage/home.service';
 
 import {
   faFacebook,
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   authError = false;
   authMessage = '*Email or password is incorrect, Please try again';
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private LocalstorageService: LocalstorageService, private auth: AuthService) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private LocalstorageService: LocalstorageService, private auth: AuthService, private HomeService:HomeService) {}
 
   ngOnInit(): void {
     this._initLoginForm();
@@ -70,5 +71,10 @@ export class LoginComponent implements OnInit {
         }
       }
     );
+  }
+
+  onSignup(){
+    this.router.navigate(['/']);
+    this.HomeService.toggle.next(true);
   }
 }
