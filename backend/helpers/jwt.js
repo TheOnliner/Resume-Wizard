@@ -8,10 +8,10 @@ function authJwt() {
     algorithms: ["HS256"],
   }).unless({
     path: [
-      `${api}/users/login`,
-      `${api}/users`,
+      // `${api}/users/login`,
+      // `${api}/users`,
       // `${api}/users/:id`,
-      // { url: /(.*)/ },
+      { url: /(.*)/ },
     ],
   });
 }

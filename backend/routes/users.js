@@ -19,7 +19,9 @@ router.post("/", async (req, res) => {
 
   user = await user.save();
 
-  res.send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 300);
 });
 
 router.get("/", async (req, res) => {
@@ -28,7 +30,10 @@ router.get("/", async (req, res) => {
   if (!userList) {
     res.status(500).json({ success: false });
   }
-  res.send(userList);
+  
+  setTimeout(function() {
+    res.send(userList);
+  }, 1500);
 });
 
 router.get("/:id", async (req, res) => {
@@ -37,7 +42,10 @@ router.get("/:id", async (req, res) => {
   if (!user) {
     res.status(500).json({ success: false });
   }
-  res.status(200).send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
+  
 });
 
 router.put("/:id", async (req, res) => {
@@ -55,7 +63,9 @@ router.put("/:id", async (req, res) => {
   if (!user) {
     res.status(500).json({ success: false });
   }
-  res.status(200).send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
 });
 
 router.delete("/:id", (req, res) => {
