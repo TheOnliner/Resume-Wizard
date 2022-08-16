@@ -1,5 +1,7 @@
 @import "../../../assets/variables.scss";
 
+
+
 .fcontainer {
   background: linear-gradient(to right, #350f96, #511bda, #350f96);
   display: flex;
@@ -8,6 +10,7 @@
   align-items: center;
   justify-content: center;
   height: 50em;
+  overflow-x: hidden;
 
   &__heading {
     font-family: "Quicksand", sans-serif;

@@ -101,7 +101,6 @@ router.post("/login", async (req, res) => {
       secret,
       {expiresIn : '1d'}
   )
-
     res
       .status(200)
       .send({ email: user.email, token: token, isAdmin: user.isAdmin });

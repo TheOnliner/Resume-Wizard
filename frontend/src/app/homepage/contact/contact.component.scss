@@ -1,8 +1,14 @@
 @import "../../../assets/variables.scss";
 
+
+// html{
+//   overflow-x: hidden;
+// }
+
 .imgcontainer {
   background-color: rgb(56, 11, 161);
-  width: 98.7vw;
+  max-width: 149.98rem;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
