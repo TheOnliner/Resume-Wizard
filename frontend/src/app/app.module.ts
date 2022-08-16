@@ -63,6 +63,7 @@ import { FormComponent } from './dashboard/forms/form.component';
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
+import { Interceptor } from './interceptor';
 
 
 const ADMIN_MODULE = [
@@ -131,7 +132,7 @@ const ADMIN_MODULE = [
     ButtonModule,
     ...ADMIN_MODULE,
   ],
-  providers: [UsersService,MessageService,ConfirmationService],
+  providers: [UsersService,MessageService,ConfirmationService,  { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }, ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
