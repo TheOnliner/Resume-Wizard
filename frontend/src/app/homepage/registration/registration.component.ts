@@ -21,7 +21,8 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private homeService: HomeService,
     private formBuilder: FormBuilder,
-private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -47,7 +48,7 @@ private auth: AuthService
 
   onSignup() {
     if (this.signupFormGroup.invalid) return;
-
+    this.displayModal = false;
     this.isSubmitted = true;
 
     const signupData = {
@@ -62,9 +63,11 @@ private auth: AuthService
       (user) => {
         this.authsignError = false;
         this.signupFormGroup.reset();
+        this.router.navigate(['/login'])
       },
       (error: HttpErrorResponse) => {
         console.log(error);
+        this.displayModal = true;
         this.authsignError = true;
 
         if (error.status === 400) {
