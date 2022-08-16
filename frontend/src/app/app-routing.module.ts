@@ -18,12 +18,14 @@ import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { FormComponent } from './dashboard/forms/form.component';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
+import { AdminAuthGuard } from './admin-auth-guard.service';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   {
     path: '',
+    canActivate:[AuthGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent},
       {path:'dashboard/form', component: FormComponent,children:[
@@ -41,7 +43,12 @@ const routes: Routes = [
       { path: 'dashboard/templates/simple', component: Template1Component},
       { path: 'dashboard/templates/modern', component: Template2Component},
       { path: 'dashboard/templates/classic', component: Template3Component},  
-      { path: 'admin', component: AdminComponent, 
+    ]
+  },{
+    path: '',
+    canActivate:[AdminAuthGuard],
+    children: [
+       { path: 'admin', component: AdminComponent, 
     children:[
       {path: 'home', component: AdminhomeComponent},
       {path: 'userprofiles', component : UserprofilesComponent},
@@ -49,7 +56,10 @@ const routes: Routes = [
       {path: 'userprofiles/forms/:id', component : UserformsComponent}
     ] },
     ]
-  },
+  }
+
+   
+   
 
 ];
 

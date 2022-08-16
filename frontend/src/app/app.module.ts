@@ -59,7 +59,6 @@ import { ExperienceComponent } from './dashboard/forms/2.experience/experience.c
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { FormComponent } from './dashboard/forms/form.component';
 import { HttpErrorInterceptor } from './interceptor';
-// import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
