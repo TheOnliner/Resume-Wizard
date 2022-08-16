@@ -1,0 +1,107 @@
+<div class="container" #functional>
+    <div class="header">
+        <div class="full-name">
+            <div class="user">
+                <span class="User">{{ data.contact.user }} </span>
+            </div>
+            <hr><br>
+            <div class="contact-info">
+                <span class="location">Location: </span>
+                <span class="location-val">{{ data.contact.location }}</span>
+                <span class="separator"></span>
+                <span class="email">Email: </span>
+                <span class="email-val">{{ data.contact.email }}</span>
+                <span class="separator"></span>
+                <span class="phone">Phone: </span>
+                <span class="phone-val">{{ data.contact.phoneNumber }}</span>
+                <span class="separator"></span>
+            </div>
+            <div class="objective">
+                <div class="obj-heading blue">
+                    <h2>Carrier Objective</h2>
+                </div><br> {{ data.carrierObjective.objective }}
+                <br>
+            </div>
+        </div>
+        <div class="section">
+            <div class="objective">
+                <div class="obj-heading blue">
+                    <h2>Summary</h2>
+                </div><br> {{ data.professionalSummary.summary }}
+            </div>
+        </div>
+        <div class="details">
+            <div class="section">
+                <div class="objective">
+                    <div class="obj-heading blue">
+                        <h2>Experience</h2>
+                    </div><br>
+                    <div class="section__list">
+                        <div class="section__list-item">
+                            <div class="center">
+                                <div class="name">{{ data.experience.title }}</div>
+                                <div class="name">{{ data.experience.company }}</div>
+                                <div class="name">{{ data.experience.description }}</div>
+                                <div class="name">{{ data.experience.from }}-{{ data.experience.to }}</div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="section">
+                        <div class="objective">
+                            <div class="obj-heading blue">
+                                <h2>Skill</h2>
+                            </div><br>
+                            <div class="skills">
+                                <div class="skills__item">
+                                    <div class="left">
+                                        <div class="name">
+                                            {{ data.skills.skill1 }}
+                                        </div>
+                                    </div>
+                                    <div class="skills__item">
+                                        <div class="left">
+                                            <div class="name">
+                                                {{ data.skills.skill2 }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__item">
+                                        <div class="left">
+                                            <div class="name">
+                                                {{ data.skills.skill3 }}</div>
+                                        </div>
+                                    </div>
+                                    <div class="skills__item">
+                                        <div class="left">
+                                            <div class="name">
+                                                {{ data.skills.skill4 }}</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="section">
+                                        <div class="objective">
+                                            <div class="obj-heading blue">
+                                                <h2>Education</h2>
+                                            </div><br>
+                                            <div class="section__list">
+                                                <div class="section__list-item">
+                                                    <div class="left">
+                                                        <div class="name">{{ data.education.school }}</div>
+                                                        <div class="name">{{ data.education.degree }}</div>
+                                                        <div class="name">{{ data.education.major }}</div>
+                                                        <div class="name">{{ data.education.from }}--{{ data.education.to }}</div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div><br>
+
+                                        <div class="btngrp">
+                                            <div class="buttonContainer2" (click)="changeTemplate()">
+                                                <h3><a>Back</a></h3>
+                                            </div>
+                                            <div class="buttonContainer" (click)="downloadpdf()">
+                                                <h3><a id="pdf" class="download">Download PDF</a></h3>
+                                            </div>
+                                        </div>
