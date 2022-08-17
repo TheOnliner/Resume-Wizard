@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
+:host ::ng-deep .p-tooltip .p-component .p-tooltip-right {
+  background: #216fd6;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 0.5rem 0.75rem;
+  box-shadow: none;
+  border-radius: 4px;
+}
 // Colors
 $color-one: #1F2124;
 $color-two: #383A3F;
@@ -19,6 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   .input{
     width: 80%;
     padding-left: 1rem;
@@ -26,17 +34,21 @@ body {
     height: 5rem;
     border-radius: 5px;
   }
+
   .btninput{
     background: $color-four;
     color: white;
-    padding: 10px 30px;
+    padding: 8px 30px;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.9);
     transition: all 200ms ease-in-out;
     text-decoration: none;
     cursor: pointer;
+  
     h1{
       font-size: 2rem;
+      padding-top: 5px;
+      text-align: center;
     }
     &:hover {
       background: $color-three;

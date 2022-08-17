@@ -43,6 +43,7 @@ import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-
 
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
+import {TooltipModule} from 'primeng/tooltip';
 import {TableModule} from 'primeng/table';
 import { UsersService } from './admin/services/users.service';
 import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
@@ -84,6 +85,7 @@ const ADMIN_MODULE = [
   ScrollTopModule,
   CarouselModule,
   StepsModule,
+  TooltipModule
 ];
 
 

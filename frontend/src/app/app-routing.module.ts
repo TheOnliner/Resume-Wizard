@@ -24,6 +24,7 @@ import { ViewresumeComponent } from './viewresume/viewresume.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
+  { path: 'resumewiz/view/resume', component: ViewresumeComponent },
   {
     path: '',
     canActivate:[AuthGuard],
@@ -58,7 +59,6 @@ const routes: Routes = [
     ] },
     ]
   },
-  { path: 'view/resume/:id', component: ViewresumeComponent },
 ];
 
 @NgModule({

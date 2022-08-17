@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FormsService } from 'src/app/dashboard/service/forms.service';
+import { Profile } from 'src/app/models/profile';
+import { PdfresumeService } from '../pdfresume.service';
 
 @Component({
   selector: 'app-rpdf',
@@ -6,8 +10,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rpdf.component.scss']
 })
 export class RpdfComponent implements OnInit {
+  simple:boolean = false;
+  functional:boolean = false;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private formsService:FormsService, private pdfResumeService:PdfresumeService) { 
+    this.activatedRoute.queryParams.subscribe(url =>{
+      console.log(url?.['id']);
+      let userID:string = url?.['id'];
+
+      this.formsService.getUserProfile(userID).then(() =>{
+        let data:any = this.formsService.getProfile()
+        if(data.template.selection === 'Simple'){
+          this.simple = true;
+          this.pdfResumeService.data.next(data)
+        }
+        else if(data.template.selection === 'Functional'){
+          this.functional = true;
+          this.pdfResumeService.data.next(data)
+        }
+      })
+    })
+  }
 
   ngOnInit(): void {
   }

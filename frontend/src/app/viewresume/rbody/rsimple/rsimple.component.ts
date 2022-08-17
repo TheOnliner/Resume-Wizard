@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormsService } from '../../../dashboard/service/forms.service';
 import { jsPDF } from "jspdf";
 import { Location } from '@angular/common';
+import { PdfresumeService } from '../pdfresume.service';
 
 @Component({
   selector: 'app-rsimple',
@@ -12,21 +13,14 @@ import { Location } from '@angular/common';
 export class RsimpleComponent implements OnInit {
   @ViewChild('simple', {static:false}) el!: ElementRef;
   data:any;
-  constructor(private formService:FormsService, private router:Router, private location: Location) { }
-
+  constructor(private pdfResumeService:PdfresumeService) { }
 
   ngOnInit(): void {
-    // this.getData();
+    this.pdfResumeService.data.subscribe((data)=>{
+      this.data = data;
+    })
   }
 
-// getData(){
-//  this.data = this.formService.getProfile()
-
-//  if(!this.data.education){
-//   this.router.navigate(['/dashboard/form/education'])
-//       }
-// }
-  
   downloadpdf(){
                                 // Height,width [1300, 1040]
     let pdf = new jsPDF('p', 'mm', [1000, 750]);

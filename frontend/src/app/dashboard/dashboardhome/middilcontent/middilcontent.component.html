@@ -42,8 +42,7 @@
   >
   <div class="inputC" [hidden]="editbtn">
   <input class="input" name="sharelink" #sharelink>
-  <a class="btninput"><h1><strong>SHARE</strong></h1></a>
+  <a class="btninput" pButton type="button" pTooltip="Copy Link to Clipboard" tooltipPosition="right" (click)="copyMessage(RW_URL)"><h1><strong>SHARE</strong></h1></a>
   </div>
-  
 </div>
 <!--/card-->

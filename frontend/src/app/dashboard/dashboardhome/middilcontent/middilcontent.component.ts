@@ -2,7 +2,8 @@ import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/localstorage.service';
 import { FormsService } from '../../service/forms.service';
-
+import { environment } from 'src/environments/environment';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-middilcontent',
@@ -14,19 +15,19 @@ export class MiddilcontentComponent implements OnInit {
   url1="./assets/image/pro.png";
 
   @ViewChild('sharelink', {static:false}) el!: ElementRef;
-
-  editbtn:boolean = false
-
-  constructor(private router:Router, private formService:FormsService, private localStorage:LocalstorageService) { }
+  editbtn:boolean = false;
+  RW_URL:string;
+  constructor(private router:Router, private formService:FormsService, private localStorage:LocalstorageService, private messageService:MessageService) { }
 
   ngOnInit() {
     const userId = this.localStorage.getUserId()
     this.formService.checkProfile(userId).subscribe((data)=>{
-      // console.log(data);
       if(data.length !== 0){
           this.editbtn = false;
           this.formService.toggleEditMode(true);
-          this.el.nativeElement.value = '';
+          let URL:string = environment.URL;
+          this.el.nativeElement.value = `${URL}/resumewiz/view/resume?id=${userId}`;
+          this.RW_URL= this.el.nativeElement.value;
           this.formService.getUserProfile(userId);
       }else{
           this.editbtn = true;
@@ -39,8 +40,11 @@ export class MiddilcontentComponent implements OnInit {
   }
 
   editResume(){
-    this.router.navigate(['/dashboard/form/education'])
-    
+    this.router.navigate(['/dashboard/form/education']) 
     }
+
+  copyMessage(text: string) {
+    navigator.clipboard.writeText(text).then().catch(e => console.log(e));
   }
+}
 
