@@ -27,7 +27,13 @@ export class LoginComponent implements OnInit {
   authError = false;
   authMessage = '*Email or password is incorrect, Please try again';
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private LocalstorageService: LocalstorageService, private auth: AuthService, private HomeService:HomeService) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private LocalstorageService: LocalstorageService,
+    private auth: AuthService,
+    private HomeService: HomeService
+  ) {}
 
   ngOnInit(): void {
     this._initLoginForm();
@@ -57,9 +63,9 @@ export class LoginComponent implements OnInit {
       (user) => {
         this.authError = false;
         this.LocalstorageService.setToken(user.token);
-        if(user.isAdmin){
+        if (user.isAdmin) {
           this.router.navigate(['/admin/home']);
-        }else{
+        } else {
           this.router.navigate(['/dashboard']);
         }
       },
@@ -73,7 +79,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  onSignup(){
+  onSignup() {
     this.router.navigate(['/']);
     this.HomeService.toggle.next(true);
   }
