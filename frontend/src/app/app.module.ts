@@ -65,6 +65,12 @@ import { Template2Component } from './dashboard/templates/template2/template2.co
 import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
 import { SpinnerComponent } from './spinner/spinner/spinner.component';
 import { ViewresumeComponent } from './viewresume/viewresume.component';
+import { RheaderComponent } from './viewresume/rheader/rheader.component';
+import { RbodyComponent } from './viewresume/rbody/rbody.component';
+import { RfooterComponent } from './viewresume/rfooter/rfooter.component';
+import { RpdfComponent } from './viewresume/rbody/rpdf/rpdf.component';
+import { RsimpleComponent } from './viewresume/rbody/rsimple/rsimple.component';
+import { RfunctionalComponent } from './viewresume/rbody/rfunctional/rfunctional.component';
 
 
 const ADMIN_MODULE = [
@@ -119,6 +125,12 @@ const ADMIN_MODULE = [
     FormheaderComponent,
     SpinnerComponent,
     ViewresumeComponent,
+    RheaderComponent,
+    RbodyComponent,
+    RfooterComponent,
+    RpdfComponent,
+    RsimpleComponent,
+    RfunctionalComponent,
 
   ],
   imports: [

@@ -1,0 +1,69 @@
+.pdfContainer{
+	background-color: #f3f7fd;
+  margin-top: -2rem;
+  padding-bottom: 3rem;
+  height: fit-content;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+
+  .pdf-main-content{
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .pdf-title{
+$t: 1s;
+$d: 0.08em;
+$n: 3;
+$e: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+$front: #5f4def;
+$back: lightblue;
+
+.popout{
+	font-family: Pacifico, cursive, sans-serif;
+	font-weight: 300;
+	font-size: 60px;
+	padding: 80px;
+
+	@keyframes ani{
+		0%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		30%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		70%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+		100%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+	}
+	span{
+		position: relative;
+		display: inline-block;
+		animation: ani $t infinite alternate $e;
+		@for $i from 1 through $n{
+			&:nth-last-child(#{$i}n){ animation-delay: -$t*$i/$n/2;}
+		}
+	}
+	
+}
+    }
+  }
+}
+
+
+
+

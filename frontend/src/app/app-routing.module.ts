@@ -19,6 +19,7 @@ import { ExperienceComponent } from './dashboard/forms/2.experience/experience.c
 import { FormComponent } from './dashboard/forms/form.component';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 import { AdminAuthGuard } from './admin-auth-guard.service';
+import { ViewresumeComponent } from './viewresume/viewresume.component';
 
 
 const routes: Routes = [
@@ -56,11 +57,8 @@ const routes: Routes = [
       {path: 'userprofiles/forms/:id', component : UserformsComponent}
     ] },
     ]
-  }
-
-   
-   
-
+  },
+  { path: 'view/resume/:id', component: ViewresumeComponent },
 ];
 
 @NgModule({

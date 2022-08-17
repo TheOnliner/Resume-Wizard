@@ -1,0 +1,122 @@
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css"
+  media="all"
+/>
+<div id="doc2" class="yui-t7">
+  <div id="inner" #functional>
+    <div id="hd">
+      <div class="yui-gc">
+        <div class="yui-u first">
+          <h1>{{ data.contact.firstName }}&nbsp;{{ data.contact.lastName }}</h1>
+          <!-- <h2>Web Designer, Director</h2> -->
+        </div>
+
+        <div class="yui-u">
+          <div class="contact-info">
+            <h3>
+              <a>{{ data.contact.email }}</a>
+            </h3>
+            <h3>{{ data.contact.address }}</h3>
+            <h3>{{ data.contact.phoneNumber }}</h3>
+          </div>
+        </div>
+      </div>
+      <!--// .yui-gc -->
+    </div>
+    <!--// hd -->
+
+    <div id="bd">
+      <div id="yui-main">
+        <div class="yui-b">
+          <div class="yui-gf">
+            <div class="yui-u first">
+              <h2>Career Objective</h2>
+            </div>
+            <div class="yui-u">
+              <p class="enlarge">
+                {{ data.careerObjective.objective }}
+              </p>
+            </div>
+          </div>
+
+          <div class="yui-gf">
+            <div class="yui-u first">
+              <h2>Education</h2>
+            </div>
+            <div class="yui-u">
+              <div class="talent">
+                <h2>{{ data.education.degree }}</h2>
+                <p>
+                  {{ data.education.major }} <br />
+                  <strong
+                    >{{ data.education.from }}--{{ data.education.to }}</strong
+                  >
+                </p>
+              </div>
+              <div class="talent">
+                <h2>{{ data.education.school }}</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="yui-gf">
+            <div class="yui-u first">
+              <h2>Skills</h2>
+            </div>
+            <div class="yui-u">
+              <ul class="talent">
+                <li>{{ data.skills.skill1 }}</li>
+                <li>{{ data.skills.skill2 }}</li>
+                <li class="last">{{ data.skills.skill3 }}</li>
+              </ul>
+
+              <ul class="talent">
+                <li>{{ data.skills.skill4 }}</li>
+                <li>{{ data.skills.language }}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="yui-gf">
+            <div class="yui-u first">
+              <h2>Experience</h2>
+            </div>
+
+            <div class="yui-u">
+              <div class="job">
+                <h2>{{ data.experience.company }}</h2>
+                <h3>{{ data.experience.title }}</h3>
+                <h4>{{ data.experience.from }}-{{ data.experience.to }}</h4>
+                <p>{{ data.experience.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="yui-gf">
+            <div class="yui-u first">
+              <h2>Professional Summary</h2>
+            </div>
+            <div class="yui-u">
+              <p class="enlarge">
+                {{ data.professionalSummary.summary }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// bd -->
+
+    <div id="ft">
+      <p>
+        {{ data.contact.firstName }}&nbsp;{{ data.contact.lastName }} &mdash;
+        <a>{{ data.contact.email }}</a> &mdash; {{ data.contact.phoneNumber }}
+      </p>
+    </div>
+    <!--// footer -->
+  </div>
+  <!-- // inner -->
+
+

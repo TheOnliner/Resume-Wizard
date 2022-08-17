@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/localstorage.service';
 import { FormsService } from '../../service/forms.service';
@@ -13,6 +13,8 @@ export class MiddilcontentComponent implements OnInit {
   url="./assets/image/logo1.png";
   url1="./assets/image/pro.png";
 
+  @ViewChild('sharelink', {static:false}) el!: ElementRef;
+
   editbtn:boolean = false
 
   constructor(private router:Router, private formService:FormsService, private localStorage:LocalstorageService) { }
@@ -24,6 +26,7 @@ export class MiddilcontentComponent implements OnInit {
       if(data.length !== 0){
           this.editbtn = false;
           this.formService.toggleEditMode(true);
+          this.el.nativeElement.value = '';
           this.formService.getUserProfile(userId);
       }else{
           this.editbtn = true;
