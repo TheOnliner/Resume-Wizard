@@ -1,10 +1,12 @@
 body {
     background: rgb(99, 39,120)
-}
-.box{
     
-    margin-left: 20%;
-    margin-top: 4%;
+    
+}
+.box{  
+      position: fixed;
+    margin-left: 22%;
+    margin-top: -46.5%;
     width: 70%;
 }
 
@@ -24,8 +26,8 @@ body {
 }
 
 .profile-button:focus {
-    background: #682773;
-    box-shadow: none
+     background: #682773;
+     box-shadow: none
 }
 
 .profile-button:active {
@@ -48,3 +50,22 @@ body {
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+.form-control{
+    
+    font-size: medium;
+}
+.btn{
+    font-size: x-small;
+    text-align: center;
+   
+width: 50%;
+height: 30px; 
+}
+
+
+
+
+
+
+
+
