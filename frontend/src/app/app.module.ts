@@ -59,9 +59,12 @@ import { ExperienceComponent } from './dashboard/forms/2.experience/experience.c
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { FormComponent } from './dashboard/forms/form.component';
 
+
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
+import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
 
 
 const ADMIN_MODULE = [
@@ -114,6 +117,8 @@ const ADMIN_MODULE = [
     FormComponent,
     Template2Component,
     FormheaderComponent,
+    ProfileComponent,
+    ProfilepageComponent,
 
   ],
   imports: [

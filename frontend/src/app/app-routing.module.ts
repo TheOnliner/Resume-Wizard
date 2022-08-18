@@ -38,6 +38,8 @@ const routes: Routes = [
         { path: 'download/modern', component: Template2Component},
         { path: 'download/functional', component: Template3Component},  
       ]},
+  
+      
       { path: 'dashboard/templates/simple', component: Template1Component},
       { path: 'dashboard/templates/modern', component: Template2Component},
       { path: 'dashboard/templates/classic', component: Template3Component},  
