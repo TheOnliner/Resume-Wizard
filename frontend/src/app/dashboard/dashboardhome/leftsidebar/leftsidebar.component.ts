@@ -17,7 +17,6 @@ export class LeftsidebarComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = this.localStorage.getUserId();
-
     this.formService.getUser(userId).subscribe((user:any)=>{
       this.username = user.name;
     })

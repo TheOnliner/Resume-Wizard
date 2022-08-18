@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
         if (user.isAdmin) {
           this.router.navigate(['/admin/home']);
         } else {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/dashboard/home']);
         }
       },
       (error: HttpErrorResponse) => {

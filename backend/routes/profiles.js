@@ -85,8 +85,9 @@ router.get(`/form/userprofile/:userid`, async (req, res) =>{
   if(!userProfile) {
       res.status(500).json({success: false})
   } 
-  
-  res.send(userProfile);
+  setTimeout(function() {
+    res.status(200).send(userProfile);
+  }, 400);
 })
 
 module.exports = router;

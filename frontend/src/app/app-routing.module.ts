@@ -20,6 +20,9 @@ import { FormComponent } from './dashboard/forms/form.component';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { ViewresumeComponent } from './viewresume/viewresume.component';
+import { UsermainComponent } from './dashboard/usermain.component';
+import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 
 
 const routes: Routes = [
@@ -29,7 +32,11 @@ const routes: Routes = [
     path: '',
     canActivate:[AuthGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent},
+      {path:'dashboard', component:UsermainComponent, children:[
+        { path:'home', component: DashboardComponent},
+        {path:'profile',component:ProfileComponent},
+        {path:'settings',component:SettingsComponent}
+      ]},
       {path:'dashboard/form', component: FormComponent,children:[
         { path: 'education', component: EducationComponent},
         { path: 'experience', component: ExperienceComponent},
