@@ -1,0 +1,12 @@
+:host ::ng-deep .p-scrolltop.p-link{
+  background-image:linear-gradient(#00d9ff,rgb(0, 255, 213));
+  border: 0;
+  height: 50px;
+  width:45px;
+  transition: all 1.5s;
+
+  &:hover{
+    background-image:linear-gradient(#56bbff,#0059ff);
+  }
+}
+

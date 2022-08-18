@@ -1,10 +1,10 @@
 <nav class="nav">
   <a class="logo-text">ResumeWiz</a>
   <div class="buttons">
-    <button class="btn loginbtn" routerLinkActive="active" routerLink="/login">
+    <button class="btn loginbtn" (click)="loginClicked()">
       Login
     </button>
-    <button class="btn signupbtn">Signup</button>
+    <button class="btn signupbtn" (click)="signupClicked()">Signup</button>
   </div>
 </nav>
 
