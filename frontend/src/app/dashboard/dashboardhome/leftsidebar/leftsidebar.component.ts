@@ -28,6 +28,7 @@ export class LeftsidebarComponent implements OnInit {
   onLogout() {
     this.localStorage.removeToken();
     this.router.navigate(['']);
+    this.formService.savedData = {};
   }
 
 }

@@ -34,36 +34,39 @@ body {
   color: blue;
   
   .full-name {
-    font-size: 40px;
+    font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 5px;
-    color: crimson;
+    color: rgb(63, 20, 220);
   }
   
   .first-name {
-    font-weight: 700;
-    color: crimson;
+    font-weight: 200;
+    color: #1414dc;
   }
   
   .last-name {
-    font-weight: 300;
+    font-weight: 200;
     
   }
   
   .contact-info {
+    color: blue;
+    font-size: medium;
     margin-bottom: 20px;
   }
   
   .email ,
   .phone {
-    color: #999;
-    font-weight: 300;
+    color:black;
+    font-size: medium;
+    font-weight: 500;
   } 
   
   .separator {
     height: 10px;
     display: inline-block;
-    border-left: 2px solid #999;
+    border-left: 2px solid rgb(48, 27, 237);
     margin: 0px 10px;
   }
   
@@ -74,8 +77,6 @@ body {
     text-decoration: underline;
   }
 }
-
-
 .details {
   line-height: 20px;
   
@@ -88,14 +89,17 @@ body {
   }
   
   .section__title {
+    
     letter-spacing: 2px;
-    color: blue;
+    color: rgb(78, 46, 239);
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
   }
   
   .section__list-item {
+    color: blue;
+    font-size: larger;
     margin-bottom: 40px;
   }
   
@@ -110,28 +114,25 @@ body {
   }
   
   .left {
+    font-size: larger;
     width: 60%;    
   }
-  
-  .right {
-    text-align: right;
-    width: 39%;    
-  }
-  
   .name {
-    font-weight: bold;
+    color: blue;
+    font-weight: 400;
+    font-size: larger;
   }
   
-  a {
-    text-decoration: none;
-    color: #000;
-    font-style: italic;
-  }
+  // a {
+  //   text-decoration: none;
+  //   color: #000;
+  //   font-style: italic;
+  // }
   
-  a:hover {
-    text-decoration: underline;
-    color: #000;
-  }
+  // a:hover {
+  //   text-decoration: underline;
+  //   color: #000;
+  // }
   
     
   
@@ -160,6 +161,15 @@ body {
   }
 }
 
+
+.blue {
+  background: rgb(16, 117, 232);
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+
+
 .btngrp{
   display: flex;
   align-items: center;
@@ -169,7 +179,7 @@ body {
     margin: 5rem auto;
     padding: 1em 2em;
     border-radius: 5px;
-    width: 15%;
+    width: 25%;
     transition: all 0.2s;
     h3{
       text-align: center;
@@ -199,7 +209,7 @@ body {
     border-radius: 5px;
     margin: 5rem auto;
     padding: 1em 2em;
-    width: 10%;
+    width: 15%;
     transition: all 0.2s;
     h3{
       text-align: center;
