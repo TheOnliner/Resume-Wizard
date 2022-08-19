@@ -1,10 +1,10 @@
+import { Location } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/localstorage.service';
-import { FormsService } from '../../service/forms.service';
-import { UserdataService } from '../../service/userdata.service';
+import { UserdataService } from '../../../service/userdata.service';
 
 @Component({
   selector: 'app-profile',
@@ -19,7 +19,8 @@ export class ProfileComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private userdataService: UserdataService,
-    private localStorage: LocalstorageService
+    private localStorage: LocalstorageService,
+    private location:Location
   ) {}
 
   ngOnInit(): void {
@@ -117,5 +118,9 @@ export class ProfileComponent implements OnInit {
         }
       );
     });
+  }
+
+  onCancel(){
+    this.userdataService.isEdit.next(false);
   }
 }

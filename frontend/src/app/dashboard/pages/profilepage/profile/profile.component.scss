@@ -7,6 +7,25 @@ body {
     width: 70%;
 }
 
+.editprofile{
+    font-size: 1.5rem;
+}
+
+.cancel{
+    background: #0031b8;
+    color: white;
+    padding: 0.8rem 3rem;
+    font-size: 1.3rem;
+    margin-right: 4rem;
+    transition: all 0.2s;
+    border: none;
+    border-radius: 5px;
+
+    &:hover{
+        background: #084aff;
+    }
+}
+
 .form-control:focus {
     box-shadow: none;
     border-color: #BA68C8
@@ -15,11 +34,15 @@ body {
 .profile-button {
     background: rgb(99, 39, 120);
     box-shadow: none;
-    border: none
+    padding: 0.9rem 3rem;
+    font-size: 1.3rem;
+    border: none;
+    transition: all 0.2s;
+    transform: translateY(-2px);
 }
 
 .profile-button:hover {
-    background: #682773
+    background: #a938bd;
 }
 
 .profile-button:focus {

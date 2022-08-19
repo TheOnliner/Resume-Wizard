@@ -1,0 +1,140 @@
+<div class="container" *ngIf="!editmode">
+    <div class="box">
+    
+    <div class="main-body">
+          <div class="container rounded bg-white mt-5 mb-5">
+           <div class="row">
+          <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-3"><img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+            <div class="font-weight-bold head">{{formdata.firstname}}&nbsp;{{formdata.lastname}}</div>
+            <div class="text-black-50 email">{{formdata.email}}</div></div>
+        </div>
+        <ul class="wrapper">
+          <li class="icon facebook" (click)="onEdit()">
+            <span class="tooltip">Edit</span>
+            <span class="material-symbols-outlined">
+              edit
+              </span>
+          </li>
+        </ul>
+          <div class="row gutters-sm">      
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.firstname}}&nbsp;{{formdata.lastname}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.email}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mobile number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.mobnumber}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">State</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.state}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">City</h6>
+                    </div>
+                    <div class="col-md-9 text-secondary">
+                      {{formdata.city}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Pincode</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.pincode}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Education</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.education}}
+                    </div>
+                  </div>
+                  <hr>    
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Country</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.country}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Region</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.region}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Experience</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.experience}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Additional Details</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{formdata.details}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{formdata.address}}
+                    </div>
+                  </div>       
+                   </div>
+              </div><br> 
+             </div>
+           </div>
+         </div>
+    </div>
+    </div>
+    </div>
+    </div>
+<app-profile *ngIf="editmode"></app-profile>

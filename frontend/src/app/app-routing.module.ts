@@ -21,8 +21,9 @@ import { Template2Component } from './dashboard/templates/template2/template2.co
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { ViewresumeComponent } from './viewresume/viewresume.component';
 import { UsermainComponent } from './dashboard/usermain.component';
-import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
+import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,7 @@ const routes: Routes = [
     children: [
       {path:'dashboard', component:UsermainComponent, children:[
         { path:'home', component: DashboardComponent},
-        {path:'profile',component:ProfileComponent},
+        {path:'profile',component:ProfilepageComponent},
         {path:'settings',component:SettingsComponent}
       ]},
       {path:'dashboard/form', component: FormComponent,children:[
