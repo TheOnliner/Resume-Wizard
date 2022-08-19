@@ -6,15 +6,14 @@ import { FormsService } from '../../../dashboard/service/forms.service';
 import { PdfresumeService } from '../pdfresume.service';
 
 @Component({
-  selector: 'app-rfunctional',
-  templateUrl: './rfunctional.component.html',
-  styleUrls: ['./rfunctional.component.scss']
+  selector: 'app-rmodern',
+  templateUrl: './rmodern.component.html',
+  styleUrls: ['./rmodern.component.scss']
 })
-export class RfunctionalComponent implements OnInit {
-  @ViewChild('functional', {static:false}) el!: ElementRef;
+export class RmodernComponent implements OnInit {
+  @ViewChild('modern', {static:false}) el!: ElementRef;
   data:any;
   constructor(private pdfResumeService:PdfresumeService) { }
-
 
   ngOnInit(): void {
     this.pdfResumeService.data.subscribe((data)=>{

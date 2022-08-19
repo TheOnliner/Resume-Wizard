@@ -29,19 +29,13 @@ export class FormheaderComponent implements OnInit {
         header: 'Changes made here will not be saved',
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/dashboard/home']);
           this.formService.savedData = {};
         },
         reject: () => {},
       });
     } else {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/dashboard/home']);
     }
     }
-
-  onLogout() {
-    this.localStorage.removeToken();
-    this.router.navigate(['']);
-    this.formService.savedData = {};
-  }
 }

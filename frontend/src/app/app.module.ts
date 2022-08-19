@@ -40,7 +40,7 @@ import { CareerObjectiveComponent } from './dashboard/forms/5.career-objective/c
 import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
 import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
 
-
+import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TooltipModule} from 'primeng/tooltip';
@@ -75,6 +75,8 @@ import { RfunctionalComponent } from './viewresume/rbody/rfunctional/rfunctional
 import { UsermainComponent } from './dashboard/usermain.component';
 import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.component';
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
+import { RmodernComponent } from './viewresume/rbody/rmodern/rmodern.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 
 const ADMIN_MODULE = [
   CardModule,
@@ -87,7 +89,8 @@ const ADMIN_MODULE = [
   ScrollTopModule,
   CarouselModule,
   StepsModule,
-  TooltipModule
+  TooltipModule,
+  InputTextModule
 ];
 
 
@@ -135,9 +138,11 @@ const ADMIN_MODULE = [
     RpdfComponent,
     RsimpleComponent,
     RfunctionalComponent,
+    SettingsComponent,
     UsermainComponent,
     ProfileComponent,
-    ProfilepageComponent
+    ProfilepageComponent,
+    RmodernComponent
   ],
   imports: [
     BrowserModule,

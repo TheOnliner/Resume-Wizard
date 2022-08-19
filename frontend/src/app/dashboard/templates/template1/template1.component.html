@@ -3,7 +3,7 @@
   rel="stylesheet"
   type="text/css"
 />
-
+<div class="templatebg">
 <div class="container" #simple>
   <div class="header">
     <div class="full-name">
@@ -19,7 +19,7 @@
       <span class="phone">Phone: </span>
       <span class="phone-val">{{ data.contact.phoneNumber }}</span>
       <span class="separator"></span>
-      <span class="phone">Adress: </span>
+      <span class="phone">Address: </span>
       <span class="phone-val">{{ data.contact.address }}</span>
       <span class="separator"></span>
       <span class="phone">City:</span>
@@ -149,4 +149,5 @@
   <div class="buttonContainer" (click)="downloadpdf()">
     <h3><a id="pdf" class="download">Download PDF</a></h3>
   </div>
+</div>
 </div>

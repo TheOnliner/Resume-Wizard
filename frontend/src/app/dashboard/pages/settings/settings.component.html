@@ -1,21 +1,25 @@
-<div class="body">
-
-    <div class="cont">
-
-        <h1>Settings</h1>
-        <div class="col">
-            <div class="col"><label for="form-select" class="form-label">Password</label>
-                <input type="text" class="form-control" placeholder="New Password">
-            </div>
-            <div class="row"><label for="form-select" class="form-label">New Password Confirmation</label>
-                <input type="text" class="form-control" placeholder="Enter New Password">
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <button type="submit" class="btn" id="update">Update</button>
-        </div>
-
-    </div>
+<div class="settings">
+    <h2>Password Settings</h2>
+    <form >
+    <div class="form-input">  
+    <span class="p-float-label">
+        <input 
+        class="float-input"
+        type="password" 
+        pInputText> 
+        <label for="float-input">New Password</label>
+    </span>
+    <span class="p-float-label">
+        <input 
+        class="float-input" 
+        type="password" 
+        pInputText> 
+        <label for="float-input">Confirm Password</label>
+    </span>
+</div>
+<div class="buttons">
+    <button type="button" class="btn btn-primary" id="update">Update</button>
+    <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
+</div>
+</form>
+</div>

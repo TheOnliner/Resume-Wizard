@@ -1,11 +1,17 @@
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Lato:400,300,700"
+  rel="stylesheet"
+  type="text/css"
+/>
 
 <div class="container" #simple>
   <div class="header">
     <div class="full-name">
-       <span class="first-name">{{ data.contact.firstName }} </span>  
-       <span class="last-name">{{ data.contact.lastName }}</span> 
-    </div><hr><br>
+      <span class="first-name">{{ data.contact.firstName }} </span>
+      <span class="last-name">{{ data.contact.lastName }}</span>
+    </div>
+    <hr />
+    <br />
     <div class="contact-info">
       <span class="email">Email: </span>
       <span class="email-val">{{ data.contact.email }}</span>
@@ -25,76 +31,113 @@
     <div class="objective">
       <div class="obj-heading blue">
         <h2>Career Objectve</h2>
-      </div><br>
-      <p class="name" contenteditable="true" style="font-weight: 350; font-size: 18px;">
+      </div>
+      <br />
+      <p
+        class="name"
+        contenteditable="true"
+        style="font-weight: 350; font-size: 18px"
+      >
         {{ data.careerObjective.objective }}
       </p>
-    <br></div>
+      <br />
+    </div>
   </div>
-   <div class="details">
+  <div class="details">
     <div class="section">
       <div class="objective">
         <div class="obj-heading blue">
           <h2>Experience</h2>
-        </div><br>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="center">
-            <div class="name">{{ data.experience.title }}</div>
-            <div class="name">{{ data.experience.company }}</div>
-            <div class="name">{{ data.experience.description }}</div>
-            <div class="name">{{ data.experience.from }}-{{ data.experience.to }}</div>
-          </div>
-      </div>
-    </div><br>
-    <div class="section">
-      <div class="objective">
-        <div class="obj-heading blue">
-          <h2>Education</h2>
-        </div><br>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">{{ data.education.school }}</div>
-            <div class="name">{{ data.education.degree }}</div>
-            <div class="name">{{ data.education.major }}</div>
-            <div class="name">{{ data.education.from }}--{{ data.education.to }}</div>
-          </div>
-          
         </div>
-       
-      </div>
-  </div><br>
-     <div class="section">
-      <div class="objective">
-        <div class="obj-heading blue">
-          <h2>Skill</h2>
-        </div><br>
-       <div class="skills">
-         <div class="skills__item">
-           <div class="left"><div class="name">
-            {{ data.skills.skill1 }}
-             </div></div>
-             <div class="skills__item">
-              <div class="left"><div class="name">
-                {{ data.skills.skill2 }}</div></div>
-          </div> <div class="skills__item">
-            <div class="left"><div class="name">
-              {{ data.skills.skill3 }}</div></div>
+        <br />
+        <div class="section__list">
+          <div class="section__list-item">
+            <div class="center">
+              <div class="name">{{ data.experience.title }}</div>
+              <div class="name">{{ data.experience.company }}</div>
+              <div class="name">{{ data.experience.description }}</div>
+              <div class="name">
+                {{ data.experience.from }}-{{ data.experience.to }}
+              </div>
+            </div>
+          </div>
         </div>
-       <div class="skills__item">
-           <div class="left"><div class="name">
-            {{ data.skills.skill4 }}</div></div>
-       </div>
-       <div class="section">
-        <div class="objective">
-          <div class="obj-heading blue">
-            <h2>Summary</h2>
-          </div><br>
-          <p class="name" contenteditable="true" style="font-weight: 350; font-size: 18px;">
-            {{ data.professionalSummary.summary }}
-          </p>     
-      </div>   
-     </div>
+        <br />
+        <div class="section">
+          <div class="objective">
+            <div class="obj-heading blue">
+              <h2>Education</h2>
+            </div>
+            <br />
+            <div class="section__list">
+              <div class="section__list-item">
+                <div class="left">
+                  <div class="name">{{ data.education.school }}</div>
+                  <div class="name">{{ data.education.degree }}</div>
+                  <div class="name">{{ data.education.major }}</div>
+                  <div class="name">
+                    {{ data.education.from }}--{{ data.education.to }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="section">
+            <div class="objective">
+              <div class="obj-heading blue">
+                <h2>Skill</h2>
+              </div>
+              <br />
+              <div class="skills">
+                <div class="skills__item">
+                  <div class="left">
+                    <div class="name">
+                      {{ data.skills.skill1 }}
+                    </div>
+                  </div>
+                  <div class="skills__item">
+                    <div class="left">
+                      <div class="name">
+                        {{ data.skills.skill2 }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills__item">
+                    <div class="left">
+                      <div class="name">
+                        {{ data.skills.skill3 }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills__item">
+                    <div class="left">
+                      <div class="name">
+                        {{ data.skills.skill4 }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section">
+                    <div class="objective">
+                      <div class="obj-heading blue">
+                        <h2>Summary</h2>
+                      </div>
+                      <br />
+                      <p
+                        class="name"
+                        contenteditable="true"
+                        style="font-weight: 350; font-size: 18px"
+                      >
+                        {{ data.professionalSummary.summary }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-    
+</div>

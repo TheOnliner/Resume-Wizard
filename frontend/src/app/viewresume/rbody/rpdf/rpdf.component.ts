@@ -11,9 +11,8 @@ import { Buffer } from 'buffer/';
   styleUrls: ['./rpdf.component.scss']
 })
 export class RpdfComponent implements OnInit {
-  simple:boolean = false;
-  functional:boolean = false;
-
+  simple:boolean; functional:boolean ; modern:boolean = false;
+  
   constructor(private activatedRoute: ActivatedRoute, private formsService:FormsService, private pdfResumeService:PdfresumeService) { 
     this.activatedRoute.queryParams.subscribe(url =>{
       console.log(url?.['id']);
@@ -28,6 +27,10 @@ export class RpdfComponent implements OnInit {
         }
         else if(data.template.selection === 'Functional'){
           this.functional = true;
+          this.pdfResumeService.data.next(data)
+        }
+        else if(data.template.selection === 'Modern'){
+          this.modern = true;
           this.pdfResumeService.data.next(data)
         }
       })

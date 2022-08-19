@@ -45,7 +45,7 @@ export class EducationComponent implements OnInit {
   }
 
   backToDashboard() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['dashboard/home']);
   }
 
   onSubmit() {

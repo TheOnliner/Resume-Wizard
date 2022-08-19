@@ -21,14 +21,5 @@ export class RsimpleComponent implements OnInit {
     })
   }
 
-  downloadpdf(){
-                                // Height,width [1300, 1040]
-    let pdf = new jsPDF('p', 'mm', [1000, 750]);
-    pdf.html(this.el.nativeElement,{
-      callback:(pdf)=>{
-        pdf.save("Resume.pdf");
-      }
-    });
-  }
 }
 
