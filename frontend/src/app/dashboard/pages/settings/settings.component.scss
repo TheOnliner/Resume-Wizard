@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .body {
     background-color: white;
     height: 1000px;
@@ -37,3 +38,42 @@ h1 {
     height: 35px;
     margin-left: 200%;
 }
+=======
+body{
+    height: 350px;
+    width: 800px;
+    background: #31046b !important;
+    font-family: 'Muli', sans-serif;
+    
+  }
+  h1{
+    color: #fff;
+    padding-bottom: 2rem;
+    font-weight: bold;
+  }
+  a{
+    color: #333;
+  }
+  a:hover{
+    color: #E8D426;
+    text-decoration: none;
+  }
+  .form-control:focus {
+  
+      color: #000;
+      background-color: #fff;
+      border:2px solid #E8D426;
+      outline: 0;
+      box-shadow: none;
+  
+  }
+  
+  .btn{
+    background: #2014c7;
+    border: #E8D426;
+  }
+  .btn:hover {
+    background: #20c40a;
+    border: #E8D426;
+  }
+>>>>>>> Stashed changes

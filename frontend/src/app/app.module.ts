@@ -65,6 +65,7 @@ import { Template2Component } from './dashboard/templates/template2/template2.co
 import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
 import { ProfileComponent } from './dashboard/pages/profile/profile.component';
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
+import { TipsComponent } from './dashboard/pages/tips/tips.component';
 
 
 const ADMIN_MODULE = [
@@ -119,6 +120,7 @@ const ADMIN_MODULE = [
     FormheaderComponent,
     ProfileComponent,
     ProfilepageComponent,
+    TipsComponent,
 
   ],
   imports: [
