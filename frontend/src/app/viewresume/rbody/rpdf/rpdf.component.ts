@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormsService } from 'src/app/dashboard/service/forms.service';
 import { Profile } from 'src/app/models/profile';
 import { PdfresumeService } from '../pdfresume.service';
+import { Buffer } from 'buffer/';
 
 @Component({
   selector: 'app-rpdf',
@@ -16,7 +17,8 @@ export class RpdfComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private formsService:FormsService, private pdfResumeService:PdfresumeService) { 
     this.activatedRoute.queryParams.subscribe(url =>{
       console.log(url?.['id']);
-      let userID:string = url?.['id'];
+      let userIDcoded:string = url?.['id'];
+      let userID:string = Buffer.from(userIDcoded, 'base64').toString('binary')
 
       this.formsService.getUserProfile(userID).then(() =>{
         let data:any = this.formsService.getProfile()

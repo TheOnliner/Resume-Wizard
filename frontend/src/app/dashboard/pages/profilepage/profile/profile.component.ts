@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
     private formBuilder: FormBuilder,
     private userdataService: UserdataService,
     private localStorage: LocalstorageService,
-    private location:Location
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -109,6 +109,7 @@ export class ProfileComponent implements OnInit {
         (data) => {
           console.log('Saved');
           console.log(data);
+          this.userdataService.isEdit.next(false);
         },
         (error: HttpErrorResponse) => {
           console.log(error);
@@ -120,7 +121,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  onCancel(){
+  onCancel() {
     this.userdataService.isEdit.next(false);
   }
 }

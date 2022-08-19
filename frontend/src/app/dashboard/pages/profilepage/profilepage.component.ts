@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { LocalstorageService } from 'src/app/localstorage.service';
 import { UserdataService } from '../../service/userdata.service';
 
@@ -7,10 +8,10 @@ import { UserdataService } from '../../service/userdata.service';
   templateUrl: './profilepage.component.html',
   styleUrls: ['./profilepage.component.scss']
 })
-export class ProfilepageComponent implements OnInit {
+export class ProfilepageComponent implements OnInit,OnDestroy {
   editmode:boolean = false;
   formdata: any = '';
-  constructor(private userdataService:UserdataService, private localStorage:LocalstorageService) { }
+  constructor(private userdataService:UserdataService, private localStorage:LocalstorageService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     const userId = this.localStorage.getUserId();
@@ -22,6 +23,12 @@ export class ProfilepageComponent implements OnInit {
 
   this.userdataService.isEdit.subscribe(val=>{
     this.editmode = val;
+
+    if(!val){
+      this.userdataService.getUserData(userId).subscribe((data) => {
+        this.formdata = data[0];
+    })
+    }
   })
 }
 
@@ -30,4 +37,7 @@ onEdit(){
   this.editmode = true;
  }
 
+ ngOnDestroy() {
+  this.userdataService.isEdit.next(false);
+  }
 }
