@@ -32,9 +32,11 @@ mongoose
   //Routes
 const usersRoutes = require("./routes/users");
 const profilesRoutes = require("./routes/profiles");
+const userprofilesRoutes = require("./routes/userprofiles")
 
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/profiles`, profilesRoutes);
+app.use(`${api}/userprofiles`, userprofilesRoutes);
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");

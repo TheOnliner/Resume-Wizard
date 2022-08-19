@@ -73,7 +73,7 @@ import { RpdfComponent } from './viewresume/rbody/rpdf/rpdf.component';
 import { RsimpleComponent } from './viewresume/rbody/rsimple/rsimple.component';
 import { RfunctionalComponent } from './viewresume/rbody/rfunctional/rfunctional.component';
 import { UsermainComponent } from './dashboard/usermain.component';
-
+import { ProfileComponent } from './dashboard/pages/profile/profile.component';
 
 const ADMIN_MODULE = [
   CardModule,
@@ -135,6 +135,7 @@ const ADMIN_MODULE = [
     RsimpleComponent,
     RfunctionalComponent,
     UsermainComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,42 +1,63 @@
+<form [formGroup]="profileFormGroup">
 <div class="box"><div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">My Profile</span><span class="text-black-50">view public profile</span><span> </span></div>
         </div>
-
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Profile </h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels"> First Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Last name</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                    <div class="col-md-6"><label 
+                        class="labels"> First Name</label>
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        name="firstname"
+          formControlName="firstname"
+                        placeholder="first name" 
+                        value=""></div>
+                    <div class="col-md-6"><label class="labels">Last name</label><input type="text"  name="lastname"
+                        formControlName="lastname" class="form-control" value="" placeholder="surname"></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-                    <div class="col-md-12"><label class="labels">state</label><input type="text" class="form-control" placeholder="state" value=""></div>
-                    <div class="col-md-12"><label class="labels">City</label><input type="text" class="form-control" placeholder="city" value=""></div>
-                    <div class="col-md-12"><label class="labels">PinCode</label><input type="text" class="form-control" placeholder="pin Code" value=""></div>
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="number"  class="form-control"  name="mobnumber"
+                        formControlName="mobnumber"placeholder="enter phone number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control"  name="address"
+                        formControlName="address"placeholder="enter address line 1" value=""></div>
+                    <div class="col-md-12"><label class="labels">State</label><input type="text"  name="state"
+                        formControlName="state" class="form-control" placeholder="state" value=""></div>
+                    <div class="col-md-12"><label class="labels">City</label><input type="text"  name="city"
+                        formControlName="city" class="form-control" placeholder="city" value=""></div>
+                    <div class="col-md-12"><label class="labels">PinCode</label><input type="number"  name="pincode"
+                        formControlName="pincode" class="form-control" placeholder="pin Code" value=""></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text"  name="email"
+                        formControlName="email" class="form-control" placeholder="enter email id" value=""></div>
+                    <div class="col-md-12"><label class="labels">Education</label><input type="text"  name="education"
+                        formControlName="education" class="form-control" placeholder="education" value=""></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">Region</label><input type="text" class="form-control" value="" placeholder="Region"></div>
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text"  name="country"
+                        formControlName="country" class="form-control" placeholder="country" value=""></div>
+                    <div class="col-md-6"><label class="labels">Region</label><input type="text"  name="region"
+                        formControlName="region" class="form-control" value="" placeholder="Region"></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" (click)="onSubmit()"  [disabled]="!profileFormGroup.valid" type="submit">Save Profile</button></div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="p-3 py-5">
                 <br><br>
-                <div class="col-md-12"><label class="labels">Experience </label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                <div class="col-md-12"><label class="labels">Experience </label><input type="text"  name="experience"
+                    formControlName="experience"class="form-control" placeholder="experience" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"  name="details"
+                    formControlName="details" class="form-control" placeholder="additional details" value=""></div>
             </div>
         </div>
     </div>
 </div>
 </div>
 
+</form>
