@@ -85,6 +85,36 @@ router.put("/password/:id", async (req, res) => {
   }, 800);
 });
 
+router.put("/forgotpassword", async (req, res) => {
+  // User.find({email:req.body.email}).then(
+  //   console.log('success')
+  // )
+  // const user = await User.findOne(
+  //   {
+  //     email: req.body.email,
+      // passwordHash: bcrypt.hashSync(req.body.password, 10),
+      // isAdmin: req.body.isAdmin,
+  //   },
+  //   { new: true }
+  // );
+
+  // console.log(user)
+    // {
+    //   email: req.body.email,
+    //   passwordHash: bcrypt.hashSync(req.body.password, 10),
+    // },
+    // { new: true }
+  // );
+  // console.log(req.body)
+
+  // if (!usernew) {
+  //   res.status(500).json({ success: false });
+  // }
+  // setTimeout(function() {
+  //   res.status(200).send(user);
+  // }, 800);
+});
+
 
 router.delete("/:id", (req, res) => {
   User.findByIdAndRemove(req.params.id)

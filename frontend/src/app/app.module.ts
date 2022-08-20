@@ -81,6 +81,7 @@ import { SettingsComponent } from './dashboard/pages/settings/settings.component
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
 import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
 import { TipsComponent } from './dashboard/pages/tips/tips.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const ADMIN_MODULE = [
@@ -152,6 +153,7 @@ const ADMIN_MODULE = [
     MytemplatesComponent,
     AdmintemplatesComponent,
     TipsComponent,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,
