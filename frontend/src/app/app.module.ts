@@ -80,6 +80,7 @@ import { RmodernComponent } from './viewresume/rbody/rmodern/rmodern.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
 import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
+import { TipsComponent } from './dashboard/pages/tips/tips.component';
 
 
 const ADMIN_MODULE = [
@@ -150,6 +151,7 @@ const ADMIN_MODULE = [
     RmodernComponent,
     MytemplatesComponent,
     AdmintemplatesComponent,
+    TipsComponent,
   ],
   imports: [
     BrowserModule,

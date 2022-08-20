@@ -25,6 +25,7 @@ import { SettingsComponent } from './dashboard/pages/settings/settings.component
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
 import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
+import { TipsComponent } from './dashboard/pages/tips/tips.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
         { path:'home', component: DashboardComponent},
         {path:'profile',component:ProfilepageComponent},
         {path:'settings',component:SettingsComponent},
-        {path:'templatecollections',component:MytemplatesComponent},
+        {path:'template-collections',component:MytemplatesComponent},
+        {path:'tips',component: TipsComponent},
       ]},
       {path:'dashboard/form', component: FormComponent,children:[
         { path: 'education', component: EducationComponent},
