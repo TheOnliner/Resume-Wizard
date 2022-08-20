@@ -18,7 +18,9 @@ export class ProfilepageComponent implements OnInit,OnDestroy {
     if (!userId) return;
 
     this.userdataService.getUserData(userId).subscribe((data) => {
-      this.formdata = data[0];
+      if(data.length !== 0){
+        this.formdata = data[0];
+      }
   })
 
   this.userdataService.isEdit.subscribe(val=>{

@@ -68,6 +68,24 @@ router.put("/:id", async (req, res) => {
   }, 800);
 });
 
+router.put("/password/:id", async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.params.id,
+    {
+      passwordHash: bcrypt.hashSync(req.body.password, 10),
+    },
+    { new: true }
+  );
+
+  if (!user) {
+    res.status(500).json({ success: false });
+  }
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
+});
+
+
 router.delete("/:id", (req, res) => {
   User.findByIdAndRemove(req.params.id)
     .then((user) => {

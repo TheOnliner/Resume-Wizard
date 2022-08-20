@@ -6,8 +6,8 @@
            <div class="row">
           <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-3"><img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-            <div class="font-weight-bold head">{{formdata.firstname}}&nbsp;{{formdata.lastname}}</div>
-            <div class="text-black-50 email">{{formdata.email}}</div></div>
+            <div class="font-weight-bold head">{{formdata?.firstname}}&nbsp;{{formdata?.lastname}}</div>
+            <div class="text-black-50 email">{{formdata?.email}}</div></div>
         </div>
         <ul class="wrapper">
           <li class="icon facebook" (click)="onEdit()">
@@ -26,7 +26,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.firstname}}&nbsp;{{formdata.lastname}}
+                      {{formdata?.firstname}}&nbsp;{{formdata?.lastname}}
                     </div>
                   </div>
                   <hr>
@@ -35,7 +35,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.email}}
+                      {{formdata?.email}}
                     </div>
                   </div>
                   <hr>
@@ -44,7 +44,7 @@
                       <h6 class="mb-0">Mobile number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.mobnumber}}
+                      {{formdata?.mobnumber}}
                     </div>
                   </div>
                   <hr>
@@ -53,7 +53,7 @@
                       <h6 class="mb-0">State</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.state}}
+                      {{formdata?.state}}
                     </div>
                   </div>
                   <hr>
@@ -62,7 +62,7 @@
                       <h6 class="mb-0">City</h6>
                     </div>
                     <div class="col-md-9 text-secondary">
-                      {{formdata.city}}
+                      {{formdata?.city}}
                     </div>
                   </div>
                   <hr>
@@ -71,7 +71,7 @@
                       <h6 class="mb-0">Pincode</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.pincode}}
+                      {{formdata?.pincode}}
                     </div>
                   </div>
                   <hr>
@@ -80,7 +80,7 @@
                       <h6 class="mb-0">Education</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.education}}
+                      {{formdata?.education}}
                     </div>
                   </div>
                   <hr>    
@@ -89,7 +89,7 @@
                       <h6 class="mb-0">Country</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.country}}
+                      {{formdata?.country}}
                     </div>
                   </div>
                   <hr>
@@ -98,7 +98,7 @@
                       <h6 class="mb-0">Region</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.region}}
+                      {{formdata?.region}}
                     </div>
                   </div>
                   <hr>
@@ -107,7 +107,7 @@
                       <h6 class="mb-0">Experience</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.experience}}
+                      {{formdata?.experience}}
                     </div>
                   </div>
                   <hr>
@@ -116,7 +116,7 @@
                       <h6 class="mb-0">Additional Details</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{formdata.details}}
+                      {{formdata?.details}}
                     </div>
                   </div>
                   <hr>
@@ -125,7 +125,7 @@
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                     {{formdata.address}}
+                     {{formdata?.address}}
                     </div>
                   </div>       
                    </div>

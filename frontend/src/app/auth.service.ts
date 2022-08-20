@@ -32,4 +32,11 @@ export class AuthService {
       password,
     });
   }
+
+  updatePassword(userId:string,password:string): Observable<User>{
+    return this.http.put<User>(`${this.apiURLUsers}`+`/password/${userId}`,{
+      password
+    });
+    
+  }
 }

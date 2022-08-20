@@ -1,25 +1,31 @@
+<p-toast styleClass="p-toast"></p-toast>
 <div class="settings">
     <h2>Password Settings</h2>
-    <form >
-    <div class="form-input">  
-    <span class="p-float-label">
-        <input 
-        class="float-input"
-        type="password" 
-        pInputText> 
-        <label for="float-input">New Password</label>
-    </span>
-    <span class="p-float-label">
-        <input 
-        class="float-input" 
-        type="password" 
-        pInputText> 
-        <label for="float-input">Confirm Password</label>
-    </span>
+    <form [formGroup]="settingsFormGroup">
+    <div class="form-input"> 
+        <div class="field">
+            <span class="error" *ngIf="settingsForm['password'].hasError('minlength') && settingsForm['password'].touched">*Password must be atleast 8 characters.</span>
+            <span class="error" *ngIf="settingsForm['password'].hasError('maxlength') && settingsForm['password'].touched">*Password must be less than 12 characters.</span>
+            <label for="password" class="block">Password</label>
+            <input id="value" name="password"
+            formControlName="password" 
+            (change)="onPasswordChange()" type="password" pInputText />
+        </div> 
+        <div class="field">
+            <span class="error" *ngIf="settingsForm['confirm_password'].hasError('minlength') && settingsForm['confirm_password'].touched">*Password must be atleast 8 characters.</span>
+            <span class="error" *ngIf="settingsForm['confirm_password'].hasError('maxlength') && settingsForm['confirm_password'].touched">*Password must be less than 12 characters.</span>
+            <label for="password" class="block">Confirm Password</label>
+            <input id="value2" name="confirm_password"
+            formControlName="confirm_password" 
+            (change)="onPasswordChange()" type="password" pInputText />
+        </div> 
+    <span class="error" *ngIf="confirm_password.hasError('mismatch') && settingsForm['confirm_password'].touched && settingsForm['password'].touched">*Passwords do not match.</span>
 </div>
 <div class="buttons">
-    <button type="button" class="btn btn-primary" id="update">Update</button>
+    <button type="button" class="btn btn-primary" [disabled]="!settingsFormGroup.valid" (click)="onSubmit()" id="update">Update</button>
     <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
 </div>
 </form>
 </div>
+
+

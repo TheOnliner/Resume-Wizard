@@ -31,19 +31,19 @@ export class ProfileComponent implements OnInit {
 
     this.userdataService.getUserData(userId).subscribe((data) => {
       let formdata: any = data[0];
-      this.profileForm?.['firstname'].setValue(formdata.firstname);
-      this.profileForm?.['lastname'].setValue(formdata.lastname);
-      this.profileForm?.['mobnumber'].setValue(formdata.mobnumber);
-      this.profileForm?.['address'].setValue(formdata.address);
-      this.profileForm?.['state'].setValue(formdata.state);
-      this.profileForm?.['city'].setValue(formdata.city);
-      this.profileForm?.['pincode'].setValue(formdata.pincode);
-      this.profileForm?.['email'].setValue(formdata.email);
-      this.profileForm?.['education'].setValue(formdata.education);
-      this.profileForm?.['country'].setValue(formdata.country);
-      this.profileForm?.['region'].setValue(formdata.region);
-      this.profileForm?.['experience'].setValue(formdata.experience);
-      this.profileForm?.['details'].setValue(formdata.details);
+      this.profileForm?.['firstname'].setValue(formdata?.firstname);
+      this.profileForm?.['lastname'].setValue(formdata?.lastname);
+      this.profileForm?.['mobnumber'].setValue(formdata?.mobnumber);
+      this.profileForm?.['address'].setValue(formdata?.address);
+      this.profileForm?.['state'].setValue(formdata?.state);
+      this.profileForm?.['city'].setValue(formdata?.city);
+      this.profileForm?.['pincode'].setValue(formdata?.pincode);
+      this.profileForm?.['email'].setValue(formdata?.email);
+      this.profileForm?.['education'].setValue(formdata?.education);
+      this.profileForm?.['country'].setValue(formdata?.country);
+      this.profileForm?.['region'].setValue(formdata?.region);
+      this.profileForm?.['experience'].setValue(formdata?.experience);
+      this.profileForm?.['details'].setValue(formdata?.details);
     });
   }
 
