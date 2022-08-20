@@ -24,6 +24,8 @@ import { UsermainComponent } from './dashboard/usermain.component';
 import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
+import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
+import { DigitalresumeComponent } from './dashboard/pages/digitalresume/digitalresume.component';
 
 
 const routes: Routes = [
@@ -36,7 +38,9 @@ const routes: Routes = [
       {path:'dashboard', component:UsermainComponent, children:[
         { path:'home', component: DashboardComponent},
         {path:'profile',component:ProfilepageComponent},
-        {path:'settings',component:SettingsComponent}
+        {path:'settings',component:SettingsComponent},
+        {path:'templatecollections',component:MytemplatesComponent},
+        {path:'digitalresume',component:DigitalresumeComponent}
       ]},
       {path:'dashboard/form', component: FormComponent,children:[
         { path: 'education', component: EducationComponent},

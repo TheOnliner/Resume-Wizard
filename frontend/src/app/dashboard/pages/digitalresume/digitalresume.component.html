@@ -1,0 +1,5 @@
+<div class="digitalresume">
+  <h2>Resume Templates</h2>
+  <video [src]="url" *ngIf="format==='video' && url" height="450" controls></video>
+  <input type='file' (change)="onSelectFile($event)" />
+</div>

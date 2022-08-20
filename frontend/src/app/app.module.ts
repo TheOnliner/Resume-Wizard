@@ -42,6 +42,7 @@ import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-
 
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {ImageModule} from 'primeng/image';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TooltipModule} from 'primeng/tooltip';
 import {TableModule} from 'primeng/table';
@@ -77,6 +78,8 @@ import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
 import { RmodernComponent } from './viewresume/rbody/rmodern/rmodern.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
+import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
+import { DigitalresumeComponent } from './dashboard/pages/digitalresume/digitalresume.component';
 
 const ADMIN_MODULE = [
   CardModule,
@@ -90,7 +93,8 @@ const ADMIN_MODULE = [
   CarouselModule,
   StepsModule,
   TooltipModule,
-  InputTextModule
+  InputTextModule,
+  ImageModule
 ];
 
 
@@ -142,7 +146,9 @@ const ADMIN_MODULE = [
     UsermainComponent,
     ProfileComponent,
     ProfilepageComponent,
-    RmodernComponent
+    RmodernComponent,
+    MytemplatesComponent,
+    DigitalresumeComponent
   ],
   imports: [
     BrowserModule,
