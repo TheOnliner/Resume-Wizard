@@ -38,11 +38,11 @@ body {
     box-shadow: rgba(0, 0, 0, 0.9);
     transition: all 150ms ease-in-out;
     text-decoration: none;
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     cursor: pointer;
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding-top: 5px;
       text-align: center;
     }
@@ -60,9 +60,9 @@ body {
   background: $color-one;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: 29rem;
+  margin-left: 26rem;
   height: 670px;
   width: calc(53.3333% - 40px);
   padding: 20px;

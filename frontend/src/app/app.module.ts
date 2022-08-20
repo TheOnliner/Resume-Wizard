@@ -79,7 +79,8 @@ import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.
 import { RmodernComponent } from './viewresume/rbody/rmodern/rmodern.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
-import { DigitalresumeComponent } from './dashboard/pages/digitalresume/digitalresume.component';
+import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
+
 
 const ADMIN_MODULE = [
   CardModule,
@@ -148,7 +149,7 @@ const ADMIN_MODULE = [
     ProfilepageComponent,
     RmodernComponent,
     MytemplatesComponent,
-    DigitalresumeComponent
+    AdmintemplatesComponent,
   ],
   imports: [
     BrowserModule,

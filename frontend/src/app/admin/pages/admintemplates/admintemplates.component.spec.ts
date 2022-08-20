@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DigitalresumeComponent } from './digitalresume.component';
+import { AdmintemplatesComponent } from './admintemplates.component';
 
-describe('DigitalresumeComponent', () => {
-  let component: DigitalresumeComponent;
-  let fixture: ComponentFixture<DigitalresumeComponent>;
+describe('AdmintemplatesComponent', () => {
+  let component: AdmintemplatesComponent;
+  let fixture: ComponentFixture<AdmintemplatesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DigitalresumeComponent ]
+      declarations: [ AdmintemplatesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DigitalresumeComponent);
+    fixture = TestBed.createComponent(AdmintemplatesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -21,11 +21,10 @@ import { Template2Component } from './dashboard/templates/template2/template2.co
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { ViewresumeComponent } from './viewresume/viewresume.component';
 import { UsermainComponent } from './dashboard/usermain.component';
-import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.component';
 import { SettingsComponent } from './dashboard/pages/settings/settings.component';
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
-import { DigitalresumeComponent } from './dashboard/pages/digitalresume/digitalresume.component';
+import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
 
 
 const routes: Routes = [
@@ -40,7 +39,6 @@ const routes: Routes = [
         {path:'profile',component:ProfilepageComponent},
         {path:'settings',component:SettingsComponent},
         {path:'templatecollections',component:MytemplatesComponent},
-        {path:'digitalresume',component:DigitalresumeComponent}
       ]},
       {path:'dashboard/form', component: FormComponent,children:[
         { path: 'education', component: EducationComponent},
@@ -65,9 +63,10 @@ const routes: Routes = [
        { path: 'admin', component: AdminComponent, 
     children:[
       {path: 'home', component: AdminhomeComponent},
+      {path: 'resume-templates', component: AdmintemplatesComponent},
       {path: 'userprofiles', component : UserprofilesComponent},
       {path: 'userprofiles/forms', component : UserformsComponent},
-      {path: 'userprofiles/forms/:id', component : UserformsComponent}
+      {path: 'userprofiles/forms/:id', component : UserformsComponent},
     ] },
     ]
   },
