@@ -1,9 +1,19 @@
 body {
     background: rgb(99, 39,120)
+<<<<<<< HEAD:frontend/src/app/dashboard/pages/profilepage/profile/profile.component.scss
 }
 .box{
     padding-top: 1%;
     margin-left: 20%;
+=======
+    
+    
+}
+.box{  
+      position: fixed;
+    margin-left: 22%;
+    margin-top: -46.5%;
+>>>>>>> main:frontend/src/app/dashboard/pages/profile/profile.component.scss
     width: 70%;
 }
 
@@ -46,8 +56,8 @@ body {
 }
 
 .profile-button:focus {
-    background: #682773;
-    box-shadow: none
+     background: #682773;
+     box-shadow: none
 }
 
 .profile-button:active {
@@ -70,3 +80,22 @@ body {
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+.form-control{
+    
+    font-size: medium;
+}
+.btn{
+    font-size: x-small;
+    text-align: center;
+   
+width: 50%;
+height: 30px; 
+}
+
+
+
+
+
+
+
+
