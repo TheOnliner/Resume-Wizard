@@ -9,6 +9,7 @@ function authJwt() {
   }).unless({
     path: [
       `${api}/users/login`,
+      `${api}/users/forgotpassword`,
       `${api}/users`,
       `${api}/users/:id`,
       `${api}/email`
