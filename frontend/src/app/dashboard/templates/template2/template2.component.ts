@@ -29,12 +29,14 @@ getData(){
   
   downloadpdf(){
                                 // Height,width [1300, 1040]
-    let pdf = new jsPDF('p', 'mm', [1000, 750]);
+    let pdf = new jsPDF('p', 'mm', [1400, 1600]);
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
         pdf.save("Resume.pdf");
       }
     });
+
+    this.router.navigate(['/dashboard/home'])
   }
 
   changeTemplate(){

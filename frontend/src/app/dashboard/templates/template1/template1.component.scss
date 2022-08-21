@@ -1,3 +1,4 @@
+@import "../../../../assets/variables.scss";
 
 * {
   margin: 0;
@@ -7,6 +8,13 @@
 html {
   height: 100%;  
 }
+
+.templatebg{
+  background-color: $white;
+  margin-top: -4.2rem;
+}
+
+
 
 body {
   min-height: 100%;  
@@ -124,6 +132,20 @@ body {
     font-size: larger;
   }
   
+  // a {
+  //   text-decoration: none;
+  //   color: #000;
+  //   font-style: italic;
+  // }
+  
+  // a:hover {
+  //   text-decoration: underline;
+  //   color: #000;
+  // }
+  
+    
+  
+    
   .skills__item {
     margin-bottom: 10px;  
   }
@@ -222,13 +244,3 @@ body {
 
   
 }
-
-
-
-
-
-
-  
-  
-  
-  

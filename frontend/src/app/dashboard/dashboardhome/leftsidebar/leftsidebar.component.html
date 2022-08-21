@@ -6,52 +6,45 @@
   <span class="logo_name">ResumeWiz</span>
 </div>
   <ul class="nav-links">
-    <li>
-      <a href="#" class="active">
+    <li routerLink="/dashboard/home">
+      <a routerLinkActive="active">
         <i class='bx bx-grid-alt' ></i>
         <span class="links_name">Dashboard</span>
       </a>
     </li>
     <li></li>
-    <li>
-      <a href="#">
+    <li routerLink="/dashboard/profile" >
+      <a routerLinkActive="active">
         <i class='bx bx-user' ></i>
         <span class="links_name">Profile</span>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-box' ></i>
-        <span class="links_name">My Resume</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
+    <li routerLink="/dashboard/template-collections">
+      <a routerLinkActive="active">
         <i class='bx bx-coin-stack' ></i>
         <span class="links_name">Templates</span>
       </a>
     </li>
-    <li>
-      <a href="#">
+    <li routerLink="/dashboard/tips">
+      <a routerLinkActive="active">
         <i class='bx bx-message' ></i>
         <span class="links_name">Tips</span>
       </a>
     </li>
-    <li>
-      <a href="#">
+    <li routerLink="/dashboard/settings">
+      <a  routerLinkActive="active">
         <i class='bx bx-cog' ></i>
         <span class="links_name">Settings</span>
       </a>
     </li>
     <li class="log_out" (click)="onLogout()" >
-      <a href="#">
+      <a>
         <i class='bx bx-log-out'></i>
         <span class="links_name">Log out</span>
       </a>
     </li>
   </ul>
 </div>
-<section class="home-section">
 <nav>
   <div class="sidebar-button">
     <span class="dashboard">Welcome to Your Resume Wizard Dashboard</span>
@@ -61,4 +54,3 @@
   </div>
 </nav>
 
-</section>

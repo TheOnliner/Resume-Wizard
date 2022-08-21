@@ -16,7 +16,6 @@ export class AdminComponent implements OnInit {
     const userId = this.localStorage.getUserId();
 
     this.formService.getUser(userId).subscribe((user:any)=>{
-      console.log(user.name)
       this.username = user.name;
     })
   }

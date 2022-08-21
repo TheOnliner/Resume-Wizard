@@ -1,21 +1,30 @@
-<div class="body">
+<p-toast styleClass="p-toast"></p-toast>
+<div class="settings">
+    <h2>Password Settings</h2>
+    <form [formGroup]="settingsFormGroup">
+    <div class="form-input"> 
+        <div class="field">
+            <span class="error" *ngIf="settingsForm['password'].hasError('minlength') && settingsForm['password'].touched">*Password must be atleast 8 characters.</span>
+            <span class="error" *ngIf="settingsForm['password'].hasError('maxlength') && settingsForm['password'].touched">*Password must be less than 12 characters.</span>
+            <label for="password" class="block">Password</label>
+            <input id="value" name="password"
+            formControlName="password" 
+            (change)="onPasswordChange()" type="password" pInputText />
+        </div> 
+        <div class="field">
+            <span class="error" *ngIf="settingsForm['confirm_password'].hasError('minlength') && settingsForm['confirm_password'].touched">*Password must be atleast 8 characters.</span>
+            <span class="error" *ngIf="settingsForm['confirm_password'].hasError('maxlength') && settingsForm['confirm_password'].touched">*Password must be less than 12 characters.</span>
+            <label for="password" class="block">Confirm Password</label>
+            <input id="value2" name="confirm_password"
+            formControlName="confirm_password" 
+            (change)="onPasswordChange()" type="password" pInputText />
+        </div> 
+    <span class="error" *ngIf="confirm_password.hasError('mismatch') && settingsForm['confirm_password'].touched && settingsForm['password'].touched">*Passwords do not match.</span>
+</div>
+<div class="buttons">
+    <button type="button" class="btn btn-primary" [disabled]="!settingsFormGroup.valid" (click)="onSubmit()" id="update">Update</button>
+    <button type="button" class="btn btn-primary" id="cancel">Cancel</button>
+</div>
+</form>
+</div>
 
-    <div class="cont">
-
-        <h1>Settings</h1>
-        <div class="col">
-            <div class="col"><label for="form-select" class="form-label">Password</label>
-                <input type="text" class="form-control" placeholder="New Password">
-            </div>
-            <div class="row"><label for="form-select" class="form-label">New Password Confirmation</label>
-                <input type="text" class="form-control" placeholder="Enter New Password">
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <button type="submit" class="btn" id="update">Update</button>
-        </div>
-
-    </div>

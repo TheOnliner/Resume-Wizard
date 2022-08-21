@@ -37,6 +37,8 @@ getData(){
         pdf.save("Resume.pdf");
       }
     });
+
+    this.router.navigate(['/dashboard/home'])
   }
 
   changeTemplate(){

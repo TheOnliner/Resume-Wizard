@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import "../../../assets/variables.scss";
 
+
 .headingcontainer{
   padding-top: 6rem;
   background-color: $color-grey-light-1;
+  overflow-x: hidden;
   .heading{
     font-family:'Montserrat', sans-serif;
     font-size: 3.5rem;
@@ -19,7 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  max-width: 149.98rem;
+  overflow-x: hidden;
 
   blockquote {
     padding: 0;

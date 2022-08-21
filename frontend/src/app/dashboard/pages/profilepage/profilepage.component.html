@@ -1,16 +1,22 @@
-
-<app-leftsidebar></app-leftsidebar>
-<div class="container">
+<div class="container" *ngIf="!editmode">
     <div class="box">
     
     <div class="main-body">
           <div class="container rounded bg-white mt-5 mb-5">
-            <div class="row">
+           <div class="row">
           <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-3"><img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-            <div class="font-weight-bold">MyProfile</div>
-            <div class="text-black-50">liji@gmail.com</div></div>
+            <div class="font-weight-bold head">{{formdata?.firstname}}&nbsp;{{formdata?.lastname}}</div>
+            <div class="text-black-50 email">{{formdata?.email}}</div></div>
         </div>
+        <ul class="wrapper">
+          <li class="icon facebook" (click)="onEdit()">
+            <span class="tooltip">Edit</span>
+            <span class="material-symbols-outlined">
+              edit
+              </span>
+          </li>
+        </ul>
           <div class="row gutters-sm">      
             <div class="col-md-8">
               <div class="card mb-3">
@@ -20,7 +26,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      liji
+                      {{formdata?.firstname}}&nbsp;{{formdata?.lastname}}
                     </div>
                   </div>
                   <hr>
@@ -29,16 +35,16 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                      {{formdata?.email}}
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Mobilenumber</h6>
+                      <h6 class="mb-0">Mobile number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
+                      {{formdata?.mobnumber}}
                     </div>
                   </div>
                   <hr>
@@ -47,7 +53,7 @@
                       <h6 class="mb-0">State</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (320) 380-4539
+                      {{formdata?.state}}
                     </div>
                   </div>
                   <hr>
@@ -56,7 +62,7 @@
                       <h6 class="mb-0">City</h6>
                     </div>
                     <div class="col-md-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.city}}
                     </div>
                   </div>
                   <hr>
@@ -65,7 +71,7 @@
                       <h6 class="mb-0">Pincode</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.pincode}}
                     </div>
                   </div>
                   <hr>
@@ -74,7 +80,7 @@
                       <h6 class="mb-0">Education</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.education}}
                     </div>
                   </div>
                   <hr>    
@@ -83,7 +89,7 @@
                       <h6 class="mb-0">Country</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.country}}
                     </div>
                   </div>
                   <hr>
@@ -92,7 +98,7 @@
                       <h6 class="mb-0">Region</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.region}}
                     </div>
                   </div>
                   <hr>
@@ -101,16 +107,16 @@
                       <h6 class="mb-0">Experience</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.experience}}
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">AdditionalDetailes</h6>
+                      <h6 class="mb-0">Additional Details</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                      {{formdata?.details}}
                     </div>
                   </div>
                   <hr>
@@ -119,18 +125,11 @@
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                     {{formdata?.address}}
                     </div>
                   </div>       
                    </div>
-              </div><br>
-
-              <div class="row">
-                <div class="col-sm-12">
-                   
-                  <a class="btn btn-info " target="__blank">Edit</a>
-                </div>
-              </div>  
+              </div><br> 
              </div>
            </div>
          </div>
@@ -138,3 +137,4 @@
     </div>
     </div>
     </div>
+<app-profile *ngIf="editmode"></app-profile>

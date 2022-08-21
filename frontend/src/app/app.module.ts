@@ -16,12 +16,11 @@ import { RegistrationComponent } from './homepage/registration/registration.comp
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { DashboardComponent } from './dashboard/dashboardhome/dashboard.component';
 import { RightsidebarComponent } from './dashboard/dashboardhome/rightsidebar/rightsidebar.component';
 import { LeftsidebarComponent } from './dashboard/dashboardhome/leftsidebar/leftsidebar.component';
-import { NavbarComponent } from './dashboard/dashboardhome/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/dashboardhome/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
 
@@ -38,11 +37,12 @@ import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resume
 import { Template3Component } from './dashboard/templates/template3/template3.component';
 import { CareerObjectiveComponent } from './dashboard/forms/5.career-objective/career-objective.component';
 import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
-import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
 
-
+import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {ImageModule} from 'primeng/image';
 import {ToolbarModule} from 'primeng/toolbar';
+import {TooltipModule} from 'primeng/tooltip';
 import {TableModule} from 'primeng/table';
 import { UsersService } from './admin/services/users.service';
 import { UserformsComponent } from './admin/pages/userprofiles/userforms/userforms.component';
@@ -58,13 +58,28 @@ import {CarouselModule} from 'primeng/carousel';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { FormComponent } from './dashboard/forms/form.component';
-
+import { HttpErrorInterceptor } from './interceptor';
 
 import {StepsModule} from 'primeng/steps';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
 import { FormheaderComponent } from './dashboard/forms/formheader/formheader.component';
-import { ProfileComponent } from './dashboard/pages/profile/profile.component';
+import { SpinnerComponent } from './spinner/spinner/spinner.component';
+import { ViewresumeComponent } from './viewresume/viewresume.component';
+import { RheaderComponent } from './viewresume/rheader/rheader.component';
+import { RbodyComponent } from './viewresume/rbody/rbody.component';
+import { RfooterComponent } from './viewresume/rfooter/rfooter.component';
+import { RpdfComponent } from './viewresume/rbody/rpdf/rpdf.component';
+import { RsimpleComponent } from './viewresume/rbody/rsimple/rsimple.component';
+import { RfunctionalComponent } from './viewresume/rbody/rfunctional/rfunctional.component';
+import { UsermainComponent } from './dashboard/usermain.component';
+import { ProfileComponent } from './dashboard/pages/profilepage/profile/profile.component';
 import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
+import { RmodernComponent } from './viewresume/rbody/rmodern/rmodern.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
+import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
+import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
+import { TipsComponent } from './dashboard/pages/tips/tips.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const ADMIN_MODULE = [
@@ -78,6 +93,9 @@ const ADMIN_MODULE = [
   ScrollTopModule,
   CarouselModule,
   StepsModule,
+  TooltipModule,
+  InputTextModule,
+  ImageModule
 ];
 
 
@@ -95,7 +113,6 @@ const ADMIN_MODULE = [
     LoginComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
-    NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
     SidenavComponent,
@@ -111,15 +128,28 @@ const ADMIN_MODULE = [
     Template3Component,
     CareerObjectiveComponent,
     SummaryComponent,
-    UserNavbarComponent,
     ExperienceComponent,
     SkillsComponent,
     FormComponent,
     Template2Component,
     FormheaderComponent,
+    SpinnerComponent,
+    ViewresumeComponent,
+    RheaderComponent,
+    RbodyComponent,
+    RfooterComponent,
+    RpdfComponent,
+    RsimpleComponent,
+    RfunctionalComponent,
+    SettingsComponent,
+    UsermainComponent,
     ProfileComponent,
     ProfilepageComponent,
-
+    RmodernComponent,
+    MytemplatesComponent,
+    AdmintemplatesComponent,
+    TipsComponent,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -135,7 +165,7 @@ const ADMIN_MODULE = [
     ButtonModule,
     ...ADMIN_MODULE,
   ],
-  providers: [UsersService,MessageService,ConfirmationService],
+  providers: [UsersService,MessageService,ConfirmationService,  { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true }, ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

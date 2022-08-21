@@ -25,22 +25,17 @@ export class FormheaderComponent implements OnInit {
        (window.location.pathname !== '/dashboard/form/download/modern'))
     {
       this.confirmationService.confirm({
-        message: 'Changes made here will not be saved',
-        header: 'Are you sure you want to leave this page?',
+        message: 'Are you sure you want to leave this page?',
+        header: 'Changes made here will not be saved',
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/dashboard/home']);
           this.formService.savedData = {};
         },
         reject: () => {},
       });
     } else {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/dashboard/home']);
     }
     }
-
-  onLogout() {
-    this.localStorage.removeToken();
-    this.router.navigate(['']);
-  }
 }

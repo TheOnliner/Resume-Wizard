@@ -1,415 +1,280 @@
-/* /* // Tested colors
-// #f68931 #5695cd #8b63bf #d0465f
-$accentColor = #5695cd
-$lightAccentColor = lighten($accentColor, 50%)
-$progressBackground = #d1d9e1
-$unicodeRange = U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, \
-  U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, \
-  U+FEFF, U+FFFD
+@import "../../../../assets/variables.scss";
 
-// Google Fonts
-@font-face
-  font-family 'Open Sans'
-  font-style normal
-  font-weight 400
-  font-display swap
-  unicode-range $unicodeRange
-  src local('Open Sans Regular'), local('OpenSans-Regular'), \
-    url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2) \
-    format('woff2')
+html {
+  font-family: "Open Sans", sans-serif;
+  background: whitesmoke;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
 
-@font-face
-  font-family 'Roboto'
-  font-style normal
-  font-weight 400
-  font-display swap
-  unicode-range $unicodeRange
-  src local('Roboto'), local('Roboto-Regular'), \
-    url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) \
-    format('woff2')
+.templatebg {
+  background-color: $white;
+  margin-top: -1rem;
+}
 
-@page
-  size A4
+hr {
+  background: grey;
+}
+#container {
+  position: relative;
+  display: flex;
+}
+#profile {
+  flex: 15%;
+  display: block;
+  position: relative;
+  margin: 5% 2% 0 10%;
+  width: 100%;
+  height: 100%;
+}
+#info-cards {
+  flex: 55%;
+  display: block;
+  margin-top: 5%;
+  margin-right: 10%;
+  width: 100%;
+  height: 100%;
+}
+#image {
+  position: relative;
+  overflow: hidden;
+}
+#image,
+#profile-photo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+#image > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5) !important;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+#image > a > i {
+  -webkit-text-stroke: 1px #ffffffdd;
+  padding: 40%;
+}
+#image:hover a {
+  display: block;
+}
+#name {
+  font-size: 23px !important;
+  line-height: 20px !important;
+}
+#about,
+.card > ul > li {
+  padding: 0 0 0 15px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+#about {
+  font-size: 20px !important;
+  padding: 0 !important;
+}
+#name,
+#about > p {
+  font-weight: bolder;
+  font-family: "Open Sans", sans-serif;
+}
+#email {
+  font-size: 15px !important;
+  font-weight: bold !important;
+  font-family: "Cutive Mono", monospace;
+}
+#college,
+#email,
+#year-graduation,
+#education,
+#more-about,
+#telephone,
+#fax {
+  color: #555;
+  font-size: 13.5px;
+}
+strong,
+span {
+  color: black;
+  font-size: 16px;
+}
+#social-links,
+#about {
+  display: inline-block;
+}
+#social-links {
+  margin-bottom: 12px;
+}
+#social-links a {
+  margin: 0 10px;
+}
+#edit-intro {
+  display: block;
+  color: #097bbf;
+  font-family: "Nunito", sans-serif;
+}
+.fab {
+  font-size: 1.1em;
+}
+.fab,
+.fas {
+  color: whitesmoke;
+}
+#about > a {
+  top: 4px;
+  right: 8px;
+}
+.edit {
+  top: 19px;
+  right: 10px;
+}
+#about > a,
+.edit {
+  position: absolute;
+  font-size: 15px !important;
+}
+.stroke-transparent {
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: transparent;
+}
+.blue {
+  color: #097bbf !important;
+  font-size: 13px;
+}
+.stroke-transparent-blue {
+  -webkit-text-stroke: 1px #097bbf;
+  -webkit-text-fill-color: transparent;
+}
+.card {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  padding: 15px 30px 30px 30px;
+  background-color: #fff;
+}
+.card > p {
+  color: #0e141e;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 2;
+}
+.card > p > i {
+  font-size: 18px;
+}
+.card > a {
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+  border: 0;
+  height: auto;
+  background: transparent;
+  color: #097bbf;
+  outline: none;
+  cursor: pointer;
+}
+.card > ul {
+  list-style-type: none;
+}
+.tags {
+  font-size: 17px;
+  font-weight: bolder;
+}
+.tags ~ a {
+  display: none !important;
+}
+.tags span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #0e141e;
+}
+.tags span span {
+  color: #738f93;
+}
+@media screen and (max-width: 1090px) {
+  #profile {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 850px) {
+  #container {
+    display: block;
+  }
+  #profile {
+    width: 90%;
+  }
+  .card {
+    margin: 0 5%;
+    margin-bottom: 30px;
+  }
+}
 
-body
-  color-adjust exact
-  background-color #fff
-  font-family 'Open Sans', sans-serif
-  font-weight 300
-  display flex
-  justify-content center
-
-.btn-print
-  z-index 1
-  position absolute
-  right 20px
-  top 20px
-
-.resume
-  display block
-  font-family 'Roboto', sans-serif
-  font-size 13.0736px
-  font-weight 400
-  line-height 1.5
-  min-height 1090.41px
-
-  h1
-    font-size 2.86em
-    font-weight 600
-    letter-spacing -0.5px
-
-  h2
-    font-size 1.43em
-    font-weight 600
-    line-height 1
-    margin-bottom 0
-
-  p
-    margin-bottom 1em
-    &:last-child
-      margin-bottom 0
-
-  ul
-    padding-left 20px
-
-  .resume__header
-  .resume__section
-    font-family 'Open Sans', sans-serif
-    font-size 0.95em
-
-  .resume__header
-    padding 6em 4em 0
-
-  .resume__section
-    margin-bottom 4em
-    &:last-child
-      padding-bottom 0
-
-  .resume__section-title
-    display flex
-    align-items center
-    margin-bottom 1.43em
-    > i
-      margin-right 0.63em
-      font-size 1.14em
-      background-color $accentColor
-      color white
-      border 0.25em solid $lightAccentColor
-      border-radius 50%
-      width 2.51em
-      height 2.51em
-      display flex
-      align-items center
-      justify-content center
-      line-height 1.6
-
-    > h2
-      margin-top 0
-      font-size 1.5em
-
-  .resume__columns
-    overflow hidden
-    padding 4em
-    padding-top 0
-
-  .resume__main
-    float left
-    width 75%
-    padding-right 6em
-
-  .resume__side
-    float left
-    width 25%
-
-  .other-info p > b
-    color #555
-
-  .info-item
-    margin-bottom .2em
-    font-weight 300
-    &:last-child
-      margin-bottom 0
-
-  .info-label
-    display inline-block
-    padding-right 0.63em
-    font-size 1.14em
-    min-width 2.19em
-    text-align center
-    i
-      color $accentColor
-
-  .xp-item
-    margin-bottom 4em
-    &:last-child
-      margin-bottom 0
-
-  .xp-job
-    font-size 1.14em
-    font-weight 600
-    line-height 1.25
-    span
-    small
-      font-weight 400
-    small
-      font-size 0.9em
-
-  .xp-date
-    font-size 0.8em
-    margin-top 0.3em
-    margin-bottom 1em
-    color $accentColor
-
-  .extra
-    margin-bottom 2em
-    &:last-child
-      margin-bottom 0
-
-  .extra-info
-    small
-      color #666
-      display inline-block
-      font-size 0.7em
-
-  .extra-details
-  .extra-details__progress
-    border-radius 6px
-
-  .extra-details
-    margin-top 0.5em
-    background-color $progressBackground
-    width 100%
-    height 5px
-    position relative
-
-  .extra-details__progress
-    background-color $accentColor
-    height 5px
-    position absolute
-    top 0
-    left 0
-
-  .lang-item
-    margin-bottom 2em
-    &:last-child
-      margin-bottom 0
-
-  .lang-label
-    width 8em
-
-@media print
-  // Override Bootstrap body rule
-  body
-    min-width initial !important
-
-  .btn-print
-    display none */
-
-    .btngrp {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .buttonContainer {
-        background-color: rgb(59, 59, 59);
-        margin: 5rem auto;
-        padding: 1em 2em;
-        border-radius: 5px;
-        width: 25%;
-        transition: all 0.2s;
-    }
-    
+.btngrp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .buttonContainer {
+    background-color: rgb(59, 59, 59);
+    margin: 5rem auto;
+    padding: 1em 2em;
+    border-radius: 5px;
+    width: 25%;
+    transition: all 0.2s;
     h3 {
-        text-align: center;
-        transition: all 0.2s;
-    }
-    
-    a {
+      text-align: center;
+      transition: all 0.2s;
+      a {
         text-decoration: none;
         color: white;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         transition: all 0.2s;
         text-align: center;
-    }
-    
-     :hover a {
+      }
+      &:hover a {
         cursor: pointer;
         background-color: #4314b6;
+      }
     }
-    
-     :hover {
-        background-color: #4314b6;
-        cursor: pointer;
+    &:hover {
+      background-color: #4314b6;
+      cursor: pointer;
     }
-    
-    .buttonContainer2 {
-        background-color: #082bdc;
-        color: white;
-        border-radius: 5px;
-        margin: 5rem auto;
-        padding: 1em 2em;
-        width: 15%;
-        transition: all 0.2s;
-    }
-    
+  }
+
+  .buttonContainer2 {
+    background-color: #082bdc;
+    color: white;
+    border-radius: 5px;
+    margin: 5rem auto;
+    padding: 1em 2em;
+    width: 15%;
+    transition: all 0.2s;
     h3 {
-        text-align: center;
-        transition: all 0.2s;
-    }
-    
-    a {
+      text-align: center;
+      transition: all 0.2s;
+      a {
         text-decoration: none;
         color: white;
         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         transition: all 0.2s;
         text-align: center;
-    }
-    
-     :hover a {
+      }
+      &:hover a {
         cursor: pointer;
         background-color: #001ca8;
         color: white;
+      }
     }
-    
-     :hover {
-        background-color: #001ca8;
-        ;
-        cursor: pointer;
+    &:hover {
+      background-color: #001ca8;
+      cursor: pointer;
     }
-    
-    #doc2 {
-        margin-top: 5rem;
-        height: 120rem;
-    }
-    
-    .msg {
-        padding: 10px;
-        background: #222;
-        position: relative;
-    }
-    
-    .msg h1 {
-        color: #fff;
-    }
-    
-    .msg a {
-        margin-left: 20px;
-        background: #408814;
-        color: white;
-        padding: 4px 8px;
-        text-decoration: none;
-    }
-    
-    .msg a:hover {
-        background: #266400;
-    }
-    
-    
-    /* //-- yui-grids style overrides -- */
-    
-    #inner {
-        padding: 10px 80px;
-        margin: 0px auto;
-        background: #f5f5f5;
-        border: solid #666;
-        border-width: 8px 0 2px 0;
-    }
-    
-    .yui-gf {
-        margin-bottom: 2em;
-        padding-bottom: 2em;
-        border-bottom: 1px solid #ccc;
-    }
-    
-    
-    /* //-- header, body, footer -- */
-    
-    #hd {
-        margin: 2.5em 0 3em 0;
-        padding-bottom: 1.5em;
-        border-bottom: 1px solid #ccc;
-    }
-    
-    #hd h2 {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    
-    #bd,
-    #ft {
-        margin-bottom: 2em;
-    }
-    
-    
-    /* //-- footer -- */
-    
-    #ft {
-        padding: 1em 0 5em 0;
-        font-size: 92%;
-        border-top: 1px solid #ccc;
-        text-align: center;
-    }
-    
-    #ft p {
-        margin-bottom: 0;
-        text-align: center;
-    }
-    
-    
-    /* //-- core typography and style -- */
-    
-    #hd h1 {
-        font-size: 48px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
-    
-    h2 {
-        font-size: 152%;
-    }
-    
-    h3,
-    h4 {
-        font-size: 122%;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: #333;
-    }
-    
-    p {
-        font-size: 100%;
-        line-height: 18px;
-        padding-right: 3em;
-    }
-    
-    a {
-        color: #990003
-    }
-    
-    a:hover {
-        text-decoration: none;
-    }
-    
-    strong {
-        font-weight: bold;
-    }
-    
-    li {
-        line-height: 24px;
-        border-bottom: 1px solid #ccc;
-    }
-    
-    p.enlarge {
-        font-size: 144%;
-        padding-right: 6.5em;
-        line-height: 24px;
-    }
-    
-    p.enlarge span {
-        color: #000;
-    }
+  }
+}

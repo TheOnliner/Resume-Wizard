@@ -18,14 +18,32 @@ import { SkillsComponent } from './dashboard/forms/3.skills/skills.component';
 import { ExperienceComponent } from './dashboard/forms/2.experience/experience.component';
 import { FormComponent } from './dashboard/forms/form.component';
 import { Template2Component } from './dashboard/templates/template2/template2.component';
+import { AdminAuthGuard } from './admin-auth-guard.service';
+import { ViewresumeComponent } from './viewresume/viewresume.component';
+import { UsermainComponent } from './dashboard/usermain.component';
+import { SettingsComponent } from './dashboard/pages/settings/settings.component';
+import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.component';
+import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
+import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
+import { TipsComponent } from './dashboard/pages/tips/tips.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
+  { path: 'resumewiz/view/resume', component: ViewresumeComponent },
+  { path: 'forgotpassword', component: ForgotpasswordComponent },
   {
     path: '',
+    canActivate:[AuthGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent},
+      {path:'dashboard', component:UsermainComponent, children:[
+        { path:'home', component: DashboardComponent},
+        {path:'profile',component:ProfilepageComponent},
+        {path:'settings',component:SettingsComponent},
+        {path:'template-collections',component:MytemplatesComponent},
+        {path:'tips',component: TipsComponent},
+      ]},
       {path:'dashboard/form', component: FormComponent,children:[
         { path: 'education', component: EducationComponent},
         { path: 'experience', component: ExperienceComponent},
@@ -43,16 +61,21 @@ const routes: Routes = [
       { path: 'dashboard/templates/simple', component: Template1Component},
       { path: 'dashboard/templates/modern', component: Template2Component},
       { path: 'dashboard/templates/classic', component: Template3Component},  
-      { path: 'admin', component: AdminComponent, 
+    ]
+  },{
+    path: '',
+    canActivate:[AdminAuthGuard],
+    children: [
+       { path: 'admin', component: AdminComponent, 
     children:[
       {path: 'home', component: AdminhomeComponent},
+      {path: 'resume-templates', component: AdmintemplatesComponent},
       {path: 'userprofiles', component : UserprofilesComponent},
       {path: 'userprofiles/forms', component : UserformsComponent},
-      {path: 'userprofiles/forms/:id', component : UserformsComponent}
+      {path: 'userprofiles/forms/:id', component : UserformsComponent},
     ] },
     ]
-  }
-
+  },
 ];
 
 @NgModule({

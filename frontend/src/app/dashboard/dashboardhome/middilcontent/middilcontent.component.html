@@ -22,7 +22,6 @@
       />
     </svg>
   </div>
-  <!--/icon-->
 
   <div class="features">
     <ul>
@@ -32,7 +31,6 @@
       <li><h3>Yes! It's that simple!</h3></li>
     </ul>
   </div>
-  <!--/features-->
 
   <a class="btn" [hidden]="!editbtn" (click)="createResume()"
     ><h1><strong>CREATE RESUME</strong></h1></a
@@ -40,5 +38,9 @@
   <a class="btn" [hidden]="editbtn" (click)="editResume()"
     ><h1><strong>EDIT RESUME</strong></h1></a
   >
+  <div class="inputC" [hidden]="editbtn">
+  <input class="input" name="sharelink" #sharelink>
+  <a class="btninput" pButton type="button" pTooltip="Copy Link to Clipboard"  tooltipPosition="right" (click)="copyMessage(RW_URL)"><h1><strong>SHARE</strong></h1></a>
+  </div>
 </div>
-<!--/card-->
+

@@ -35,6 +35,7 @@
               "core-js/modules/es.string.starts-with.js",
               "core-js/modules/es.string.trim.js",
               "core-js/modules/web.dom-collections.iterator.js",
+              "buffer/",
               "raf",
               "rgbcolor",
               "dompurify",

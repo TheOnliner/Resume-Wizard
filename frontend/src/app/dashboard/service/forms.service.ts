@@ -53,6 +53,11 @@ export class FormsService {
     this.savedData = data[0];
   }
 
+  getCandidateProfile(userId: string):Observable<Profile[]> {
+    return this.http
+      .get<Profile[]>(this.apiURLProfiles + `/userprofile/${userId}`)
+  }
+
   checkProfile(userId: string): Observable<Profile[]> {
     return this.http.get<Profile[]>(
       this.apiURLProfiles + `/userprofile/${userId}`

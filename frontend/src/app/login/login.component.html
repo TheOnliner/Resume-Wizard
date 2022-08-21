@@ -53,25 +53,27 @@
           {{ authMessage }}
         </p>
         <div class="link">
-          <span><a href="">Forgot your Password?</a></span>
+          <span><a class="forgot" (click)="onForgot()">Forgot your Password?</a></span>
         </div>
         <div class="btnC">
           <button
             class="loginbtn"
             type="submit"
-            [disabled]="!loginFormGroup.valid"
             (click)="onLogin()"
+            [disabled]="!loginFormGroup.valid"
           >
             Sign in
           </button>
         </div>
+          
       </form>
     </div>
     <div class="right-side">
       <div class="right-side__circle"></div>
       <div class="right-side__circle--2"></div>
       <div class="title">Hello, Friend!</div>
-      <div class="desc">Enter your personal details to log in</div>
+      <div class="desc">Forgot to sign up?</div>
+      <button class="signup" role="button" (click)="onSignup()">Signup</button>
     </div>
   </div>
 </div>

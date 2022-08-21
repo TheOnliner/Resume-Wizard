@@ -54,14 +54,10 @@ export class TemplatemodelComponent implements OnInit {
 
     if (this.formService.isEditMode) {
       this.formService.deleteProfile(userId).subscribe((data) => {
-        // console.log(data);
       });
     }
 
     this.formService.saveprofile().subscribe((data) => {
-      // console.log(data);
-
-      // console.log(templateFormData.selection);
 
       if (templateFormData.selection === 'Simple') {
         this.router.navigate(['dashboard/form/download/simple']);

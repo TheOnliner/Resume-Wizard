@@ -19,7 +19,9 @@ router.post("/", async (req, res) => {
 
   user = await user.save();
 
-  res.send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 300);
 });
 
 router.get("/", async (req, res) => {
@@ -28,7 +30,10 @@ router.get("/", async (req, res) => {
   if (!userList) {
     res.status(500).json({ success: false });
   }
-  res.send(userList);
+  
+  setTimeout(function() {
+    res.send(userList);
+  }, 1500);
 });
 
 router.get("/:id", async (req, res) => {
@@ -37,7 +42,10 @@ router.get("/:id", async (req, res) => {
   if (!user) {
     res.status(500).json({ success: false });
   }
-  res.status(200).send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
+  
 });
 
 router.put("/:id", async (req, res) => {
@@ -55,8 +63,47 @@ router.put("/:id", async (req, res) => {
   if (!user) {
     res.status(500).json({ success: false });
   }
-  res.status(200).send(user);
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
 });
+
+router.put("/password/:id", async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.params.id,
+    {
+      passwordHash: bcrypt.hashSync(req.body.password, 10),
+    },
+    { new: true }
+  );
+
+  if (!user) {
+    res.status(500).json({ success: false });
+  }
+  setTimeout(function() {
+    res.status(200).send(user);
+  }, 800);
+});
+
+router.post("/forgotpassword", async (req, res) => {
+  let user = new User({
+    email: req.body.email,
+    passwordHash: bcrypt.hashSync(req.body.password, 10),
+  });
+  const usernew = await User.findOneAndUpdate({ email: req.body.email },
+    {
+      passwordHash: bcrypt.hashSync(req.body.password, 10),
+    },
+    { new: true });
+
+    if (!user) {
+      res.status(500).json({ success: false });
+    }
+    setTimeout(function() {
+      res.status(200).send(usernew);
+    }, 800);
+});
+
 
 router.delete("/:id", (req, res) => {
   User.findByIdAndRemove(req.params.id)
@@ -91,7 +138,6 @@ router.post("/login", async (req, res) => {
       secret,
       {expiresIn : '1d'}
   )
-
     res
       .status(200)
       .send({ email: user.email, token: token, isAdmin: user.isAdmin });
