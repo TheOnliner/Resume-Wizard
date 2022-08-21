@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 require("dotenv/config");
-
+const errorHandler = require('./helpers/errorhandler');
 const mongoose = require("mongoose");
 const cors = require("cors");
 
@@ -15,6 +15,7 @@ app.use(cors());
 app.use(authJwt());
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use(errorHandler);
 
 mongoose
   .connect(process.env.CONNECTION_STRING, {
