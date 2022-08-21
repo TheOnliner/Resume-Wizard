@@ -83,4 +83,8 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/']);
     this.HomeService.toggle.next(true);
   }
+
+  onForgot(){
+    this.router.navigate(['/forgotpassword'])
+  }
 }

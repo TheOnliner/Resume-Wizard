@@ -40,9 +40,10 @@ export class AuthService {
     
   }
 
-  forgotPassword(email:string): Observable<User>{
-    return this.http.put<User>(`${this.apiURLUsers}`+`/forgotpassword`,{
+  forgotPassword(email:string,password:string): Observable<User>{
+    return this.http.post<User>(`${this.apiURLUsers}`+`/forgotpassword`,{
       email,
+      password
     });
     
   }

@@ -26,11 +26,13 @@ import { ProfilepageComponent } from './dashboard/pages/profilepage/profilepage.
 import { MytemplatesComponent } from './dashboard/pages/mytemplates/mytemplates.component';
 import { AdmintemplatesComponent } from './admin/pages/admintemplates/admintemplates.component';
 import { TipsComponent } from './dashboard/pages/tips/tips.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'resumewiz/view/resume', component: ViewresumeComponent },
+  { path: 'forgotpassword', component: ForgotpasswordComponent },
   {
     path: '',
     canActivate:[AuthGuard],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { EmailserviceService } from '../emailservice.service';
 
@@ -10,8 +11,9 @@ import { EmailserviceService } from '../emailservice.service';
 })
 export class ForgotpasswordComponent implements OnInit {
   nodeMailerForm :FormGroup;
+  authError:boolean=false;
 
-  constructor(private formBuilder:FormBuilder,private emailService:EmailserviceService,private auth:AuthService) { }
+  constructor(private formBuilder:FormBuilder,private emailService:EmailserviceService,private auth:AuthService,private router:Router) { }
 
   ngOnInit(): void {
     this.nodeMailerForm = this.formBuilder.group({
@@ -32,16 +34,23 @@ export class ForgotpasswordComponent implements OnInit {
     console.log(password);
 
     let email  = this.nodeMailerForm.value.email;
-    this.auth.forgotPassword(email).subscribe(data=>{
-      console.log(data);
+    this.auth.forgotPassword(email,password).subscribe(data=>{
+      if(!data){
+        this.authError=true;
+      } else{
+        this.authError=false;
+        this.router.navigate(['/login'])
+      }
     })
     let reqObj = {
       email:email,
       password:password
     }
-    console.log(reqObj);
-    // this.emailService.sendMessage(reqObj).subscribe(data=>{
-    //   console.log(data);
-    // })
+    this.emailService.sendMessage(reqObj).subscribe(data=>{
+    })
+  }
+
+  onCancel(){
+    this.router.navigate(['/login'])
   }
 }
