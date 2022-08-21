@@ -31,7 +31,6 @@ export class ForgotpasswordComponent implements OnInit {
         .join('')
     
     let password = generatePassword(11);
-    console.log(password);
 
     let email  = this.nodeMailerForm.value.email;
     this.auth.forgotPassword(email,password).subscribe(data=>{

@@ -49,10 +49,7 @@ export class SettingsComponent implements OnInit {
 
   onSubmit(){
     const userId = this.localStorage.getUserId();
-    console.log(userId);
-
     let password:string = this.settingsForm?.['password'].value;
-    console.log(password);
 
     this.authService.updatePassword(userId,password).subscribe((data)=>{
       this.messageService.add({severity:'success', summary:'Success', detail:'Password changed successfully'})

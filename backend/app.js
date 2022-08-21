@@ -35,12 +35,10 @@ const emailsRoutes = require('./routes/emails');
 const profilesRoutes = require("./routes/profiles");
 const userprofilesRoutes = require("./routes/userprofiles")
 
-
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/email`, emailsRoutes);
 app.use(`${api}/profiles`, profilesRoutes);
 app.use(`${api}/userprofiles`, userprofilesRoutes);
-
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");

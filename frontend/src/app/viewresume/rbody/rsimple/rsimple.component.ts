@@ -1,8 +1,4 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormsService } from '../../../dashboard/service/forms.service';
-import { jsPDF } from "jspdf";
-import { Location } from '@angular/common';
 import { PdfresumeService } from '../pdfresume.service';
 
 @Component({

@@ -21,7 +21,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboardhome/dashboard.component';
 import { RightsidebarComponent } from './dashboard/dashboardhome/rightsidebar/rightsidebar.component';
 import { LeftsidebarComponent } from './dashboard/dashboardhome/leftsidebar/leftsidebar.component';
-import { NavbarComponent } from './dashboard/dashboardhome/navbar/navbar.component';
 import { MiddilcontentComponent } from './dashboard/dashboardhome/middilcontent/middilcontent.component';
 import { AdminComponent } from './admin/admin.component';
 
@@ -38,7 +37,6 @@ import { ResumecontactComponent } from './dashboard/forms/6.resumecontact/resume
 import { Template3Component } from './dashboard/templates/template3/template3.component';
 import { CareerObjectiveComponent } from './dashboard/forms/5.career-objective/career-objective.component';
 import { SummaryComponent } from './dashboard/forms/4.summary/summary.component';
-import { UserNavbarComponent } from './dashboard/dashboardhome/user-navbar/user-navbar.component';
 
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
@@ -115,7 +113,6 @@ const ADMIN_MODULE = [
     LoginComponent,
     RightsidebarComponent,
     LeftsidebarComponent,
-    NavbarComponent,
     MiddilcontentComponent,
     AdminComponent,
     SidenavComponent,
@@ -131,7 +128,6 @@ const ADMIN_MODULE = [
     Template3Component,
     CareerObjectiveComponent,
     SummaryComponent,
-    UserNavbarComponent,
     ExperienceComponent,
     SkillsComponent,
     FormComponent,

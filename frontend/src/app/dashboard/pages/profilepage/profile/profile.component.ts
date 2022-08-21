@@ -94,8 +94,6 @@ export class ProfileComponent implements OnInit {
       if (data.length !== 0) {
         this.userdataService.deleteUserData(userId).subscribe(
           (data) => {
-            console.log('Deleted');
-            console.log(data);
           },
           (error: HttpErrorResponse) => {
             console.log(error);
@@ -107,8 +105,6 @@ export class ProfileComponent implements OnInit {
       }
       this.userdataService.saveUserData(profileData).subscribe(
         (data) => {
-          console.log('Saved');
-          console.log(data);
           this.userdataService.isEdit.next(false);
         },
         (error: HttpErrorResponse) => {
